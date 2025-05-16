@@ -1,6 +1,6 @@
 # Starflight Codex
 
-An informational codex for [Starflight](https://en.wikipedia.org/wiki/Starflight).
+An informational codex for PC classic [Starflight](https://en.wikipedia.org/wiki/Starflight) (1986).
 
 The codex includes:
 
