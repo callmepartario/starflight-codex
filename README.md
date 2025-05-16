@@ -2,6 +2,8 @@
 
 An informational codex for PC classic [Starflight](https://en.wikipedia.org/wiki/Starflight) (1986).
 
+Available online at https://callmepartario.github.io/starflight-codex/
+
 The codex includes:
 
 - Customizable starmap:
