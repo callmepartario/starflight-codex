@@ -1,201 +1,191 @@
-<!DOCTYPE html PUBLIC" // W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<title>Starflight Codex</title>
-
-<link rel="stylesheet" href="css/starflightcodex.css" type="text/css" media="screen" />
-
-<script type="text/javascript" src="javascript/jquery183.js"></script>
-
-<script type="text/javascript" src="javascript/scrollto.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-$(window).scrollTo( '38%', '38%' );
-});
-</script>
-
+	<title>Starflight Codex</title>
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://callmepartario.github.io/starflight-codex">
+	<meta property="og:title" content="Starflight Codex">
+	<meta property="og:description" content="An online reference tool classic PC game Starflight (1986).webp">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/1/1c/Starflight_cover.jpg">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/starflight-codex.css" type="text/css" media="screen">
+	<script src="javascript/jquery183.js"></script>
+	<script src="javascript/scrollto.js"></script>
+	<!-- center map on load -->
+	<script>
+		$(document).ready(function(){
+		$(window).scrollTo( '38%', '38%' );
+		});
+	</script>
+	<meta name="theme-color" content="#108885">
 </head>
-
 <body>
-
-
 <div id="utilities">
-
 	<!-- INTERSTEL LOGO -->
-	<div id="interstel">
-	</div>
-
+	<div id="interstel"></div>
 	<!-- CODE WHEEL -->
 	<div id="codegen" class="util border-shape border-interstel bg-interstel">
 		<h2>Launch Codes</h2>
-		<script type="text/javascript" src="javascript/starflightcodes.js">
+		<script src="javascript/starflightcodes.js">
 		</script>
-		<script type="text/javascript">
-//<![CDATA[
-printInterface();
-//]]>
+		<script>
+			//<![CDATA[
+			printInterface();
+			//]]>
 		</script>
-
 	</div>
-
 	<!-- CODEX -->
 	<div id="codex" class="util border-shape border-interstel bg-interstel">
 		<h2>Codex</h2>
-
 		<div id="legend" class="text-interstel">
-
 			<h4 class="border-interstel border-shape2">Legend</h4>
-
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-alienscript').change(function() {
-        $('#alienscript').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-alienscript').change(function() {
+						$('#alienscript').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-nebulae').change(function() {
-        $('#nebulae').toggle();
-        $('#nebulaedetail').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-nebulae').change(function() {
+						$('#nebulae').toggle();
+						$('#nebulaedetail').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-territories').change(function() {
-        $('#territories').toggle();
-        $('#territoriesdetail').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-territories').change(function() {
+						$('#territories').toggle();
+						$('#territoriesdetail').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-constellations').change(function() {
-        $('#constellations').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-constellations').change(function() {
+						$('#constellations').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-fluxes').change(function() {
-        $('#fluxes').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-fluxes').change(function() {
+						$('#fluxes').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-starfield').change(function() {
-        $('#starfield').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-starfield').change(function() {
+						$('#starfield').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-colonies').change(function() {
-        $('#colonysystems').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-colonies').change(function() {
+						$('#colonysystems').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-artifacts').change(function() {
-        $('#artifactsystems').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-artifacts').change(function() {
+						$('#artifactsystems').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-additional').change(function() {
-        $('#additionalsystems').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-additional').change(function() {
+						$('#additionalsystems').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-grid').change(function() {
-        $('#grid').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-grid').change(function() {
+						$('#grid').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-history').change(function() {
-        $('#history').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-history').change(function() {
+						$('#history').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-tech').change(function() {
-        $('#tech').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-tech').change(function() {
+						$('#tech').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-science').change(function() {
-        $('#science').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-science').change(function() {
+						$('#science').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-engineering').change(function() {
-        $('#engineering').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-engineering').change(function() {
+						$('#engineering').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-combat').change(function() {
-        $('#combat').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-combat').change(function() {
+						$('#combat').toggle();
+					});
+				});
 			</script>
-			<script type="text/javascript">
-$(document).ready(function() {
-    $('#show-profile').change(function() {
-        $('#profile').toggle();
-    });
-});
+			<script>
+				$(document).ready(function() {
+					$('#show-profile').change(function() {
+						$('#profile').toggle();
+					});
+				});
 			</script>
-
-
 			<div class="column">
 				<ul>
 					<li>
-						<input type="checkbox" name="show-territories" id="show-territories" />
+						<input type="checkbox" name="show-territories" id="show-territories">
 						<label for="show-territories">
 							<span></span>
 							Territory Detail
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-alienscript" id="show-alienscript" checked />
+						<input type="checkbox" name="show-alienscript" id="show-alienscript" checked>
 						<label for="show-alienscript">
 							<span></span>
 							Alien Script
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-nebulae" id="show-nebulae" checked />
+						<input type="checkbox" name="show-nebulae" id="show-nebulae" checked>
 						<label for="show-nebulae">
 							<span></span>
 							Nebulae Detail
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-grid" id="show-grid" checked />
+						<input type="checkbox" name="show-grid" id="show-grid" checked>
 							<label for="show-grid">
 							<span></span>
 							Grid Lines
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-starfield" id="show-starfield" checked />
+						<input type="checkbox" name="show-starfield" id="show-starfield" checked>
 						<label for="show-starfield">
 							<span></span>
 							Starfield Background
@@ -203,39 +193,38 @@ $(document).ready(function() {
 					</li>
 				</ul>
 			</div>
-
 			<div class="column">
 				<ul>
 					<li>
-						<input type="checkbox" name="show-constellations" id="show-constellations" />
+						<input type="checkbox" name="show-constellations" id="show-constellations">
 						<label for="show-constellations">
 							<span></span>
 							Constellations
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-fluxes" id="show-fluxes" /><label for="show-fluxes">
+						<input type="checkbox" name="show-fluxes" id="show-fluxes">
  						<label for="show-fluxes">
 							<span></span>
 							Continuum Fluxes
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-colonies" id="show-colonies" />
+						<input type="checkbox" name="show-colonies" id="show-colonies">
 						<label for="show-colonies">
 							<span></span>
 							Colonizable Planets
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-additional" id="show-additional" />
+						<input type="checkbox" name="show-additional" id="show-additional">
 							<label for="show-additional">
 							<span></span>
 							Additional Planets
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-artifacts" id="show-artifacts" />
+						<input type="checkbox" name="show-artifacts" id="show-artifacts">
 						<label for="show-artifacts">
 							<span></span>
 							Artifact Planets
@@ -247,28 +236,28 @@ $(document).ready(function() {
 			<div class="column">
 				<ul>
 					<li>
-						<input type="checkbox" name="show-science" id="show-science" />
+						<input type="checkbox" name="show-science" id="show-science">
  						<label for="show-science">
 							<span></span>
 							Science Station
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-engineering" id="show-engineering" />
+						<input type="checkbox" name="show-engineering" id="show-engineering">
  						<label for="show-engineering">
 							<span></span>
 							Engineering Station
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-combat" id="show-combat" />
+						<input type="checkbox" name="show-combat" id="show-combat">
  						<label for="show-combat">
 							<span></span>
 							Combat Station
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-tech" id="show-tech" />
+						<input type="checkbox" name="show-tech" id="show-tech">
 	 						<label for="show-tech">
 							<span></span>
 							Artifact Technology 
@@ -279,32 +268,31 @@ $(document).ready(function() {
 			<div class="column">
 				<ul>
 					<li>
-						<input type="checkbox" name="show-history" id="show-history" />
+						<input type="checkbox" name="show-history" id="show-history">
 	 						<label for="show-history">
 							<span></span>
 							Historical Timeline 
 						</label>
 					</li>
 					<li>
-						<input type="checkbox" name="show-profile" id="show-profile" />
+						<input type="checkbox" name="show-profile" id="show-profile">
  						<label for="show-profile">
 							<span></span>
 							Alien Fleet Analysis: 
 						</label>
 					</li>
 				</ul>
-
 				<!-- PROFILE SELECT -->
-				<script type="text/javascript">
-$(document).ready(function () {
-$('.alienprofile').hide();
-$('#aliens-interstel').show();
-$('#profile').hide();
-$('#profileselect').change(function () {
-$('.alienprofile').hide();
-$('#'+$(this).val()).show();
-});
-});
+				<script>
+					$(document).ready(function () {
+						$('.alienprofile').hide();
+						$('#aliens-interstel').show();
+						$('#profile').hide();
+						$('#profileselect').change(function () {
+							$('.alienprofile').hide();
+							$('#'+$(this).val()).show();
+						});
+					});
 				</script>
 				<select id="profileselect" class="border-shape">
 					<option value="aliens-interstel">Interstel</option>
@@ -319,102 +307,99 @@ $('#'+$(this).val()).show();
 				</select>
 				<!-- end profile select -->
 			</div>
-
-		</div> <!-- end legend -->
-
+		</div>
+		<!-- end legend -->
 		<!-- HISTORICAL TIMELINE -->
 		<div id="history" style="display: none;" class="border-interstel text-interstel bg-interstel border-shape">
 			<h6 style="text-align: center;">Historical Timeline</h6>
 			<div class="column">
 				<ul>
-					<li>[<span class="planetname">2100</span>]&nbsp; Humanity discovers <span class="mining">Endurium</span> and begins to research its properties.</li>
-					<li>[<span class="planetname">2150</span>]&nbsp; Humanity discovers  <span class="mining">Endurium</span>'s application to superphotonic technology and begins exploring the cosmos. <span class="planetname">Mardan-4</span> is colonized and exploited for its mineral wealth. <span class="colonybonus">The Empire</span> is born.</li>
-					<li>[<span class="planetname">2300</span>]&nbsp; Humanity encounters the <span class="artifactlocation">Velox</span>.</li>
-					<li>[<span class="planetname">2650</span>]&nbsp; Major  <span class="mining">Endurium</span> finds usher in <span class="colonybonus">The Empire</span>'s <span class="planetname">Golden Era</span>. Humanity's ships venture deeper into space than ever before.</li>
-					<li>[<span class="planetname">2675</span>]&nbsp; <span class="colonybonus">The Empire</span> encounters the <span class="artifactlocation">Spemin</span>.</li>
-					<li>[<span class="planetname">2770</span>]&nbsp; <span class="colonybonus">The Empire</span> encounters the <span class="artifactlocation">Thrynn</span> and <span class="artifactlocation">Elowan</span>.</li>
-					<li>[<span class="planetname">3000</span>]&nbsp; Start of <span class="planetname">The First Wave</span>: <span class="guarded">Numlox</span> and <span class="guarded">Phlegmak</span> ships attack from coreward space.</li>
-					<li>[<span class="planetname">3120</span>]&nbsp; <span class="colonybonus">The Empire</span> forms an defensive pact with the <span class="artifactlocation">Velox</span> to combat the <span class="guarded">Numlox</span> and <span class="guarded">Phlegmak</span> menace.</li>
-					<li>[<span class="planetname">3260</span>]&nbsp; First wave ends.</li>
-					<li>[<span class="planetname">3400</span>]&nbsp; Start of <span class="planetname">The Second Wave</span>: <span class="artifactlocation">Spemin</span>, <span class="guarded">Gazurtoid</span>, and <span class="guarded">Uhlek</span> ships attack from coreward space and settle outward.</li>
+					<li>[<span class="text-warning">2100</span>]&nbsp; Humanity discovers <span class="text-activity">Endurium</span> and researches its properties.</li>
+					<li>[<span class="text-warning">2150</span>]&nbsp; Humanity discovers  <span class="text-activity">Endurium</span>'s application to hyperspace travel and begins exploring. <span class="text-warning">Mardan-4</span> is colonized and exploited for its mineral wealth. <span class="text-success">The Empire</span> is born.</li>
+					<li>[<span class="text-warning">2300</span>]&nbsp; Humanity encounters the <span class="text-activity">Velox</span>.</li>
+					<li>[<span class="text-warning">2650</span>]&nbsp; Major  <span class="text-activity">Endurium</span> finds usher in <span class="text-success">The Empire</span>'s <span class="text-warning">Golden Era</span>. Humanity's ships venture deeper into space than ever before.</li>
+					<li>[<span class="text-warning">2675</span>]&nbsp; <span class="text-success">The Empire</span> encounters the <span class="text-activity">Spemin</span>.</li>
+					<li>[<span class="text-warning">2770</span>]&nbsp; <span class="text-success">The Empire</span> encounters the <span class="text-activity">Thrynn</span> and <span class="text-activity">Elowan</span>.</li>
+					<li>[<span class="text-warning">3000</span>]&nbsp; <span class="text-danger">The First Wave</span> begins: <span class="text-activity">Numlox</span> and <span class="text-activity">Phlegmak</span> ships attack from coreward space.</li>
+					<li>[<span class="text-warning">3120</span>]&nbsp; <span class="text-success">The Empire</span> allies with the <span class="text-activity">Velox</span> to combat the <span class="text-activity">Numlox</span> and <span class="text-activity">Phlegmak</span> menace.</li>
+					<li>[<span class="text-warning">3260</span>]&nbsp; <span class="text-danger">The First Wave</span> ends.</li>
+					<li>[<span class="text-warning">3400</span>]&nbsp; <span class="text-danger">The Second Wave</span>: <span class="text-activity">Spemin</span>, <span class="text-activity">Gazurtoid</span>, and <span class="text-activity">Uhlek</span> ships attack from coreward space and settle outward.</li>
 				</ul>
 			</div>
 			<div class="column">
 				<ul>
-					<li>[<span class="planetname">3450</span>]&nbsp; <span class="colonybonus">The Noah Project</span> is initiated.</li>
-					<li>[<span class="planetname">3454</span>]&nbsp; Launch of <span class="colonybonus">Noah 2</span> expedition, which colonizes Arth.</li>
-					<li>[<span class="planetname">3466</span>]&nbsp; Launch of <span class="colonybonus">Noah 6</span>, a deep space expedition, in cooperation with the <span class="artifactlocation">Elowan</span>).</li>
-					<li>[<span class="planetname">3480</span>]&nbsp; The birthplace and heart of <span class="colonybonus">The Empire</span>, <span class="planetname">Earth</span>, falls when its sun mysteriously flares.</li>
-					<li>[<span class="planetname">3505</span>]&nbsp; <span class="guarded">Uhlek</span> bombs hit the surface of <span class="planetname">Arth</span>, creating a southern hot zone and forcing survivors underground.</li>
-					<li>[<span class="planetname">3520</span>]&nbsp; <span class="planetname">Arth</span>'s governments and societies collapse. <span class="guarded">The Dark Years</span> begin.</li>
-					<li>[<span class="planetname">4400</span>]&nbsp; <span class="planetname">Arth</span> forms a new governing council. An industrial revolution begins, the surface of the planet is reclaimed.</li>
-					<li>[<span class="planetname">4500</span>]&nbsp; Rediscovery of space flight (sublight).</li>
-					<li>[<span class="planetname">4594</span>]&nbsp; Rediscovery of <span class="colonybonus">Noah 2</span> colony and  <span class="mining">Endurium</span>.</li>
-					<li>[<span class="planetname">4615</span>]&nbsp; Humanity's new superphotonic ships leave the <span class="planetname">Arth</span> system for the first time.</li>
-					<li>[<span class="planetname">4620</span>]&nbsp; Present day.</li>
+					<li>[<span class="text-warning">3450</span>]&nbsp; <span class="text-success">The Noah Project</span> is initiated.</li>
+					<li>[<span class="text-warning">3454</span>]&nbsp; <span class="text-success">Noah 2</span> launches and colonizes Arth.</li>
+					<li>[<span class="text-warning">3466</span>]&nbsp; <span class="text-success">Noah 6</span> launches, a deep space expedition in cooperation with the <span class="text-activity">Elowan</span>.</li>
+					<li>[<span class="text-warning">3480</span>]&nbsp; <span class="text-warning">Earth</span>&mdash;The birthplace and heart of <span class="text-success">The Empire</span>&mdash;falls when its sun mysteriously flares.</li>
+					<li>[<span class="text-warning">3505</span>]&nbsp; <span class="text-activity">Uhlek</span> bombs hit <span class="text-warning">Arth</span>, creating a southern hot zone and forcing survivors underground.</li>
+					<li>[<span class="text-warning">3520</span>]&nbsp; <span class="text-warning">Arth</span>'s governments and societies collapse. <span class="text-danger">The Dark Years</span> begin.</li>
+					<li>[<span class="text-warning">4400</span>]&nbsp; <span class="text-warning">Arth</span> forms a new governing council. An industrial revolution begins, and the surface is reclaimed.</li>
+					<li>[<span class="text-warning">4500</span>]&nbsp; Rediscovery of sublight speed space flight.</li>
+					<li>[<span class="text-warning">4594</span>]&nbsp; Rediscovery of <span class="text-success">Noah 2</span> colony and  <span class="text-activity">Endurium</span>.</li>
+					<li>[<span class="text-warning">4615</span>]&nbsp; Humanity ventures beyond the <span class="text-warning">Arth</span> system.</li>
+					<li>[<span class="text-warning">4620</span>]&nbsp; Present day.</li>
 				</ul>
 			</div>
-		</div> <!-- end history -->
-
-
+		</div>
+		<!-- end history -->
 		<!-- TECHNOLOGY -->
 		<div id="tech" style="display: none;" class="border-interstel text-interstel bg-interstel border-shape">
 			<h6 style="text-align: center;">Artifact Technology</h6>
 			<div class="column">
 				<ul>
-					<li><span class="artifactname artifactlocation">Black Egg</span>: Planetary destruction devices of  <span class="guarded=">Phlegmak</span> origin. <!-- Obtained from 143, 115 [1] 28N x 4E. A second egg is at 234, 20 [2] 35S x 99E and a third at 238, 189 [3] 52N x 16E. --> </li>
-					<li><span class="artifactname artifactlocation">Crystal Cone</span>: Locates Control Nexus of the <span class="planetname">Crystal Planet</span>. <!-- Obtained from 20, 198 [1] 29S x 55W. --></li>
-					<li><span class="artifactname artifactlocation">Crystal Orb</span>: Bypasses <span class="planetname">Crystal Planet</span> defenses and allows ship to land on surface. Triggers conflict with <span class="artifactlocation">Velox</span> when stolen. <!-- Obtained from 132,165 [1] 46N x 14E. --></li>
-					<li><span class="artifactname artifactlocation">Crystal Pearl</span>: Warps ship out of combat once ship systems sustain damage. <!-- Obtained from 56, 144 [1] 29N x 13W. --></li>
-					<li><span class="artifactname artifactlocation">Dodecahedron</span>: A transmitter that increases alien ships' ability to track you through hyperspace. <span class="guarded">Not recommending when moving through hostile aliens' territory.</span> <!-- Obtained from 118,146 [4] 16S x 20W. --></li>
-					<li><span class="artifactname artifactlocation">Ellipsoid</span>: Return to <span class="artifactlocation">Velox</span> (who refer to it as the "<span class="planetname">Focusing Stone</span>" to establish friendly relations. <!-- Obtained from 81,98 [1] 44S x 137W. --></li>
-					<li><span class="artifactname artifactlocation">Flat Device</span>: Projects a shield around Terrain Vehicle, defending it against attacks from hostile lifeforms. Purchased from <span class="planetname">Starport</span>.</li>
+					<li><span class="artifactname">Black Egg</span>: Planetary destruction devices of  <span class="text-danger=">Phlegmak</span> origin. <!-- Obtained from 143, 115 [1] 28N x 4E. A second egg is at 234, 20 [2] 35S x 99E and a third at 238, 189 [3] 52N x 16E. --> </li>
+					<li><span class="artifactname">Crystal Cone</span>: Locates Control Nexus of the <span class="text-warning">Crystal Planet</span>. <!-- Obtained from 20, 198 [1] 29S x 55W. --></li>
+					<li><span class="artifactname">Crystal Orb</span>: Bypasses <span class="text-warning">Crystal Planet</span> defenses and allows ship to land on surface. <span class="text-danger"> Stealing it triggers a conflict with the <span class="text-activity">Velox</span>.</span><!-- Obtained from 132,165 [1] 46N x 14E. --></li>
+					<li><span class="artifactname">Crystal Pearl</span>: Warps ship out of combat if ship systems are damaged.<!-- Obtained from 56, 144 [1] 29N x 13W. --></li>
+					<li><span class="artifactname">Dodecahedron</span>: Increases alien encounter rates. <span class="text-danger">Not recommended when moving through hostile territory.</span><!-- Obtained from 118,146 [4] 16S x 20W. --></li>
+					<li><span class="artifactname">Ellipsoid</span>: Return to <span class="text-activity">Velox</span> (who refer to it as the "<span class="text-warning">Focusing Stone</span>" to establish friendly relations.<!-- Obtained from 81,98 [1] 44S x 137W. --></li>
+					<li><span class="artifactname">Flat Device</span>: Projects a shield around Terrain Vehicle, defending it from hostile lifeforms.</li>
 				</ul>
 			</div>
 			<div class="column">
 				<ul>
-					<li><span class="artifactname artifactlocation">Hypercube</span>: Hours of fun for the kids! <!-- Obtained from 215,86 [3] 11N x 104W. --></li>
-					<li><span class="artifactname artifactlocation">Red Cylinder</span>: Displays coordinates of Ancient Ruins and Artifacts from the captain's Landing screen. <!-- Obtained from 112,200 [3] 59N x 64W. --></li>
-					<li><span class="artifactname artifactlocation">Ring Device</span>: Assists in displaying continuum fluxes when in hyperspace. <!-- Obtained from 215,86 [4] 90N x 0. --></li>
-					<li><span class="artifactname artifactlocation">Rod Device</span>: Gives the ship's shields a chance to deflect laser attacks. <!-- Obtained from 180, 124 [2] 59N x 23E. --></li>
-					<li><span class="artifactname artifactlocation">Shimmering Ball</span>: A cloaking device that allows the ship to dodge incoming attacks. <span class="guarded">This effect can actually hamper a ship's ability to outrun a Uhlek warship's plasma bolts.</span> <!-- Obtained from 68,66 [1] 12N x 35E. --></li>
-					<li><span class="artifactname artifactlocation">Tesseract</span>: Halves the <span class="mining">Endurium</span> fuel consumed by the ship's engines during hyperspace travel. <!-- Obtained from 18, 50 [5] 15N x 44W. --></li>
-					<li><span class="artifactname artifactlocation">Whining Orb</span>: Translates <span class="artifactlocation">Spemin</span> language. Purchased from <span class="planetname">Starport</span>.</li>
+					<li><span class="artifactname">Hypercube</span>: Hours of fun for the kids!<!-- Obtained from 215,86 [3] 11N x 104W. --></li>
+					<li><span class="artifactname">Red Cylinder</span>: Displays Ancient Ruins and Artifacts on the captain's Landing interface.<!-- Obtained from 112,200 [3] 59N x 64W. --></li>
+					<li><span class="artifactname">Ring Device</span>: Detects nearby continuum fluxes.<!-- Obtained from 215,86 [4] 90N x 0. --></li>
+					<li><span class="artifactname">Rod Device</span>: Occasionally causes shields to deflect laser attacks.<!-- Obtained from 180, 124 [2] 59N x 23E. --></li>
+					<li><span class="artifactname">Shimmering Ball</span>: A cloaking device that allows the ship to dodge incoming attacks. <span class="text-danger">This effect can make outruning a <span class="text-activity">Uhlek</span> plasma bolt more difficult.</span> <!-- Obtained from 68,66 [1] 12N x 35E. --></li>
+					<li><span class="artifactname">Tesseract</span>: Halves the <span class="text-activity">Endurium</span> fuel consumption for hyperspace travel.<!-- Obtained from 18, 50 [5] 15N x 44W. --></li>
+					<li><span class="artifactname">Whining Orb</span>: Translates <span class="text-activity">Spemin</span> language.</li>
 				</ul>
 			</div>
-		
-		</div> <!-- end tech -->
-
+		</div>
+		<!-- end tech -->
 		<!-- SCIENCE -->
 		<div id="science" class="border-shape border-interstel text-interstel bg-interstel" style="display: none;">
 			<div class="column">
 				<h6>Colonization Requirements</h6>
 				<table>
-					<tr><th class="colonybonus">Temperature</td><td>Temperate-Tropical</td></tr>
-					<tr><th class="colonybonus">Gravity</td><td>0.7 - 2.0 G</td></tr>
-					<tr><th class="colonybonus">Atmosphere</td><td>Oxygen</td></tr>
-					<tr><th class="colonybonus">Hydrosphere</td><td>Water</td></tr>
-					<tr><th class="colonybonus">Weather</td><td>None, Calm, Moderate</td></tr>
+					<tr><th class="text-activity">Temperature</th><td>Temperate-Tropical</td></tr>
+					<tr><th class="text-activity">Gravity</th><td>0.7 - 2.0 G</td></tr>
+					<tr><th class="text-activity">Atmosphere</th><td>Oxygen</td></tr>
+					<tr><th class="text-activity">Hydrosphere</th><td>Water</td></tr>
+					<tr><th class="text-activity">Weather</th><td>None, Calm, Moderate</td></tr>
 				</table>
-				<p>Planets with biological and mineral density are more desireable.</p>
-				<p class="planetname">While humans can survive on planets with up to 2.0 G, it's far more comfortable to live on a planet with less than 1.3 G.</p>
-				<p><span class="guarded">Planets with surface gravity of more than 8.0 G will crush your ship's hull if you attempt to land on them.</span></p>
+				<p class="text-success">Planets with rich biological and mineral density are more valuable.</p>
+				<p class="text-warning">Humans can survive on planets up to 2.0 G, but are more comfortable ton a planet with less than 1.3 G.</p>
+				<p><span class="text-danger">Planets with 8.0 G or more crush the hull upon landing.</span></p>
 			</div>
 			<div class="column">
 				<h6>Star Temperatures</h6>
 				<div class="startypes border-shape2 border-interstel">
 					<ul style="margin-bottom: 10px;">
-						<li><img src="map/star-red.png" alt="Red Star" />&nbsp;&nbsp; <strong>M</strong> (coolest)</li>
-						<li><img src="map/star-orange.png" alt="Orange Star" />&nbsp;&nbsp; <strong>K</strong></li>
-						<li><img src="map/star-yellow.png" alt="Yellow Star" />&nbsp;&nbsp; <strong>G</strong></li>
-						<li><img src="map/star-white.png" alt="White Star" />&nbsp;&nbsp; <strong>F</strong></li>
-						<li><img src="map/star-green.png" alt="Green Star" />&nbsp;&nbsp; <strong>A</strong></li>
-						<li><img src="map/star-teal.png" alt="Teal Star" />&nbsp;&nbsp; <strong>B</strong></li>
-						<li><img src="map/star-blue.png" alt="Blue Star" />&nbsp;&nbsp; <strong>O</strong> (hottest)</li>
+						<li><img src="map/star-red.webp" alt="Red Star">&nbsp;&nbsp; <strong>M</strong> (coolest)</li>
+						<li><img src="map/star-orange.webp" alt="Orange Star">&nbsp;&nbsp; <strong>K</strong></li>
+						<li><img src="map/star-yellow.webp" alt="Yellow Star">&nbsp;&nbsp; <strong>G</strong></li>
+						<li><img src="map/star-white.webp" alt="White Star">&nbsp;&nbsp; <strong>F</strong></li>
+						<li><img src="map/star-green.webp" alt="Green Star">&nbsp;&nbsp; <strong>A</strong></li>
+						<li><img src="map/star-teal.webp" alt="Teal Star">&nbsp;&nbsp; <strong>B</strong></li>
+						<li><img src="map/star-blue.webp" alt="Blue Star">&nbsp;&nbsp; <strong>O</strong> (hottest)</li>
 					</ul>
 				</div>
 				<h6 style="margin-top: 20px;">Goldilocks Zones</h6>
-				<p>The hotter a star is, the further away a planet will need to orbit it to be habitable for humankind.</p>
+				<p>The hotter a star is, the further away habitable planets must orbit it.</p>
 			</div>
 			<div class="column">
 				<h6>Planet Primary Surface</h6>
@@ -427,244 +412,252 @@ $('#'+$(this).val()).show();
 						<li><div class="planettype" style="background-color: #808; border: 1px solid #404;"></div> &nbsp;&nbsp; Gas Giant</li>
 					</ul>
 				</div>
-					<h6>Lifeform Value</h6>
-					<p>Previously unencountered, larger, more intelligent and predatory lifeforms are more valuable. The further away from Arth a lifeform is captured, the more valuable it may be determined to be. The Terrain Vehicle is not equipped to capture floating or flying lifeforms.</p>
-					<p class="planetname">Hostile lifeforms are easier to capture when stunned.</p>
-					<p class="guarded">Dead lifeforms are worth very little.</p>
+					<h6>Lifeform</h6>
+					<p class="text-success">Lifeform value is increased if it is previously unencountered, larger, more intelligent, or predatory. The distance of the creature's origin from Arth also increases value.</p>
+					<p class="text-warning">Hostile lifeforms are easier to capture when stunned. Floating or flying lifeforms can't be captured.</p>
+					<p class="text-danger">Dead lifeforms are worthless.</p>
 			</div>
 			<div class="column">
 				<h6>Star Flare Schedule</h6>
 				<table style="text-align: center;">
-					<tr>
-						<th class="border-interstel bg-interstel border-shape2"><strong>M-Y</strong></td>
-						<th class="border-interstel bg-interstel border-shape2"><strong>Flaring (X)</strong></td>
-					</tr>
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2"><strong>M-Y</strong></th>
+							<th class="border-interstel bg-interstel border-shape2"><strong>Flaring (X)</strong></th>
+						</tr>
 					</thead>
-					<tr>
-						<td>01-4620</td>
-						<td>200-193</td>
-					</tr>
-					<tr>
-						<td>02-4620</td>
-						<td>192-186</td>
-					</tr>
-					<tr>
-						<td>03-4620</td>
-						<td>185-178</td>
-					</tr>
-					<tr>
-						<td>04-4620</td>
-						<td>177-171</td>
-					</tr>
-					<tr>
-						<td>05-4620</td>
-						<td>170-163</td>
-					</tr>
-					<tr>
-						<td>06-4620</td>
-						<td>162-155</td>
-					</tr>
-					<tr>
-						<td>07-4620</td>
-						<td>154-148</td>
-					</tr>
-					<tr>
-						<td>08-4620</td>
-						<td>147-141</td>
-					</tr>
-					<tr>
-						<td>09-4620</td>
-						<td>140-133</td>
-					</tr>
-					<tr>
-						<td class="guarded">10-4620</td>
-						<td class="guarded">132-126</td>
-					</tr>
+					<tbody>
+						<tr>
+							<td>01-4620</td>
+							<td>200-193</td>
+						</tr>
+						<tr>
+							<td>02-4620</td>
+							<td>192-186</td>
+						</tr>
+						<tr>
+							<td>03-4620</td>
+							<td>185-178</td>
+						</tr>
+						<tr>
+							<td>04-4620</td>
+							<td>177-171</td>
+						</tr>
+						<tr>
+							<td>05-4620</td>
+							<td>170-163</td>
+						</tr>
+						<tr>
+							<td>06-4620</td>
+							<td>162-155</td>
+						</tr>
+						<tr>
+							<td>07-4620</td>
+							<td>154-148</td>
+						</tr>
+						<tr>
+							<td>08-4620</td>
+							<td>147-141</td>
+						</tr>
+						<tr>
+							<td>09-4620</td>
+							<td>140-133</td>
+						</tr>
+						<tr>
+							<td class="text-danger">10-4620</td>
+							<td class="text-danger">132-126</td>
+						</tr>
+					<tbody>
 				</table>
-				<p>Star flare phenomena are moving through our sector of space from coreward to outward at a rate of roughly 7 clicks per month.</p>
-				<p class="planetname">The mission to determine the cause of the solar flares will end when Arth is destroyed in 10-4620.</p>
-				<p class="guarded">Ships caught in a system when it flares will be utterly destroyed.</p>
+				<p>Stellar flare phenomena are moving coreward (right) to outward (left) at a rate 7 clicks per month.</p>
+				<p class="text-warning">Your mission is to determine the cause of the solar flares.</p>
+				<p class="text-danger">Ships caught in a flaring star system are destroyed. Arth is destroyed at 10-4620.</p>
 			</div>
-		</div> <!-- end science -->
-
+		</div>
+		<!-- end science -->
 		<!-- ENGINEERING -->
 		<div id="engineering" class="border-shape border-interstel text-interstel bg-interstel" style="display: none;">
 			<div class="column">
-				<h6>Fuel Consumption (CM)</h6>
+				<h6>Fuel Consumption</h6>
+				<p>Endurium fuel is consumed at a rate measured in cubic meters (CM).</p>
 				<table>
 					<tr>
-						<th class="mining">Travel 1 X,Y</td>
+						<th class="text-activity">Travel 1 Click</th>
 						<td>
 							<ul style="margin-left: 0px;">
-								<li><span class="planetname">Class 1</span>: 0.49</li>
-								<li><span class="planetname">Class 2</span>: 0.41</li>
-								<li><span class="planetname">Class 3</span>: 0.33</li>
-								<li><span class="planetname">Class 4</span>: 0.25</li>
-								<li><span class="planetname">Class 5</span>: 0.16</li>
+								<li><span class="text-warning">Class 1</span>: 0.49</li>
+								<li><span class="text-warning">Class 2</span>: 0.41</li>
+								<li><span class="text-warning">Class 3</span>: 0.33</li>
+								<li><span class="text-warning">Class 4</span>: 0.25</li>
+								<li><span class="text-warning">Class 5</span>: 0.16</li>
 							</ul>
 						</td>
 					</tr>
 					<tr>
-						<th class="mining">Land/<span class="linebreak">Launch</span></td>
-						<td>0.25 / G</td>
+						<th class="text-activity">Land/<span class="linebreak">Launch</span></th>
+						<td>0.25/G</td>
 					</tr>
 					<tr>
-						<th class="mining">Shields</td>
-						<td>0.1 / hr</td>
+						<th class="text-activity">Shields</th>
+						<td>0.1/HOUR</td>
 					</tr>
 					<tr>
-						<th class="mining">Laser</td>
-						<td>0.01 / hr</td>
+						<th class="text-activity">Laser</th>
+						<td>0.01/HOUR</td>
 					</tr>
 					<tr>
-						<th class="mining">Missile</td>
-						<td>0.05 / hr</td>
+						<th class="text-activity">Missile</th>
+						<td>0.05/HOUR</td>
 					</tr>
 				</table>
-				<br />
-
+				<br>
 				<h6>Endurium Price Schedule</h6>
+				<p>The price of Endurium fuel increases over time.</p>
 				<table style="text-align: center;">
 					<tr>
-						<th class="border-interstel bg-interstel border-shape2"><strong>D-M-Y</strong></td>
-						<th class="border-interstel bg-interstel border-shape2"><strong>Price/(CM)</strong></td>
+						<th class="border-interstel bg-interstel border-shape2"><strong>D-M-Y</strong></th>
+						<th class="border-interstel bg-interstel border-shape2"><strong>Price/(CM)</strong></th>
 					</tr>
 					<tr>
 						<td>01-01-4620</td>
-						<td class="colonybonus">1000 MU</td>
+						<td class="text-success">1000 MU</td>
 					</tr>
 					<tr>
 						<td>20-02-4620</td>
-						<td class="planetname">1500 MU</td>
+						<td class="text-warning">1500 MU</td>
 					</tr>
 					<tr>
 						<td>15-05-4620</td>
-						<td class="guarded">2000 MU</td>
+						<td class="text-danger">2000 MU</td>
 					</tr>
 				</table>
 			</div>
 			<div class="column">
 				<h6>Mineral Prices</h6>
-				<p>Elements used in the construction and repair of Interstel ships are <span class="planetname">highlighted</span>:</p>
+				<p>Mining is profitable enterprise. If shipe equipment is broken, <span class="text-activity">Repair Elements</span> are needed to get it working again:</p>
 				<table style="margin-top: 5px; margin-left: 10px; text-transform: none;">
-					<tr><th class="border-interstel bg-interstel border-shape2">Mineral</td><th class="border-interstel bg-interstel border-shape2">Price/CM</td></tr>
-					<tr><td class="planetname">&nbsp;&nbsp;<strong>Aluminum</strong></td><td>&nbsp;&nbsp;220 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Antimony</strong></td><td>&nbsp;&nbsp;280 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Chromium</strong></td><td>&nbsp;&nbsp;260 MU</td></tr>
-					<tr><td class="planetname">&nbsp;&nbsp;<strong>Cobalt</strong></td><td>&nbsp;&nbsp;80 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Copper</strong></td><td>&nbsp;&nbsp;120 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Gold</strong></td><td>&nbsp;&nbsp;380 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Iron</strong></td><td>&nbsp;&nbsp;60 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Lead</strong></td><td>&nbsp;&nbsp;40 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Magnesium</strong></td><td>&nbsp;&nbsp;200 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Mercury</strong></td><td>&nbsp;&nbsp;320 MU</td></tr>
-					<tr><td class="planetname">&nbsp;&nbsp;<strong>Molybdenum</strong></td><td>&nbsp;&nbsp;160 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Nickel</strong></td><td>&nbsp;&nbsp;100 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Platinum</strong></td><td>&nbsp;&nbsp;400 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Plutonium</strong></td><td>&nbsp;&nbsp;420 MU</td></tr>
-					<tr><td class="planetname">&nbsp;&nbsp;<strong>Promethium</strong></td><td>&nbsp;&nbsp;300 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Rodnium</strong></td><td>&nbsp;&nbsp;440 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Silver</strong></td><td>&nbsp;&nbsp;360 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Tin</strong></td><td>&nbsp;&nbsp;180 MU</td></tr>
-					<tr><td class="planetname">&nbsp;&nbsp;<strong>Titanium</strong></td><td>&nbsp;&nbsp;240 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Tungsten</strong></td><td>&nbsp;&nbsp;340 MU</td></tr>
-					<tr><td>&nbsp;&nbsp;<strong>Zinc</strong></td><td>&nbsp;&nbsp;140 MU</td></tr>
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2">Mineral</th>
+							<th class="border-interstel bg-interstel border-shape2">Price/CM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Aluminum</strong></td><td>&nbsp;&nbsp;220 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Antimony</strong></td><td>&nbsp;&nbsp;280 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Chromium</strong></td><td>&nbsp;&nbsp;260 MU</td></tr>
+						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Cobalt</strong></td><td>&nbsp;&nbsp;80 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Copper</strong></td><td>&nbsp;&nbsp;120 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Gold</strong></td><td>&nbsp;&nbsp;380 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Iron</strong></td><td>&nbsp;&nbsp;60 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Lead</strong></td><td>&nbsp;&nbsp;40 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Magnesium</strong></td><td>&nbsp;&nbsp;200 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Mercury</strong></td><td>&nbsp;&nbsp;320 MU</td></tr>
+						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Molybdenum</strong></td><td>&nbsp;&nbsp;160 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Nickel</strong></td><td>&nbsp;&nbsp;100 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Platinum</strong></td><td>&nbsp;&nbsp;400 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Plutonium</strong></td><td>&nbsp;&nbsp;420 MU</td></tr>
+						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Promethium</strong></td><td>&nbsp;&nbsp;300 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Rodnium</strong></td><td>&nbsp;&nbsp;440 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Silver</strong></td><td>&nbsp;&nbsp;360 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Tin</strong></td><td>&nbsp;&nbsp;180 MU</td></tr>
+						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Titanium</strong></td><td>&nbsp;&nbsp;240 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Tungsten</strong></td><td>&nbsp;&nbsp;340 MU</td></tr>
+						<tr><td>&nbsp;&nbsp;<strong>Zinc</strong></td><td>&nbsp;&nbsp;140 MU</td></tr>
+					</tbody>
 				</table>			
 			</div>
 			<div class="column">
-				<h6>Cargo Pods</h6>
-				<p>Interstel Ships' cargo holds may hold up to 50 CM of material: Fuel, mineral elements, lifeforms, and Artifact Technology all contribute to the total cargo space used.</p>
-				<p>Each cargo pod installed to an Interstel Ship adds an additional 50 CM of space to the ship's cargo hold.</p>
-				<p>The ship's Terrain Vehicle also includes an additional 50 CM of storage space, which will be offloaded into the ship's cargo holds when returning to the ship.</p>
+				<h6>Cargo Capacity</h6>
+				<p>Interstel Ships have 50 CM cargo capacity: Endurium fuel, minerals, lifeforms, and Artifacts all contribute to the total.</p>
+				<p>The Terrain Vehicle also includes an additional 50 CM of storage space, which is loaded into the ship upon returning.</p>
+				<p class="text-success">Cargo Pods add 50 CM of cargo capacity.</p>
 				<h6>Terrain Vehicle Mining</h6>
-				<p>Minerals appear in higher concentrations on rocky planets in higher elevations. Difficult terrainand inclement weather  will drain the Terrain Vehicles energy reserves faster.</p>
-				<p class="guarded">Running out of energy means returning to your ship on foot, which can be dangerous. Replacing the ship's terrain vehicle is also expensive!</p>
+				<p>Minerals appear in higher concentrations on rocky planets, and in higher elevations. Difficult terrain and inclement weather increase the drain the Terrain Vehicles energy reserves.</p>
+				<p class="text-warning">Running out of energy means returning to ship on foot, which can be hazardous.</p>
+				<p class="text-danger">Replacing terrain vehicle is also expensive!</p>
 			</div>
-		</div> <!-- end engineering -->
-
+		</div>
+		<!-- end engineering -->
 		<!-- COMBAT -->
 		<div id="combat" class="border-shape border-interstel text-interstel bg-interstel" style="display: none;">
 			<div class="column">
-				<img src="interface/interstelship.png" alt="Interstel Ship Diagram" />
+				<img src="interface/interstelship.webp" alt="Interstel Ship Diagram">
 			</div>
 			<div class="column">
-				<h6 class="colonybonus">Lasers</h6>
+				<h6 class="text-success">Lasers</h6>
 				<p>Lasers have a maximum range of 6 spaces, and dissipate by 5% per space traveled to the target ship.</p>
 				<ul>
-					<li><span class="planetname">Class 1</span>: 90</li>
-					<li><span class="planetname">Class 2</span>: 210</li>
-					<li><span class="planetname">Class 3</span>: 360</li>
-					<li><span class="planetname">Class 4</span>: 510</li>
-					<li><span class="planetname">Class 5</span>: 660</li>
+					<li><span class="text-warning">Class 1</span>: 90</li>
+					<li><span class="text-warning">Class 2</span>: 210</li>
+					<li><span class="text-warning">Class 3</span>: 360</li>
+					<li><span class="text-warning">Class 4</span>: 510</li>
+					<li><span class="text-warning">Class 5</span>: 660</li>
 				</ul>
 
-				<h6 class="colonybonus">Missiles</h6>
+				<h6 class="text-success">Missiles</h6>
 				<ul>
-					<li><span class="planetname">Class 1</span>: 200</li>
-					<li><span class="planetname">Class 2</span>: 400</li>
-					<li><span class="planetname">Class 3</span>: 700</li>
-					<li><span class="planetname">Class 4</span>: 1000</li>
-					<li><span class="planetname">Class 5</span>: 1500</li>
-					<li><span class="guarded">Plasma Bolt: 4000</span></li>
+					<li><span class="text-warning">Class 1</span>: 200</li>
+					<li><span class="text-warning">Class 2</span>: 400</li>
+					<li><span class="text-warning">Class 3</span>: 700</li>
+					<li><span class="text-warning">Class 4</span>: 1000</li>
+					<li><span class="text-warning">Class 5</span>: 1500</li>
+					<li><span class="text-danger">Plasma Bolt: 4000</span></li>
 				</ul>
-				<p class="guarded">Plasma Bolts home in on enemy ships.</p>
+				<p class="text-danger">Plasma Bolts home in on enemy ships.</p>
 			</div>
 			<div class="column">
-				<h6 class="artifactlocation">Interstel Shields</h6>
-				<p>Shields maintain damage resistance (DR) when weakened, but do not function within nebulae.</p>
+				<h6 class="text-interest">Interstel Shields</h6>
 				<ul>
-					<li><span class="planetname">Class 1</span>: 400</li>
-					<li><span class="planetname">Class 2</span>: 600 + 20% DR</li>
-					<li><span class="planetname">Class 3</span>: 800 + 40% DR</li>
-					<li><span class="planetname">Class 4</span>: 1000 + 60% DR</li>
-					<li><span class="planetname">Class 5</span>: 1000 + 80% DR</li>
+					<li><span class="text-warning">Class 1</span>: 400</li>
+					<li><span class="text-warning">Class 2</span>: 600 + 20% DR</li>
+					<li><span class="text-warning">Class 3</span>: 800 + 40% DR</li>
+					<li><span class="text-warning">Class 4</span>: 1000 + 60% DR</li>
+					<li><span class="text-warning">Class 5</span>: 1000 + 80% DR</li>
 				</ul>
-
-				<h6 class="artifactlocation">Interstel Armor</h6>
-				<p>Damage resistance (DR) rounds to nearest class when damaged. Armor is heavy and will slow your ship's accelleration in combat.</p>
+				<p class="text-success">DR means damage resistance.</p>
+				<p class="text-danger">Shields don't function in nebulae.</p>
+				<h6 class="text-interest">Interstel Armor</h6>
 				<ul>
-					<li><span class="planetname">Ship Hull:</span> 250</li>
-					<li><span class="planetname">Class 1</span>: 500</li>
-					<li><span class="planetname">Class 2</span>: 750 + 20% DR</li>
-					<li><span class="planetname">Class 3</span>: 1000 + 40% DR</li>
-					<li><span class="planetname">Class 4</span>: 1250 + 60% DR</li>
-					<li><span class="planetname">Class 5</span>: 1500 + 80% DR</li>
+					<li><span class="text-warning">Ship Hull:</span> 250</li>
+					<li><span class="text-warning">Class 1</span>: 500</li>
+					<li><span class="text-warning">Class 2</span>: 750 + 20% DR</li>
+					<li><span class="text-warning">Class 3</span>: 1000 + 40% DR</li>
+					<li><span class="text-warning">Class 4</span>: 1250 + 60% DR</li>
+					<li><span class="text-warning">Class 5</span>: 1500 + 80% DR</li>
 				</ul>
+				<p class="text-warning">As armor is damaged, DR rounds to nearest class.</p>
+				<p class="text-danger">Heavier armor slows ship accelleration in combat.</p>
 			</div>
 			<div class="column">
-				<h6 class="guarded">Alien Defense Ratings</h6>
+				<h6 class="text-activity">Alien Defense Ratings</h6>
 				<p>200 + [ (Armor + Shields ) / 200 ]</p>
 				<ul>
-					<li><span class="planetname">Ship Hull</span>: 0-199</li>
-					<li><span class="planetname">Class 1</span>: 200-399</li>
-					<li><span class="planetname">Class 2</span>: 400-599</li>
-					<li><span class="planetname">Class 3</span>: 600-799</li>
-					<li><span class="planetname">Class 4</span>: 800-999</li>
-					<li><span class="planetname">Class 5</span>: 1000-1199</li>
-					<li><span class="planetname">Class 6</span>: 1200-1399</li>
-					<li><span class="planetname">Class 7</span>: 1400-1599</li>
+					<li><span class="text-warning">Ship Hull</span>: 0-199</li>
+					<li><span class="text-warning">Class 1</span>: 200-399</li>
+					<li><span class="text-warning">Class 2</span>: 400-599</li>
+					<li><span class="text-warning">Class 3</span>: 600-799</li>
+					<li><span class="text-warning">Class 4</span>: 800-999</li>
+					<li><span class="text-warning">Class 5</span>: 1000-1199</li>
+					<li><span class="text-warning">Class 6</span>: 1200-1399</li>
+					<li><span class="text-warning">Class 7</span>: 1400-1599</li>
 					<li>etc.</li>
 				</ul>
-				<p class="guarded">Aliens will adapt their defenses each time a ship from their fleet is destroyed, raising their effective defense levels over time. Alien defenses are raised after combat encounters are resolved.</p>
+				<p class="text-danger">Aliens adapt defenses each time a ship is destroyed, raising defense levels after the encounter.</p>
 			</div>
 		</div> <!-- end combat -->
-
 		<!-- PROFILES -->
 		<div id="profile" style="display: none;">
-
-
 			<!-- PROFILE: INTERSTEL -->
 			<div id="aliens-interstel" class="alienprofile border-interstel text-interstel bg-interstel">
 				<h5><span>Profile:</span> Interstel</h5>
 				<div>
-					<img src="interface/alien-interstel.png" alt="Starport" class="race border-interstel border-shape2" />
+					<img src="interface/alien-interstel.webp" alt="Starport" class="race border-interstel border-shape2">
 				</div>
-
-			<p>Captains of the fleet, the situation has never been more grave. Within two years, the star our home planet of Arth's orbits will flare, killing off all life in the system. This phenomenon is not local to our star system: stars all over our region of space are flaring, coreward to outward. Your mission is to do anything it takes to find out why this is happening and put a stop to it. Failing that, find as many coloinzable worlds as you can. We'll need somewhere to begin again if Arth can't be saved.</p>
-
+				<p>Captains of the fleet, the situation has never been more grave. Within two years, the star our home planet of Arth's orbits will flare, killing off all life in the system. This phenomenon is not local to our star system: stars all over our region of space are flaring, coreward to outward. Your mission is to do anything it takes to find out why this is happening and put a stop to it. Failing that, find as many coloinzable worlds as you can. We'll need somewhere to begin again if Arth can't be saved.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
-						<img src="ships/ship-interstel-iss.png" alt="[Ship]"/>
+						<img src="ships/ship-interstel-iss.webp" alt="[Ship]">
 						<h5>Interstel Ship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 1-5</li>
@@ -676,7 +669,7 @@ $('#'+$(this).val()).show();
  						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
-						<img src="ships/ship-interstel-police.png" alt="[Ship]"/>
+						<img src="ships/ship-interstel-police.webp" alt="[Ship]">
 						<h5>Police</h5>
 						<ul>
 							<li><strong>Shields</strong>: 15000</li>
@@ -688,7 +681,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
-						<img src="ships/ship-interstel-nomad.png" alt="[Ship]"/>
+						<img src="ships/ship-interstel-nomad.webp" alt="[Ship]">
 						<h5>Nomad Probe</h5>
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
@@ -698,18 +691,14 @@ $('#'+$(this).val()).show();
 							<li class="notes"><strong>Components</strong>: Iron, Magnesium, Endurium</li>
 						</ul>
 					</div>
-
 				</div>
-
 			</div> <!-- end interstel -->
-
 			<!-- PROFILE: VELOX -->
 			<div id="aliens-velox" class="alienprofile border-velox text-velox bg-velox">
 				<h5><span>Profile:</span> Velox</h5>
 				<div>
-					<img src="interface/alien-velox.png" alt="Veloxi" class="race border-velox border-shape2" />
+					<img src="interface/alien-velox.webp" alt="Veloxi" class="race border-velox border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: Insectoid</li>
 					<li><strong>Approx Fleet Size</strong>: 300 ships</li>
@@ -717,12 +706,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Gregarious</li>
 					<li><strong>Holy Number: 6</strong></li>
 				</ul>
-
 				<p>Velox ships are piloted by males, servants of the Veloxi Queen. Their fleet patrols their territory constantly and may demand a tribute of Endurium fuel from ships passing through it. Veloxi colonies are often orbited by robotic Drone security satellites.</p>
-
 				<div class="fleet">
 					<div class="ship border-shape border-velox text-velox bg-velox">
-						<img src="ships/ship-velox-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-velox-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 600</li>
@@ -733,7 +720,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="border-shape ship border-velox text-velox bg-velox2">
-						<img src="ships/ship-velox-warship.png" alt="[Ship]"/>
+						<img src="ships/ship-velox-warship.webp" alt="[Ship]">
 						<h5>Warship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 800</li>
@@ -744,7 +731,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-velox text-velox bg-velox2">
-						<img src="ships/ship-velox-transport.png" alt="[Ship]"/>
+						<img src="ships/ship-velox-transport.webp" alt="[Ship]">
 						<h5>Transport</h5>
 						<ul>
 							<li><strong>Shields</strong>: 400</li>
@@ -755,7 +742,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-velox text-velox bg-velox">
-						<img src="ships/ship-velox-drone.png" alt="[Ship]"/>
+						<img src="ships/ship-velox-drone.webp" alt="[Ship]">
 						<h5>Drone</h5>
 						<ul>
 							<li><strong>Shields</strong>: 1000</li>
@@ -766,15 +753,14 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 				</div>
-			</div> <!-- end velox -->
-
+			</div>
+			<!-- end velox -->
 			<!-- PROFILE: ELOWAN -->
 			<div id="aliens-elowan" class="alienprofile border-elowan text-elowan bg-elowan">
 				<h5><span>Profile:</span> Elowan</h5>
 				<div>
-					<img src="interface/alien-elowan.png" alt="Elowan"  class="race border-elowan border-shape2" />
+					<img src="interface/alien-elowan.webp" alt="Elowan"  class="race border-elowan border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: Plant</li>
 					<li><strong>Approx Fleet Size</strong>: 50 ships</li>
@@ -782,11 +768,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Friendly</li>
 					<li><strong></strong></li>
 				</ul>
-
 				<p>Elowans have been extremely receptive to human presense in their territory, having known our kind since the days of the Old Empire. It is advised to have no Thrynn crew members on board when speaking with Elowan captains.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-elowan text-elowan bg-elowan">
-						<img src="ships/ship-elowan-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-elowan-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 800</li>
@@ -797,7 +782,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-elowan text-elowan bg-elowan2">
-						<img src="ships/ship-elowan-warship.png" alt="[Ship]"/>
+						<img src="ships/ship-elowan-warship.webp" alt="[Ship]">
 						<h5>Warship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 1000</li>
@@ -808,7 +793,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-elowan text-elowan bg-elowan2">
-						<img src="ships/ship-elowan-transport.png" alt="[Ship]"/>
+						<img src="ships/ship-elowan-transport.webp" alt="[Ship]">
 						<h5>Transport</h5>
 						<ul>
 							<li><strong>Shields</strong>: 600</li>
@@ -819,15 +804,13 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>			
 				</div>
-			</div> <!-- end elowan -->
-
+			</div><!-- end elowan -->
 			<!-- PROFILE: GAZURTOID -->
 			<div id="aliens-gazurtoid" class="alienprofile border-gazurtoid text-gazurtoid bg-gazurtoid">
 				<h5><span>Profile:</span> Gazurtoid</h5>
 				<div>
-					<img src="interface/alien-gazurtoid.png" alt="Gazurtoid" class="race border-gazurtoid border-shape2" />
+					<img src="interface/alien-gazurtoid.webp" alt="Gazurtoid" class="race border-gazurtoid border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: Mollusk</li>
 					<li><strong>Approx Fleet Size</strong>: 250 ships</li>
@@ -835,12 +818,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Hostile</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-
 				<p>Gazurtoid are squid-like aliens with a penchant for guns and religion. Conversation with them is rare, and usually ends like most Gazurtoid encoutners do: with laser fire coming from the many cannons atop their giant cathedral-ships. Special shielding makes their ships impervious to missiles.</p>
-				
 				<div class="fleet">
 					<div class="ship border-shape border-gazurtoid text-gazurtoid bg-gazurtoid">
-						<img src="ships/ship-gazurtoid-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-gazurtoid-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 200</li>
@@ -852,7 +833,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-gazurtoid text-gazurtoid bg-gazurtoid2">
-						<img src="ships/ship-gazurtoid-warship.png" alt="[Ship]"/>
+						<img src="ships/ship-gazurtoid-warship.webp" alt="[Ship]">
 						<h5>Warship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 800</li>
@@ -864,15 +845,14 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 				</div>
-			</div> <!-- end gazurtoid -->
-
+			</div>
+			<!-- end gazurtoid -->
 			<!-- PROFILE: MECHAN 9 -->
 			<div id="aliens-mechans" class="alienprofile border-mechans text-mechans bg-mechans">
 				<h5><span>Profile:</span> Mechan 9</h5>
 				<div>
-					<img src="interface/alien-mechan.png" alt="Mechan 9"  class="race border-mechans border-shape2" />
+					<img src="interface/alien-mechan.webp" alt="Mechan 9"  class="race border-mechans border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: Android</li>
 					<li><strong>Approx Fleet Size</strong>: 75 ships</li>
@@ -880,12 +860,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Erratic</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-
 				<p>While the design of their ships suggests Old Empire origin, all else about these androids is shrouded in mystery. They appear to be waiting for something, or someone. Several Interstel ships have been lost Mechan missiles; approach the space coreward of Arth with caution.</p>
-
 				<div class="fleet">
 					<div class="ship border-shape border-mechans text-mechans bg-mechans">
-						<img src="ships/ship-mechan-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-mechan-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 400</li>
@@ -896,7 +874,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-mechans text-mechans bg-mechans">
-						<img src="ships/ship-mechan-noah9.png" alt="[Ship]"/>
+						<img src="ships/ship-mechan-noah9.webp" alt="[Ship]">
 						<h5>Noah 9</h5>
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
@@ -905,17 +883,15 @@ $('#'+$(this).val()).show();
 							<li><strong>Missiles</strong>: 0</li>
 						</ul>
 					</div>
-
 				</div>
-			</div> <!-- end mechans -->
-
+			</div>
+			<!-- end mechans -->
 			<!-- PROFILE: SPEMIN -->
 			<div id="aliens-spemin" class="alienprofile border-spemin text-spemin bg-spemin">
 				<h5><span>Profile:</span> Spemin</h5>
 				<div>
-					<img src="interface/alien-spemin.png" alt="Spemin"  class="race border-spemin border-shape2" />
+					<img src="interface/alien-spemin.webp" alt="Spemin"  class="race border-spemin border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: Invertebrate</li>
 					<li><strong>Approx Fleet Size</strong>: 225 ships</li>
@@ -923,12 +899,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Treacherous</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-
 				<p>While Spemin ships are unimpressive by sector standards, they've survived on the edge of Uhlek *and* Gazurtoid space for centuries. Spemin are known to lack a spine in more ways that one: avoid them unless you have the upper hand, then give them a good thrashing to get them talking.</p>
-
 				<div class="fleet">
 					<div class="ship border-shape border-spemin text-spemin bg-spemin">
-						<img src="ships/ship-spemin-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-spemin-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
@@ -939,7 +913,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-spemin text-spemin bg-spemin2">
-						<img src="ships/ship-spemin-warship.png" alt="[Ship]"/>
+						<img src="ships/ship-spemin-warship.webp" alt="[Ship]">
 						<h5>Warship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
@@ -950,7 +924,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-spemin text-spemin bg-spemin2">
-						<img src="ships/ship-spemin-transport.png" alt="[Ship]"/>
+						<img src="ships/ship-spemin-transport.webp" alt="[Ship]">
 						<h5>Transport</h5>
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
@@ -961,15 +935,14 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 				</div>
-			</div> <!-- end spemin -->
-
+			</div>
+			<!-- end spemin -->
 			<!-- PROFILE: THRYNN -->
 			<div id="aliens-thrynn" class="alienprofile border-thrynn text-thrynn bg-thrynn">
 				<h5><span>Profile:</span> Thrynn</h5>
 				<div>
-					<img src="interface/alien-thrynn.png" alt="Thrynn"  class="race border-thrynn border-shape2" />
+					<img src="interface/alien-thrynn.webp" alt="Thrynn"  class="race border-thrynn border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: Reptilian</li>
 					<li><strong>Approx Fleet Size</strong>: 100 ships</li>
@@ -977,12 +950,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Commcercial</li>
 					<li><strong>Trafficking</strong>: Artifacts, Plutonium</li>
 				</ul>
-
 				<p>Thrynn are prideful and see themselves as the apex of natural selection. Their transformation to a spacefaring society has made them fiercely competetive traders and information brokers. They are knowledgeable about the locations of artifacts in the sector.</p>
-
 				<div class="fleet">
 					<div class="ship border-shape border-thrynn text-thrynn bg-thrynn">
-						<img src="ships/ship-thrynn-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-thrynn-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 400</li>
@@ -993,7 +964,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-thrynn text-thrynn bg-thrynn2">
-						<img src="ships/ship-thrynn-warship.png" alt="[Ship]"/>
+						<img src="ships/ship-thrynn-warship.webp" alt="[Ship]">
 						<h5>Warship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 600</li>
@@ -1004,7 +975,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-thrynn text-thrynn bg-thrynn2">
-						<img src="ships/ship-thrynn-transport.png" alt="[Ship]"/>
+						<img src="ships/ship-thrynn-transport.webp" alt="[Ship]">
 						<h5>Transport</h5>
 						<ul>
 							<li><strong>Shields</strong>: 200</li>
@@ -1015,15 +986,14 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 				</div>
-			</div> <!-- end thrynn -->
-
+			</div>
+			<!-- end thrynn -->
 			<!-- PROFILE: UHLEK -->
 			<div id="aliens-uhlek" class="alienprofile border-uhlek text-uhlek bg-uhlek">
 				<h5><span>Profile:</span> Uhlek</h5>
 				<div>
-					<img src="interface/alien-uhlek.png" alt="Uhlek"  class="race border-uhlek border-shape2" />
+					<img src="interface/alien-uhlek.webp" alt="Uhlek"  class="race border-uhlek border-shape2">
 				</div>
-
 				<ul class="race">
 					<li><strong>Phenotype</strong>: ???</li>
 					<li><strong>Approx Fleet Size</strong>: 300 ships</li>
@@ -1031,12 +1001,10 @@ $('#'+$(this).val()).show();
 					<li><strong>Disposition</strong>: Hostile</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-
 				<p>Huge Uhlek fleets dominate the outward and upspin areas of our sector and have not communicated in centuries. Their warships are armed with plasma bolts, which have double the destructive capacity of Interstel's Class 5 missiles. Venture into Uhlek space at your own risk.</p>
-
 				<div class="fleet">
 					<div class="ship border-shape border-uhlek text-uhlek bg-uhlek2">
-						<img src="ships/ship-uhlek-scout.png" alt="[Ship]"/>
+						<img src="ships/ship-uhlek-scout.webp" alt="[Ship]">
 						<h5>Scout</h5>
 						<ul>
 							<li><strong>Shields</strong>: 1000</li>
@@ -1047,7 +1015,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-uhlek text-uhlek bg-uhlek">
-						<img src="ships/ship-uhlek-warship.png" alt="[Ship]"/>
+						<img src="ships/ship-uhlek-warship.webp" alt="[Ship]">
 						<h5>Warship</h5>
 						<ul>
 							<li><strong>Shields</strong>: 1400</li>
@@ -1059,20 +1027,18 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 				</div>
-			</div> <!-- end uhlek -->
-
+			</div>
+			<!-- end uhlek -->
 			<!-- PROFILE: MISC -->
 			<div id="aliens-misc" class="alienprofile border-interstel text-interstel bg-interstel">
 				<h5><span>Profile:</span> Other Alien Life</h5>
 				<div>
-					<img src="interface/alien-minstrel.png" alt="Minstrel"  class="race border-interstel border-shape2" />
+					<img src="interface/alien-minstrel.webp" alt="Minstrel"  class="race border-interstel border-shape2">
 				</div>
-
 				<p>The Elowan tales of Delasa'Alia (wandering minstrels) appear to be true, and Interstel has recieved scattered reports of a few other ships exploring the deep. There is also terrestrial life on planet surfaces, Interstel will pay for lifeforms or lifeform scans brought back to starport.</p>
-
 				<div class="fleet">
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
-						<img src="ships/ship-misc-minstrel.png" alt="[Ship]"/>
+						<img src="ships/ship-misc-minstrel.webp" alt="[Ship]">
 						<h5>Minstrel</h5>
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
@@ -1082,7 +1048,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
-						<img src="ships/ship-misc-mysterion.png" alt="[Ship]"/>
+						<img src="ships/ship-misc-mysterion.webp" alt="[Ship]">
 						<h5>Mysterion</h5>
 						<ul>
 							<li><strong>Shields</strong>: 15000</li>
@@ -1093,7 +1059,7 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
-						<img src="ships/ship-misc-enterprise.png" alt="[Ship]"/>
+						<img src="ships/ship-misc-enterprise.webp" alt="[Ship]">
 						<h5>Enterprise</h5>
 						<ul>
 							<li><strong>Shields</strong>: 1000</li>
@@ -1104,44 +1070,35 @@ $('#'+$(this).val()).show();
 						</ul>
 					</div>
 				</div>
-			</div> <!-- end misc -->
-
-		</div> <!-- end profiles -->
-
-	</div> <!-- end codex -->
-
-</div> <!-- end utils -->
-
-
-
+			</div>
+			<!-- end misc -->
+		</div>
+		<!-- end profiles -->
+	</div>
+	<!-- end codex -->
+</div>
+<!-- end utils -->
 <!-- SET FULL SCREEN -->
 <div id="fullscreen">
-
 	<!-- MAP CONTAINER -->
 	<div id="map">
-
 		<!-- SCROLLING JS FOR STARFIELD AND COORDS -->
-		<script type="text/javascript">
-$(window).scroll(function(){
-//box one
-var $win = $(window);
-$('#west').css('top', -$win.scrollTop());
-$('#east').css('top', -$win.scrollTop());
-$('#north').css('left', -$win.scrollLeft());
-$('#south').css('left', -$win.scrollLeft());
-$('#starfield').css('left', -$win.scrollLeft()/2.8);
-$('#starfield').css('top', -$win.scrollTop()/2.8);
-});
+		<script>
+			$(window).scroll(function(){
+				//box one
+				var $win = $(window);
+				$('#west').css('top', -$win.scrollTop());
+				$('#east').css('top', -$win.scrollTop());
+				$('#north').css('left', -$win.scrollLeft());
+				$('#south').css('left', -$win.scrollLeft());
+				$('#starfield').css('left', -$win.scrollLeft()/2.8);
+				$('#starfield').css('top', -$win.scrollTop()/2.8);
+			});
 		</script>
-
 		<!-- STARFIELD BACKGROUND -->
-		<div id="starfield" style="display: block;">
-			&nbsp;
-		</div>
-
+		<div id="starfield" style="display: block;">&nbsp;</div>
 		<!-- COORDINATES OVERLAY -->
 		<div id="coordinates">
-
 			<!-- COORDINATES - BOTTOM -->
 			<div id="south">
 				<ul class="xcoords maptext">
@@ -1201,178 +1158,339 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					<li>0</li>
 				</ul>
 			</div>
-			
-			
 		</div> <!-- end coordinates -->
-
 		<!-- BEGIN STARMAP -->
 		<div class="starmap maptext">
-
 			<!-- BEGIN NEBULAE -->
 			<div id="nebulae" style="display: none;">
-
 				<!-- sw, uhlek territory -->			
 				<div class="nebulae" style="top: 1920px; left: 98px;">
-					<img src="map/nebulae-01.png" alt="nebulae" />
+					<img src="map/nebulae-01.webp" alt="nebulae">
 				</div>
-
 				<!-- center, uhlek territory -->			
 				<div class="nebulae" style="top: 1435px; left: 160px;">
-					<img src="map/nebulae-02.png" alt="nebulae" />
+					<img src="map/nebulae-02.webp" alt="nebulae">
 				</div>
-
 				<!-- nw, spemin territory -->			
 				<div class="nebulae" style="top: 735px; left: 455px;">
-					<img src="map/nebulae-03.png" alt="nebulae" />
+					<img src="map/nebulae-03.webp" alt="nebulae">
 				</div>
-
 				<!-- nw, uhlek territory -->			
 				<div class="nebulae" style="top: 245px; left: 135px;">
-					<img src="map/nebulae-04.png" alt="nebulae" />
+					<img src="map/nebulae-04.webp" alt="nebulae">
 				</div>
-
 				<!-- n, uhlek territory -->			
 				<div class="nebulae" style="top: 164px; left: 1105px;">
-					<img src="map/nebulae-05.png" alt="nebulae" />
+					<img src="map/nebulae-05.webp" alt="nebulae">
 				</div>
-
 				<!-- n, velox territory -->			
 				<div class="nebulae" style="top: 735px; left: 1515px;">
-					<img src="map/nebulae-06.png" alt="nebulae" />
+					<img src="map/nebulae-06.webp" alt="nebulae">
 				</div>
-
 				<!-- ne, black egg area -->			
 				<div class="nebulae" style="top: 440px; left: 2235px;">
-					<img src="map/nebulae-07.png" alt="nebulae" />
+					<img src="map/nebulae-07.webp" alt="nebulae">
 				</div>
-
 				<!-- e, pythagorus area -->			
 				<div class="nebulae" style="top: 1480px; left: 2275px;">
-					<img src="map/nebulae-08.png" alt="nebulae" />
+					<img src="map/nebulae-08.webp" alt="nebulae">
 				</div>
-
 				<!-- central, four seedlings area -->			
 				<div class="nebulae" style="top: 1385px; left: 1645px;">
-					<img src="map/nebulae-09.png" alt="nebulae" />
+					<img src="map/nebulae-09.webp" alt="nebulae">
 				</div>
-
 				<!-- s, thrynn territory -->			
 				<div class="nebulae" style="top: 1830px; left: 1395px;">
-					<img src="map/nebulae-10.png" alt="nebulae" />
+					<img src="map/nebulae-10.webp" alt="nebulae">
 				</div>
-
 				<!-- se, left of axe -->			
 				<div class="nebulae" style="top: 1960px; left: 1800px;">
-					<img src="map/nebulae-11.png" alt="nebulae" />
+					<img src="map/nebulae-11.webp" alt="nebulae">
 				</div>
-
 			</div> <!-- end nebulae -->
-
-
 			<!-- BEGIN NEBULAE -->
 			<div id="nebulaedetail" style="display: block;">
-
 				<!-- sw, uhlek territory -->			
 				<div class="nebulae" style="top: 1920px; left: 98px;">
-					<img src="map/nebulae2-01.png" alt="nebulae" />
+					<img src="map/nebulae2-01.webp" alt="nebulae">
 				</div>
-
 				<!-- center, uhlek territory -->			
 				<div class="nebulae" style="top: 1435px; left: 160px;">
-					<img src="map/nebulae2-02.png" alt="nebulae" />
+					<img src="map/nebulae2-02.webp" alt="nebulae">
 				</div>
-
 				<!-- nw, spemin territory -->			
 				<div class="nebulae" style="top: 735px; left: 455px;">
-					<img src="map/nebulae2-03.png" alt="nebulae" />
+					<img src="map/nebulae2-03.webp" alt="nebulae">
 				</div>
-
 				<!-- nw, uhlek territory -->			
 				<div class="nebulae" style="top: 245px; left: 135px;">
-					<img src="map/nebulae2-04.png" alt="nebulae" />
+					<img src="map/nebulae2-04.webp" alt="nebulae">
 				</div>
-
 				<!-- n, uhlek territory -->			
 				<div class="nebulae" style="top: 164px; left: 1105px;">
-					<img src="map/nebulae2-05.png" alt="nebulae" />
+					<img src="map/nebulae2-05.webp" alt="nebulae">
 				</div>
-
 				<!-- n, velox territory -->			
 				<div class="nebulae" style="top: 735px; left: 1515px;">
-					<img src="map/nebulae2-06.png" alt="nebulae" />
+					<img src="map/nebulae2-06.webp" alt="nebulae">
 				</div>
-
 				<!-- ne, black egg area -->			
 				<div class="nebulae" style="top: 440px; left: 2235px;">
-					<img src="map/nebulae2-07.png" alt="nebulae" />
+					<img src="map/nebulae2-07.webp" alt="nebulae">
 				</div>
-
 				<!-- e, pythagorus area -->			
 				<div class="nebulae" style="top: 1480px; left: 2275px;">
-					<img src="map/nebulae2-08.png" alt="nebulae" />
+					<img src="map/nebulae2-08.webp" alt="nebulae">
 				</div>
-
 				<!-- central, four seedlings area -->			
 				<div class="nebulae" style="top: 1385px; left: 1645px;">
-					<img src="map/nebulae2-09.png" alt="nebulae" />
+					<img src="map/nebulae2-09.webp" alt="nebulae">
 				</div>
-
 				<!-- s, thrynn territory -->			
 				<div class="nebulae" style="top: 1830px; left: 1395px;">
-					<img src="map/nebulae2-10.png" alt="nebulae" />
+					<img src="map/nebulae2-10.webp" alt="nebulae">
 				</div>
-
 				<!-- se, left of axe -->			
 				<div class="nebulae" style="top: 1960px; left: 1800px;">
-					<img src="map/nebulae2-11.png" alt="nebulae" />
+					<img src="map/nebulae2-11.webp" alt="nebulae">
 				</div>
-
 			</div> <!-- end nebulae detail -->
-
 			<!-- BEGIN STARS -->
 			<div id="stars">
-			
 				<!-- WHITE STARS -->
 				<div id="wstars" >
-
 					<!-- unknkown star types -->
 					<div id="s026-082" style="left: 350px; top: 1495px;" class="star"></div>
 					<div id="s033-006" style="left: 425px; top: 2285px;" class="star"></div> <!-- colonizable -->
 					<div id="s082-148" style="left: 930px; top: 830px;" class="star"></div> <!-- spewia -->
-					<div id="" style="left: 885px; top: 1085px;" class="star"></div>
+					<div id="s078-122" style="left: 885px; top: 1085px;" class="star"></div>
 					<div id="s103-185" style="left: 1135px; top: 450px;" class="star"></div> <!-- colonizable -->
 					<div id="s226-167" style="left: 2405px; top: 615px;" class="star"></div> <!-- colonizable -->
 					<!-- end unknown star types -->
-
-					<div id="s002-206" style="left: 115px; top: 225px;" class="star"></div>					<div id="s005-066" style="left: 140px; top: 1660px;" class="star"></div>					<div id="s013-115" style="left: 230px; top: 1165px;" class="star"></div>					<div id="s016-163" style="left: 260px; top: 665px;" class="star"></div> <!-- colonizable -->					<div id="s016-112" style="left: 260px; top: 1200px;" class="star"></div>					<div id="s017-108" style="left: 270px; top: 1235px;" class="star"></div> <!-- colonizable -->					<div id="s020-198" style="left: 285px; top: 315px;" class="star"></div> <!-- crystal cone -->					<div id="s022-121" style="left: 320px; top: 1105px;" class="star"></div>					<div id="s026-103" style="left: 355px; top: 565px;" class="star"></div>					<div id="s032-063" style="left: 420px; top: 1695px;" class="star"></div>					<div id="s034-083" style="left: 435px; top: 1485px;" class="star"></div>					<div id="s035-173" style="left: 455px; top: 565px;" class="star"></div>					<div id="s043-151" style="left: 530px; top: 790px;" class="star"></div>					<div id="s046-148" style="left: 575px; top: 830px;" class="star"></div>					<div id="s048-030" style="left: 580px; top: 2035px;" class="star"></div>					<div id="s054-062" style="left: 640px; top: 1710px;" class="star"></div>					<div id="s056-202" style="left: 665px; top: 270px;" class="star"></div>					<div id="s057-012" style="left: 670px; top: 2220px;" class="star"></div>					<div id="s059-125" style="left: 690px; top: 1075px;" class="star"></div> <!-- nebula, 59, 125ish -->					<div id="s063-102" style="left: 730px; top: 1295px;" class="star"></div>					<div id="s065-099" style="left: 755px; top: 1330px;" class="star"></div>					<div id="s067-208" style="left: 775px; top: 205px;" class="star"></div>					<div id="s068-104" style="left: 785px; top: 1275px;" class="star"></div>					<div id="s070-102" style="left: 805px; top: 1295px;" class="star"></div>
-					<div id="s083-067" style="left: 930px; top: 1660px;" class="star"></div>					<div id="s083-169" style="left: 935px; top: 610px;" class="star"></div>					<div id="s086-055" style="left: 965px; top: 1780px;" class="star"></div>					<div id="s086-080" style="left: 965px; top: 1523px;" class="star"></div> <!-- colonizable -->					<div id="s086-042" style="left: 965px; top: 1915px;" class="star"></div>					<div id="s087-040" style="left: 975px; top: 1940px;" class="star"></div> <!-- colonizable -->					<div id="s088-038" style="left: 985px; top: 1960px;" class="star"></div>					<div id="s090-008" style="left: 1010px; top: 2265px;" class="star"></div> <!-- colonizable -->					<div id="s091-086" style="left: 1015px; top: 1460px;" class="star"></div> <!-- colonizable -->					<div id="s093-207" style="left: 1040px; top: 215px;" class="star"></div>					<div id="s094-007" style="left: 1050px; top: 2275px;" class="star"></div>					<div id="s094-118" style="left: 1050px; top: 1135px;" class="star"></div> <!-- colonizable -->					<div id="s098-078" style="left: 1085px; top: 1550px;" class="star"></div>					<div id="s105-165" style="left: 1165px; top: 650px;" class="star"></div> <!-- colonizable -->										<div id="s112-200" style="left: 1230px; top: 295px;" class="star"></div> <!-- red cylinder -->					<div id="s114-138" style="left: 1250px; top: 925px;" class="star"></div>					<div id="s118-146" style="left: 1295px; top: 845px;" class="star"></div> <!-- dodecahedron -->					<div id="s125-189" style="left: 1365px; top: 405px;" class="star"></div>					<div id="s126-028" style="left: 1370px; top: 2055px;" class="star"></div>					<div id="s126-072" style="left: 1375px; top: 1610px;" class="star"></div>					<div id="s127-213" style="left: 1385px; top: 155px;" class="star"></div>					<div id="s131-116" style="left: 1425px; top: 1150px;" class="star"></div>					<div id="s143-082" style="left: 1550px; top: 1500px;" class="star"></div>					<div id="s144-022" style="left: 1555px; top: 2120px;" class="star"></div>					<div id="s145-107" style="left: 1565px; top: 1240px;" class="star"></div> <!-- heaven -->					<div id="s145-081" style="left: 1570px; top: 1510px;" class="star"></div>					<div id="s146-177" style="left: 1585px; top: 510px;" class="star"></div>					<div id="s149-133" style="left: 1610px; top: 980px;" class="star"></div> <!-- colonizable -->					<div id="s160-044" style="left: 1720px; top: 1894px;" class="star"></div>					<div id="s161-135" style="left: 1730px; top: 960px;" class="star"></div>					<div id="s162-143" style="left: 1745px; top: 1910px;" class="star"></div>					<div id="s166-121" style="left: 1785px; top: 1105px;" class="star"></div>
-					<div id="s166-159" style="left: 1785px; top: 710px;" class="star"></div>					<div id="s172-055" style="left: 1845px; top: 1780px;" class="star"></div>					<div id="s176-202" style="left: 1885px; top: 265px;" class="star"></div>					<div id="s179-173" style="left: 1915px; top: 570px;" class="star"></div>					<div id="s179-195" style="left: 1915px; top: 340px;" class="star"></div>					<div id="s180-008" style="left: 1920px; top: 2265px;" class="star"></div>					<div id="s180-122" style="left: 1925px; top: 1090px;" class="star"></div>					<div id="s182-026" style="left: 1945px; top: 20856px;" class="star"></div> <!-- nebula, 182, 26-->
+					<div id="s002-206" style="left: 115px; top: 225px;" class="star"></div>
+					<div id="s005-066" style="left: 140px; top: 1660px;" class="star"></div>
+					<div id="s013-115" style="left: 230px; top: 1165px;" class="star"></div>
+					<div id="s016-163" style="left: 260px; top: 665px;" class="star"></div> <!-- colonizable -->
+					<div id="s016-112" style="left: 260px; top: 1200px;" class="star"></div>
+					<div id="s017-108" style="left: 270px; top: 1235px;" class="star"></div> <!-- colonizable -->
+					<div id="s020-198" style="left: 285px; top: 315px;" class="star"></div> <!-- crystal cone -->
+					<div id="s022-121" style="left: 320px; top: 1105px;" class="star"></div>
+					<div id="s026-103" style="left: 355px; top: 565px;" class="star"></div>
+					<div id="s032-063" style="left: 420px; top: 1695px;" class="star"></div>
+					<div id="s034-083" style="left: 435px; top: 1485px;" class="star"></div>
+					<div id="s035-173" style="left: 455px; top: 565px;" class="star"></div>
+					<div id="s043-151" style="left: 530px; top: 790px;" class="star"></div>
+					<div id="s046-148" style="left: 575px; top: 830px;" class="star"></div>
+					<div id="s048-030" style="left: 580px; top: 2035px;" class="star"></div>
+					<div id="s054-062" style="left: 640px; top: 1710px;" class="star"></div>
+					<div id="s056-202" style="left: 665px; top: 270px;" class="star"></div>
+					<div id="s057-012" style="left: 670px; top: 2220px;" class="star"></div>
+					<div id="s059-125" style="left: 690px; top: 1075px;" class="star"></div> <!-- nebula, 59, 125ish -->
+					<div id="s063-102" style="left: 730px; top: 1295px;" class="star"></div>
+					<div id="s065-099" style="left: 755px; top: 1330px;" class="star"></div>
+					<div id="s067-208" style="left: 775px; top: 205px;" class="star"></div>
+					<div id="s068-104" style="left: 785px; top: 1275px;" class="star"></div>
+					<div id="s070-102" style="left: 805px; top: 1295px;" class="star"></div>
+					<div id="s083-067" style="left: 930px; top: 1660px;" class="star"></div>
+					<div id="s083-169" style="left: 935px; top: 610px;" class="star"></div>
+					<div id="s086-055" style="left: 965px; top: 1780px;" class="star"></div>
+					<div id="s086-080" style="left: 965px; top: 1523px;" class="star"></div> <!-- colonizable -->
+					<div id="s086-042" style="left: 965px; top: 1915px;" class="star"></div>
+					<div id="s087-040" style="left: 975px; top: 1940px;" class="star"></div> <!-- colonizable -->
+					<div id="s088-038" style="left: 985px; top: 1960px;" class="star"></div>
+					<div id="s090-008" style="left: 1010px; top: 2265px;" class="star"></div> <!-- colonizable -->
+					<div id="s091-086" style="left: 1015px; top: 1460px;" class="star"></div> <!-- colonizable -->
+					<div id="s093-207" style="left: 1040px; top: 215px;" class="star"></div>
+					<div id="s094-007" style="left: 1050px; top: 2275px;" class="star"></div>
+					<div id="s094-118" style="left: 1050px; top: 1135px;" class="star"></div> <!-- colonizable -->
+					<div id="s098-078" style="left: 1085px; top: 1550px;" class="star"></div>
+					<div id="s105-165" style="left: 1165px; top: 650px;" class="star"></div> <!-- colonizable -->					
+					<div id="s112-200" style="left: 1230px; top: 295px;" class="star"></div> <!-- red cylinder -->
+					<div id="s114-138" style="left: 1250px; top: 925px;" class="star"></div>
+					<div id="s118-146" style="left: 1295px; top: 845px;" class="star"></div> <!-- dodecahedron -->
+					<div id="s125-189" style="left: 1365px; top: 405px;" class="star"></div>
+					<div id="s126-028" style="left: 1370px; top: 2055px;" class="star"></div>
+					<div id="s126-072" style="left: 1375px; top: 1610px;" class="star"></div>
+					<div id="s127-213" style="left: 1385px; top: 155px;" class="star"></div>
+					<div id="s131-116" style="left: 1425px; top: 1150px;" class="star"></div>
+					<div id="s143-082" style="left: 1550px; top: 1500px;" class="star"></div>
+					<div id="s144-022" style="left: 1555px; top: 2120px;" class="star"></div>
+					<div id="s145-107" style="left: 1565px; top: 1240px;" class="star"></div> <!-- heaven -->
+					<div id="s145-081" style="left: 1570px; top: 1510px;" class="star"></div>
+					<div id="s146-177" style="left: 1585px; top: 510px;" class="star"></div>
+					<div id="s149-133" style="left: 1610px; top: 980px;" class="star"></div> <!-- colonizable -->
+					<div id="s160-044" style="left: 1720px; top: 1894px;" class="star"></div>
+					<div id="s161-135" style="left: 1730px; top: 960px;" class="star"></div>
+					<div id="s162-143" style="left: 1745px; top: 1910px;" class="star"></div>
+					<div id="s166-121" style="left: 1785px; top: 1105px;" class="star"></div>
+					<div id="s166-159" style="left: 1785px; top: 710px;" class="star"></div>
+					<div id="s172-055" style="left: 1845px; top: 1780px;" class="star"></div>
+					<div id="s176-202" style="left: 1885px; top: 265px;" class="star"></div>
+					<div id="s179-173" style="left: 1915px; top: 570px;" class="star"></div>
+					<div id="s179-195" style="left: 1915px; top: 340px;" class="star"></div>
+					<div id="s180-008" style="left: 1920px; top: 2265px;" class="star"></div>
+					<div id="s180-122" style="left: 1925px; top: 1090px;" class="star"></div>
+					<div id="s182-026" style="left: 1945px; top: 20856px;" class="star"></div> <!-- nebula, 182, 26-->
 					<div id="s184-112" style="left: 1965px; top: 1200px;" class="star"></div>
-					<div id="s187-193" style="left: 2005px; top: 360px;" class="star"></div>					<div id="s188-148" style="left: 2010px; top: 825px;" class="star"></div>					<div id="s192-044" style="left: 2045px; top: 1890px;" class="star"></div>					<div id="s196-049" style="left: 2085px; top: 1840px;" class="star"></div>					<div id="s204-144" style="left: 2170px; top: 870px;" class="star"></div>					<div id="s206-018" style="left: 2185px; top: 2160px;" class="star"></div>					<div id="s207-217" style="left: 2200px; top: 115px;" class="star"></div>					<div id="s225-007" style="left: 2375px; top: 2280px;" class="star"></div>					<div id="s226-208" style="left: 2395px; top: 205px;" class="star"></div>					<div id="s230-067" style="left: 2440px; top: 1655px;" class="star"></div>					<div id="s232-023" style="left: 2450px; top: 2110px;" class="star"></div>					<div id="s234-020" style="left: 2470px; top: 2145px;" class="star"></div> <!-- black egg -->					<div id="s236-119" style="left: 2500px; top: 1130px;" class="star"></div>					<div id="s243-028" style="left: 2560px; top: 2060px;" class="star"></div>
-
-				</div> <!-- end white stars -->
-				
+					<div id="s187-193" style="left: 2005px; top: 360px;" class="star"></div>
+					<div id="s188-148" style="left: 2010px; top: 825px;" class="star"></div>
+					<div id="s192-044" style="left: 2045px; top: 1890px;" class="star"></div>
+					<div id="s196-049" style="left: 2085px; top: 1840px;" class="star"></div>
+					<div id="s204-144" style="left: 2170px; top: 870px;" class="star"></div>
+					<div id="s206-018" style="left: 2185px; top: 2160px;" class="star"></div>
+					<div id="s207-217" style="left: 2200px; top: 115px;" class="star"></div>
+					<div id="s225-007" style="left: 2375px; top: 2280px;" class="star"></div>
+					<div id="s226-208" style="left: 2395px; top: 205px;" class="star"></div>
+					<div id="s230-067" style="left: 2440px; top: 1655px;" class="star"></div>
+					<div id="s232-023" style="left: 2450px; top: 2110px;" class="star"></div>
+					<div id="s234-020" style="left: 2470px; top: 2145px;" class="star"></div> <!-- black egg -->
+					<div id="s236-119" style="left: 2500px; top: 1130px;" class="star"></div>
+					<div id="s243-028" style="left: 2560px; top: 2060px;" class="star"></div>
+				</div>
+				<!-- end white stars -->			
 				<!-- RED STARS -->
 				<div id="rstars">
-					<div id="s234-020" style="left: 110px; top: 2000px;" class="star"></div>					<div id="s010-088" style="left: 190px; top: 1445px;" class="star"></div> <!-- nebula, 10, 88 -->
-					<div id="s014-005" style="left: 230px; top: 2295px;" class="star"></div> <!-- colonizable -->					<div id="s015-214" style="left: 245px; top: 145px;" class="star"></div>					<div id="s021-009" style="left: 310px; top: 2260px;" class="star"></div> <!-- nebula, 21, 9 -->					<div id="s024-095" style="left: 340px; top: 1370px;" class="star"></div>					<div id="s027-172" style="left: 370px; top: 580px;" class="star"></div>					<div id="s032-172" style="left: 420px; top: 580px;" class="star"></div>					<div id="s035-066" style="left: 445px; top: 1655px;" class="star"></div>					<div id="s035-065" style="left: 445px; top: 1675px;" class="star"></div>					<div id="s038-026" style="left: 490px; top: 2085px;" class="star"></div>					<div id="s052-056" style="left: 620px; top: 1775px;" class="star"></div>
-					<div id="s056-144" style="left: 665px; top: 870px;" class="star"></div> <!-- crystal pearl -->					<div id="s065-202" style="left: 760px; top: 270px;" class="star"></div>					<div id="s066-031" style="left: 760px; top: 2025px;" class="star"></div>					<div id="s068-066" style="left: 770px; top: 1665px;" class="star"></div> <!-- shimmering ball -->					<div id="s068-211" style="left: 790px; top: 175px;" class="star"></div>					<div id="s081-098" style="left: 915px; top: 1335px;" class="star"></div> <!-- ellipsoid -->					<div id="s085-168" style="left: 960px; top: 625px;" class="star"></div>					<div id="s088-120" style="left: 985px; top: 1115px;" class="star"></div>
-					<div id="s097-013" style="left: 1075px; top: 2210px;" class="star"></div>					<div id="s097-092" style="left: 1080px; top: 1400px;" class="star"></div>					<div id="s098-082" style="left: 1085px; top: 1500px;" class="star"></div> <!-- colonizable -->					<div id="s104-071" style="left: 1150px; top: 1615px;" class="star"></div> <!-- colonizable -->					<div id="s117-114" style="left: 1285px; top: 1175px;" class="star"></div>					<div id="s121-004" style="left: 1325px; top: 2305px;" class="star"></div>					<div id="s125-039" style="left: 1360px; top: 1945px;" class="star"></div>					<div id="s128-124" style="left: 1395px; top: 1075px;" class="star"></div>					<div id="s128-183" style="left: 1395px; top: 465px;" class="star"></div>					<div id="s128-187" style="left: 1395px; top: 425px;" class="star"></div> <!-- colonizable -->					<div id="s132-165" style="left: 1435px; top: 655px;" class="star"></div> <!-- crystal orb -->					<div id="s144-044" style="left: 1555px; top: 1895px;" class="star"></div>					<div id="s144-131" style="left: 1555px; top: 1000px;" class="star"></div>					<div id="s145-168" style="left: 1568px; top: 620px;" class="star"></div>					<div id="s150-148" style="left: 1620px; top: 830px;" class="star"></div> <!-- votiputox -->					<div id="s154-062" style="left: 1660px; top: 1710px;" class="star"></div>					<div id="s157-098" style="left: 1690px; top: 1335px;" class="star"></div>					<div id="s166-158" style="left: 1785px; top: 725px;" class="star"></div>					<div id="s175-094" style="left: 1875px; top: 1380px;" class="star"></div> <!-- noah 9 -->					<div id="s179-211" style="left: 1920px; top: 180px;" class="star"></div>
-					<div id="s180-028" style="left: 1925px; top: 2065px;" class="star"></div> <!-- nebula, 180, 28 -->					<div id="s182-170" style="left: 1950px; top: 600px;" class="star"></div>					<div id="s184-200" style="left: 1970px; top: 290px;" class="star"></div>					<div id="s188-074" style="left: 2005px; top: 1585px;" class="star"></div> <!-- colonizable -->					<div id="s194-039" style="left: 2065px; top: 1950px;" class="star"></div>					<div id="s206-145" style="left: 2190px; top: 860px;" class="star"></div>					<div id="s211-027" style="left: 2235px; top: 2075px;" class="star"></div>					<div id="s211-093" style="left: 2235px; top: 1390px;" class="star"></div> <!-- colonizable -->					<div id="s247-081" style="left: 2605px; top: 1510px;" class="star"></div>					<div id="s249-000" style="left: 2625px; top: 2335px;" class="star"></div>
-				</div> <!-- end red stars -->
-				
+					<div id="s034-002" style="left: 110px; top: 2000px;" class="star"></div>
+					<div id="s010-088" style="left: 190px; top: 1445px;" class="star"></div> <!-- nebula, 10, 88 -->
+					<div id="s014-005" style="left: 230px; top: 2295px;" class="star"></div> <!-- colonizable -->
+					<div id="s015-214" style="left: 245px; top: 145px;" class="star"></div>
+					<div id="s021-009" style="left: 310px; top: 2260px;" class="star"></div> <!-- nebula, 21, 9 -->
+					<div id="s024-095" style="left: 340px; top: 1370px;" class="star"></div>
+					<div id="s027-172" style="left: 370px; top: 580px;" class="star"></div>
+					<div id="s032-172" style="left: 420px; top: 580px;" class="star"></div>
+					<div id="s035-066" style="left: 445px; top: 1655px;" class="star"></div>
+					<div id="s035-065" style="left: 445px; top: 1675px;" class="star"></div>
+					<div id="s038-026" style="left: 490px; top: 2085px;" class="star"></div>
+					<div id="s052-056" style="left: 620px; top: 1775px;" class="star"></div>
+					<div id="s056-144" style="left: 665px; top: 870px;" class="star"></div> <!-- crystal pearl -->
+					<div id="s065-202" style="left: 760px; top: 270px;" class="star"></div>
+					<div id="s066-031" style="left: 760px; top: 2025px;" class="star"></div>
+					<div id="s068-066" style="left: 770px; top: 1665px;" class="star"></div> <!-- shimmering ball -->
+					<div id="s068-211" style="left: 790px; top: 175px;" class="star"></div>
+					<div id="s081-098" style="left: 915px; top: 1335px;" class="star"></div> <!-- ellipsoid -->
+					<div id="s085-168" style="left: 960px; top: 625px;" class="star"></div>
+					<div id="s088-120" style="left: 985px; top: 1115px;" class="star"></div>
+					<div id="s097-013" style="left: 1075px; top: 2210px;" class="star"></div>
+					<div id="s097-092" style="left: 1080px; top: 1400px;" class="star"></div>
+					<div id="s098-082" style="left: 1085px; top: 1500px;" class="star"></div> <!-- colonizable -->
+					<div id="s104-071" style="left: 1150px; top: 1615px;" class="star"></div> <!-- colonizable -->
+					<div id="s117-114" style="left: 1285px; top: 1175px;" class="star"></div>
+					<div id="s121-004" style="left: 1325px; top: 2305px;" class="star"></div>
+					<div id="s125-039" style="left: 1360px; top: 1945px;" class="star"></div>
+					<div id="s128-124" style="left: 1395px; top: 1075px;" class="star"></div>
+					<div id="s128-183" style="left: 1395px; top: 465px;" class="star"></div>
+					<div id="s128-187" style="left: 1395px; top: 425px;" class="star"></div> <!-- colonizable -->
+					<div id="s132-165" style="left: 1435px; top: 655px;" class="star"></div> <!-- crystal orb -->
+					<div id="s144-044" style="left: 1555px; top: 1895px;" class="star"></div>
+					<div id="s144-131" style="left: 1555px; top: 1000px;" class="star"></div>
+					<div id="s145-168" style="left: 1568px; top: 620px;" class="star"></div>
+					<div id="s150-148" style="left: 1620px; top: 830px;" class="star"></div> <!-- votiputox -->
+					<div id="s154-062" style="left: 1660px; top: 1710px;" class="star"></div>
+					<div id="s157-098" style="left: 1690px; top: 1335px;" class="star"></div>
+					<div id="s166-158" style="left: 1785px; top: 725px;" class="star"></div>
+					<div id="s175-094" style="left: 1875px; top: 1380px;" class="star"></div> <!-- noah 9 -->
+					<div id="s179-211" style="left: 1920px; top: 180px;" class="star"></div>
+					<div id="s180-028" style="left: 1925px; top: 2065px;" class="star"></div> <!-- nebula, 180, 28 -->
+					<div id="s182-170" style="left: 1950px; top: 600px;" class="star"></div>
+					<div id="s184-200" style="left: 1970px; top: 290px;" class="star"></div>
+					<div id="s188-074" style="left: 2005px; top: 1585px;" class="star"></div> <!-- colonizable -->
+					<div id="s194-039" style="left: 2065px; top: 1950px;" class="star"></div>
+					<div id="s206-145" style="left: 2190px; top: 860px;" class="star"></div>
+					<div id="s211-027" style="left: 2235px; top: 2075px;" class="star"></div>
+					<div id="s211-093" style="left: 2235px; top: 1390px;" class="star"></div> <!-- colonizable -->
+					<div id="s247-081" style="left: 2605px; top: 1510px;" class="star"></div>
+					<div id="s249-000" style="left: 2625px; top: 2335px;" class="star"></div>
+				</div>
+				<!-- end red stars -->
 				<!-- ORANGE STARS -->
 				<div id="ostars">
-					<div id="s012-129" style="left: 220px; top: 1225px;" class="star"></div>					<div id="s017-213" style="left: 270px; top: 156px;" class="star"></div> <!-- colonizable -->					<div id="s036-065" style="left: 465px; top: 1675px;" class="star"></div>					<div id="s041-103" style="left: 505px; top: 1290px;" class="star"></div>					<div id="s045-151" style="left: 560px; top: 790px;" class="star"></div>					<div id="s055-032" style="left: 650px; top: 2020px;" class="star"></div>					<div id="s070-208" style="left: 806px; top: 210px;" class="star"></div>					<div id="s082-038" style="left: 925px; top: 1960px;" class="star"></div>					<div id="s088-086" style="left: 985px; top: 1460px;" class="star"></div>					<div id="s090-069" style="left: 1010px; top: 1635px;" class="star"></div>					<div id="s095-103" style="left: 1060px; top: 1285px;" class="star"></div>					<div id="s123-101" style="left: 1345px; top: 1300px;" class="star"></div>					<div id="s129-033" style="left: 1403px; top: 2010px;" class="star"></div> <!-- eleran / thoss -->					<div id="s129-214" style="left: 1410px; top: 145px;" class="star"></div>					<div id="s131-146" style="left: 1425px; top: 845px;" class="star"></div>					<div id="s136-167" style="left: 1475px; top: 630px;" class="star"></div>					<div id="s137-153" style="left: 1490px; top: 770px;" class="star"></div> <!-- colonizable -->					<div id="s150-138" style="left: 1620px; top: 925px;" class="star"></div>					<div id="s151-068" style="left: 1630px; top: 1645px;" class="star"></div>					<div id="s157-091" style="left: 1695px; top: 1405px;" class="star"></div>					<div id="s158-095" style="left: 1700px; top: 1365px;" class="star"></div>					<div id="s162-156" style="left: 1745px; top: 740px;" class="star"></div>					<div id="s172-171" style="left: 1850px; top: 590px;" class="star"></div>					<div id="s177-011" style="left: 1890px; top: 2235px;" class="star"></div>					<div id="s180-120" style="left: 1925px; top: 1120px;" class="star"></div> <!-- old empire ruins -->					<div id="s196-045" style="left: 2085px; top: 1880px;" class="star"></div>					<div id="s217-088" style="left: 2300px; top: 1440px;" class="star"></div>					<div id="s220-005" style="left: 2330px; top: 2300px;" class="star"></div>					<div id="s229-022" style="left: 2420px; top: 2120px;" class="star"></div>					<div id="s241-157" style="left: 2550px; top: 730px;" class="star"></div>
-				</div> <!-- end orange stars -->
-				
+					<div id="s012-129" style="left: 220px; top: 1225px;" class="star"></div>
+					<div id="s017-213" style="left: 270px; top: 156px;" class="star"></div> <!-- colonizable -->
+					<div id="s036-065" style="left: 465px; top: 1675px;" class="star"></div>
+					<div id="s041-103" style="left: 505px; top: 1290px;" class="star"></div>
+					<div id="s045-151" style="left: 560px; top: 790px;" class="star"></div>
+					<div id="s055-032" style="left: 650px; top: 2020px;" class="star"></div>
+					<div id="s070-208" style="left: 806px; top: 210px;" class="star"></div>
+					<div id="s082-038" style="left: 925px; top: 1960px;" class="star"></div>
+					<div id="s088-086" style="left: 985px; top: 1460px;" class="star"></div>
+					<div id="s090-069" style="left: 1010px; top: 1635px;" class="star"></div>
+					<div id="s095-103" style="left: 1060px; top: 1285px;" class="star"></div>
+					<div id="s123-101" style="left: 1345px; top: 1300px;" class="star"></div>
+					<div id="s129-033" style="left: 1403px; top: 2010px;" class="star"></div> <!-- eleran / thoss -->
+					<div id="s129-214" style="left: 1410px; top: 145px;" class="star"></div>
+					<div id="s131-146" style="left: 1425px; top: 845px;" class="star"></div>
+					<div id="s136-167" style="left: 1475px; top: 630px;" class="star"></div>
+					<div id="s137-153" style="left: 1490px; top: 770px;" class="star"></div> <!-- colonizable -->
+					<div id="s150-138" style="left: 1620px; top: 925px;" class="star"></div>
+					<div id="s151-068" style="left: 1630px; top: 1645px;" class="star"></div>
+					<div id="s157-091" style="left: 1695px; top: 1405px;" class="star"></div>
+					<div id="s158-095" style="left: 1700px; top: 1365px;" class="star"></div>
+					<div id="s162-156" style="left: 1745px; top: 740px;" class="star"></div>
+					<div id="s172-171" style="left: 1850px; top: 590px;" class="star"></div>
+					<div id="s177-011" style="left: 1890px; top: 2235px;" class="star"></div>
+					<div id="s180-120" style="left: 1925px; top: 1120px;" class="star"></div> <!-- old empire ruins -->
+					<div id="s196-045" style="left: 2085px; top: 1880px;" class="star"></div>
+					<div id="s217-088" style="left: 2300px; top: 1440px;" class="star"></div>
+					<div id="s220-005" style="left: 2330px; top: 2300px;" class="star"></div>
+					<div id="s229-022" style="left: 2420px; top: 2120px;" class="star"></div>
+					<div id="s241-157" style="left: 2550px; top: 730px;" class="star"></div>
+				</div>
+				<!-- end orange stars -->
 				<!-- YELLOW STARS -->
 				<div id="ystars">
-
-					<div id="s004-034" style="left: 130px; top: 2000px;" class="star"></div>					<div id="s007-114" style="left: 155px; top: 1180px;" class="star"></div>					<div id="s021-155" style="left: 310px; top: 750px;" class="star"></div>					<div id="s023-152" style="left: 330px; top: 780px;" class="star"></div>					<div id="s031-152" style="left: 410px; top: 785px;" class="star"></div>					<div id="s031-027" style="left: 415px; top: 2075px;" class="star"></div>					<div id="s042-126" style="left: 525px; top: 1050px;" class="star"></div>					<div id="s042-020" style="left: 525px; top: 2145px;" class="star"></div>					<div id="s044-150" style="left: 545px; top: 805px;" class="star"></div>					<div id="s55-125" style="left: 650px; top: 1065px;" class="star"></div> <!-- nebula, 55, 125 -->					<div id="s056-010" style="left: 655px; top: 2245px;" class="star"></div>					<div id="s064-209" style="left: 745px; top: 195px;" class="star"></div>					<div id="s066-102" style="left: 765px; top: 1295px;" class="star"></div>					<div id="s069-163" style="left: 795px; top: 670px;" class="star"></div>					<div id="s087-077" style="left: 970px; top: 1555px;" class="star"></div>					<div id="s087-204" style="left: 980px; top: 250px;" class="star"></div>					<div id="s088-078" style="left: 985px; top: 1545px;" class="star"></div> <!-- colonizable -->					<div id="s091-139" style="left: 1020px; top: 920px;" class="star"></div>					<div id="s094-042" style="left: 1045px; top: 1915px;" class="star"></div>					<div id="s102-080" style="left: 1125px; top: 1525px;" class="star"></div>					<div id="s104-169" style="left: 1155px; top: 610px;" class="star"></div>					<div id="s113-028" style="left: 1240px; top: 2055px;" class="star"></div>					<div id="s114-092" style="left: 1250px; top: 1390px;" class="star"></div>					<div id="s121-159" style="left: 1325px; top: 720px;" class="star"></div> <!-- colonizable -->					<div id="s125-100" style="left: 1360px; top: 1315px;" class="star"></div> <!-- arth -->
-					<div id="s129-123" style="left: 1405px; top: 1090px;" class="star"></div>					<div id="s135-035" style="left: 1465px; top: 1990px;" class="star"></div>					<div id="s137-156" style="left: 1485px; top: 740px;" class="star"></div> <!-- mining -->					<div id="s143-115" style="left: 1550px; top: 1165px;" class="star"></div> <!-- black egg -->					<div id="s143-175" style="left: 1550px; top: 550px;" class="star"></div>					<div id="s145-206" style="left: 1570px; top: 2300px;" class="star"></div>					<div id="s148-063" style="left: 1595px; top: 1700px;" class="star"></div> <!-- elan -->					<div id="s149-173" style="left: 1610px; top: 565px;" class="star"></div>					<div id="s151-173" style="left: 1630px; top: 570px;" class="star"></div> <!-- guarded, velox -->					<div id="s160-048" style="left: 1720px; top: 1855px;" class="star"></div> <!-- colonizable -->					<div id="s163-119" style="left: 1750px; top: 1125px;" class="star"></div> <!-- guarded, velox -->					<div id="s169-002" style="left: 1815px; top: 2315px;" class="star"></div> <!-- colonizable -->					<div id="s173-118" style="left: 1855px; top: 1135px;" class="star"></div>					<div id="s174-200" style="left: 1865px; top: 290px;" class="star"></div>					<div id="s179-169" style="left: 1915px; top: 610px;" class="star"></div>					<div id="s180-124" style="left: 1925px; top: 1070px;" class="star"></div> <!-- rod device -->					<div id="s196-071" style="left: 2085px; top: 1620px;" class="star"></div>					<div id="s199-181" style="left: 2120px; top: 485px;" class="star"></div> <!-- colonizable -->					<div id="s209-029" style="left: 2215px; top: 2050px;" class="star"></div>					<div id="s209-080" style="left: 2215px; top: 1525px;" class="star"></div> <!-- colonizable -->					<div id="s210-141" style="left: 2230px; top: 900px;" class="star"></div>					<div id="s215-086" style="left: 2275px; top: 1466px;" class="star"></div> <!-- earth, hypercube, ring device -->					<div id="s215-088" style="left: 2275px; top: 1440px;" class="star"></div> <!-- mardan -->					<div id="s216-143" style="left: 2290px; top: 875px;" class="star"></div>					<div id="s230-026" style="left: 2430px; top: 2080px;" class="star"></div>					<div id="s233-036" style="left: 2460px; top: 1975px;" class="star"></div>
-				</div> <!-- end yellow stars -->
-				
+					<div id="s004-034" style="left: 130px; top: 2000px;" class="star"></div>
+					<div id="s007-114" style="left: 155px; top: 1180px;" class="star"></div>
+					<div id="s021-155" style="left: 310px; top: 750px;" class="star"></div>
+					<div id="s023-152" style="left: 330px; top: 780px;" class="star"></div>
+					<div id="s031-152" style="left: 410px; top: 785px;" class="star"></div>
+					<div id="s031-027" style="left: 415px; top: 2075px;" class="star"></div>
+					<div id="s042-126" style="left: 525px; top: 1050px;" class="star"></div>
+					<div id="s042-020" style="left: 525px; top: 2145px;" class="star"></div>
+					<div id="s044-150" style="left: 545px; top: 805px;" class="star"></div>
+					<div id="s55-125" style="left: 650px; top: 1065px;" class="star"></div> <!-- nebula, 55, 125 -->
+					<div id="s056-010" style="left: 655px; top: 2245px;" class="star"></div>
+					<div id="s064-209" style="left: 745px; top: 195px;" class="star"></div>
+					<div id="s066-102" style="left: 765px; top: 1295px;" class="star"></div>
+					<div id="s069-163" style="left: 795px; top: 670px;" class="star"></div>
+					<div id="s087-077" style="left: 970px; top: 1555px;" class="star"></div>
+					<div id="s087-204" style="left: 980px; top: 250px;" class="star"></div>
+					<div id="s088-078" style="left: 985px; top: 1545px;" class="star"></div> <!-- colonizable -->
+					<div id="s091-139" style="left: 1020px; top: 920px;" class="star"></div>
+					<div id="s094-042" style="left: 1045px; top: 1915px;" class="star"></div>
+					<div id="s102-080" style="left: 1125px; top: 1525px;" class="star"></div>
+					<div id="s104-169" style="left: 1155px; top: 610px;" class="star"></div>
+					<div id="s113-028" style="left: 1240px; top: 2055px;" class="star"></div>
+					<div id="s114-092" style="left: 1250px; top: 1390px;" class="star"></div>
+					<div id="s121-159" style="left: 1325px; top: 720px;" class="star"></div> <!-- colonizable -->
+					<div id="s125-100" style="left: 1360px; top: 1315px;" class="star"></div> <!-- arth -->
+					<div id="s129-123" style="left: 1405px; top: 1090px;" class="star"></div>
+					<div id="s135-035" style="left: 1465px; top: 1990px;" class="star"></div>
+					<div id="s137-156" style="left: 1485px; top: 740px;" class="star"></div> <!-- mining -->
+					<div id="s143-115" style="left: 1550px; top: 1165px;" class="star"></div> <!-- black egg -->
+					<div id="s143-175" style="left: 1550px; top: 550px;" class="star"></div>
+					<div id="s145-206" style="left: 1570px; top: 2300px;" class="star"></div>
+					<div id="s148-063" style="left: 1595px; top: 1700px;" class="star"></div> <!-- elan -->
+					<div id="s149-173" style="left: 1610px; top: 565px;" class="star"></div>
+					<div id="s151-173" style="left: 1630px; top: 570px;" class="star"></div> <!-- guarded, velox -->
+					<div id="s160-048" style="left: 1720px; top: 1855px;" class="star"></div> <!-- colonizable -->
+					<div id="s163-119" style="left: 1750px; top: 1125px;" class="star"></div> <!-- guarded, velox -->
+					<div id="s169-002" style="left: 1815px; top: 2315px;" class="star"></div> <!-- colonizable -->
+					<div id="s173-118" style="left: 1855px; top: 1135px;" class="star"></div>
+					<div id="s174-200" style="left: 1865px; top: 290px;" class="star"></div>
+					<div id="s179-169" style="left: 1915px; top: 610px;" class="star"></div>
+					<div id="s180-124" style="left: 1925px; top: 1070px;" class="star"></div> <!-- rod device -->
+					<div id="s196-071" style="left: 2085px; top: 1620px;" class="star"></div>
+					<div id="s199-181" style="left: 2120px; top: 485px;" class="star"></div> <!-- colonizable -->
+					<div id="s209-029" style="left: 2215px; top: 2050px;" class="star"></div>
+					<div id="s209-080" style="left: 2215px; top: 1525px;" class="star"></div> <!-- colonizable -->
+					<div id="s210-141" style="left: 2230px; top: 900px;" class="star"></div>
+					<div id="s215-086" style="left: 2275px; top: 1466px;" class="star"></div> <!-- earth, hypercube, ring device -->
+					<div id="s215-088" style="left: 2275px; top: 1440px;" class="star"></div> <!-- mardan -->
+					<div id="s216-143" style="left: 2290px; top: 875px;" class="star"></div>
+					<div id="s230-026" style="left: 2430px; top: 2080px;" class="star"></div>
+					<div id="s233-036" style="left: 2460px; top: 1975px;" class="star"></div>
+				</div>
+				<!-- end yellow stars -->
 				<!-- GREEN STARS -->
 				<div id="gstars">
 					<div id="s017-150" style="left: 270px; top: 805px;" class="star"></div>
@@ -1391,18 +1509,37 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					<div id="s219-021" style="left: 2315px; top: 2130px;" class="star"></div>
 					<div id="s221-109" style="left: 2345px; top: 1225px;" class="star"></div> <!-- colonizable -->
 					<div id="s238-189" style="left: 2515px; top: 400px;" class="star"></div> <!-- black egg -->
-				</div> <!-- end teal stars -->
-				
+				</div>
+				<!-- end green stars -->
 				<!-- TEAL STARS -->
 				<div id="tstars">
-
-					<div id="s007-118" style="left: 155px; top: 1140px;" class="star"></div> <!-- uhlek homeworld -->					<div id="s011-112" style="left: 205px; top: 1200px;" class="star"></div>					<div id="s018-050" style="left: 275px; top: 1830px;" class="star"></div> <!-- tesseract -->					<div id="s042-027" style="left: 530px; top: 2075px;" class="star"></div>					<div id="s044-149" style="left: 545px; top: 820px;" class="star"></div>
-					<div id="s060-193" style="left: 600px; top: 365px;" class="star"></div>					<div id="s052-065" style="left: 620px; top: 1680px;" class="star"></div>					<div id="" style="left: 675px; top: 1115px;" class="star"></div> <!-- nebula, 58, 120 -->					<div id="s076-131" style="left: 865px; top: 1000px;" class="star"></div>					<div id="s076-133" style="left: 870px; top: 980px;" class="star"></div>					<div id="s094-016" style="left: 1050px; top: 2185px;" class="star"></div>					<div id="s128-025" style="left: 1395px; top: 2090px;" class="star"></div>					<div id="s136-158" style="left: 1475px; top: 720px;" class="star"></div>					<div id="s144-080" style="left: 1555px; top: 1525px;" class="star"></div>					<div id="s156-094" style="left: 1680px; top: 1380px;" class="star"></div>					<div id="s163-184" style="left: 1755px; top: 460px;" class="star"></div>					<div id="s164-184" style="left: 1750px; top: 1485px;" class="star"></div> <!-- four seedlings, sw -->					<div id="s164-185" style="left: 1755px; top: 1465px;" class="star"></div> <!-- four seedlings, gaal -->					<div id="s165-184" style="left: 1770px; top: 1485px;" class="star"></div> <!-- four seedlings, akteron -->					<div id="s165-185"  style="left: 1770px; top: 1465px;" class="star"></div> <!-- four seedlings, ne -->					<div id="s208-159" style="left: 2215px; top: 710px;" class="star"></div>					<div id="s227-024" style="left: 2400px; top: 2100px;" class="star"></div>
-				</div> <!-- end blue stars -->
-				
+					<div id="s007-118" style="left: 155px; top: 1140px;" class="star"></div> <!-- uhlek homeworld -->
+					<div id="s011-112" style="left: 205px; top: 1200px;" class="star"></div>
+					<div id="s018-050" style="left: 275px; top: 1830px;" class="star"></div> <!-- tesseract -->
+					<div id="s042-027" style="left: 530px; top: 2075px;" class="star"></div>
+					<div id="s044-149" style="left: 545px; top: 820px;" class="star"></div>
+					<div id="s060-193" style="left: 600px; top: 365px;" class="star"></div>
+					<div id="s052-065" style="left: 620px; top: 1680px;" class="star"></div>
+					<div id="s058-120" style="left: 675px; top: 1115px;" class="star"></div> <!-- nebula, 58, 120 -->
+					<div id="s076-131" style="left: 865px; top: 1000px;" class="star"></div>
+					<div id="s076-133" style="left: 870px; top: 980px;" class="star"></div>
+					<div id="s094-016" style="left: 1050px; top: 2185px;" class="star"></div>
+					<div id="s128-025" style="left: 1395px; top: 2090px;" class="star"></div>
+					<div id="s136-158" style="left: 1475px; top: 720px;" class="star"></div>
+					<div id="s144-080" style="left: 1555px; top: 1525px;" class="star"></div>
+					<div id="s156-094" style="left: 1680px; top: 1380px;" class="star"></div>
+					<div id="s163-184" style="left: 1755px; top: 460px;" class="star"></div>
+					<div id="s164-184" style="left: 1750px; top: 1485px;" class="star"></div> <!-- four seedlings, sw -->
+					<div id="s164-185" style="left: 1755px; top: 1465px;" class="star"></div> <!-- four seedlings, gaal -->
+					<div id="s165-184" style="left: 1770px; top: 1485px;" class="star"></div> <!-- four seedlings, akteron -->
+					<div id="s165-185"  style="left: 1770px; top: 1465px;" class="star"></div> <!-- four seedlings, ne -->
+					<div id="s208-159" style="left: 2215px; top: 710px;" class="star"></div>
+					<div id="s227-024" style="left: 2400px; top: 2100px;" class="star"></div>
+				</div>
+				<!-- end teal stars -->
 				<!-- BLUE STARS -->
 				<div id="bstars">
-					<div id="" style="left: 650px; top: 1085px;" class="star"></div> <!-- nebula, 55, 123 -->
+					<div id="s055-123" style="left: 650px; top: 1085px;" class="star"></div> <!-- nebula, 55, 123 -->
 					<div id="s012-112" style="left: 225px; top: 1200px;" class="star"></div> <!-- colonizable -->
 					<div id="s023-098" style="left: 330px; top: 1340px;" class="star"></div>
 					<div id="s121-044" style="left: 1325px; top: 1770px;" class="star"></div>
@@ -1410,813 +1547,712 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					<div id="s192-152" style="left: 2050px; top: 785px;" class="star"></div> <!-- crystal planet -->
 					<div id="s229-064" style="left: 2420px; top: 1690px;" class="star"></div>
 				</div>
-
-
-			</div> <!-- end stars-->
-
+				<!-- end blue stars -->
+			</div>
+			<!-- end stars-->
 			<!-- BEGIN ALIEN SCRIPT -->
 			<div id="alienscript" style="display: block;">
-
 				<!-- VELOX -->
 				<div class="writing" style="top: 720px; left: 1700px;">
-					<img src="interface/script-velox.png" alt="Alien Script: Velox" /> 
+					<img src="interface/script-velox.webp" alt="Alien Script: Velox"> 
 				</div>
-				<!-- end elowan -->
-
 				<!-- MECHANS -->
 				<div class="writing" style="top: 1320px; left: 1630px;">
-					<img src="interface/script-mechans.png" alt="Alien Script: Mechans" /> 
+					<img src="interface/script-mechans.webp" alt="Alien Script: Mechans"> 
 				</div>
-				<!-- end elowan -->
-
 				<!-- ELOWAN -->
 				<div class="writing" style="top: 1685px; left: 1800px;">
-					<img src="interface/script-elowan.png" alt="Alien Script: Elowan" /> 
+					<img src="interface/script-elowan.webp" alt="Alien Script: Elowan"> 
 				</div>
-				<!-- end elowan -->
-
 				<!--THRYNN -->
 				<div class="writing" style="top: 2060px; left: 1560px;">
-					<img src="interface/script-thrynn.png" alt="Alien Script: Thrynn" /> 
+					<img src="interface/script-thrynn.webp" alt="Alien Script: Thrynn"> 
 				</div>
-				<!-- end thrynn -->
-
 				<!--GAZURTOID -->
 				<div class="writing" style="top: 1570px; left: 1260px;">
-					<img src="interface/script-gazurtoid.png" alt="Alien Script: Gazurtoid" /> 
+					<img src="interface/script-gazurtoid.webp" alt="Alien Script: Gazurtoid"> 
 				</div>
-				<!-- end gazurtoid -->
-
 				<!-- SPEMIN -->
 				<div class="writing" style="top: 910px; left: 1160px;">
-					<img src="interface/script-spemin.png" alt="Alien Script: Spemin" /> 
+					<img src="interface/script-spemin.webp" alt="Alien Script: Spemin"> 
 				</div>
-				<!-- end spemin -->
-
 				<!-- UHLEK -->
 				<div class="writing" style="top: 260px; left: 1510px;">
-					<img src="interface/script-uhlek.png" alt="Alien Script: Uhlek" /> 
+					<img src="interface/script-uhlek.webp" alt="Alien Script: Uhlek"> 
 				</div>
-
 				<div class="writing" style="top: 260px; left: 575px;">
-					<img src="interface/script-uhlek.png" alt="Alien Script: Uhlek" /> 
+					<img src="interface/script-uhlek.webp" alt="Alien Script: Uhlek"> 
 				</div>
-
 				<div class="writing" style="top: 1030px; left: 440px;">
-					<img src="interface/script-uhlek.png" alt="Alien Script: Uhlek" /> 
+					<img src="interface/script-uhlek.webp" alt="Alien Script: Uhlek"> 
 				</div>
-
 				<div class="writing" style="top: 1870px; left: 440px;">
-					<img src="interface/script-uhlek.png" alt="Alien Script: Uhlek" /> 
+					<img src="interface/script-uhlek.webp" alt="Alien Script: Uhlek"> 
 				</div>
 				<!-- end uhlek -->
-
-			</div> <!-- end alien script -->
-
+			</div>
+			<!-- end alien script -->
 			<!-- BEGIN TERRITORIES -->
 			<div id="territories" style="display: block;">
-
 				<!-- VELOX TERRITORY -->
-				<div style="position: absolute; top: 595px; left: 1225px; border-radius: 360px; width: 720px; height: 720px;" class="territorycircle">
-				</div>
-
+				<div style="position: absolute; top: 595px; left: 1225px; border-radius: 360px; width: 720px; height: 720px;" class="territorycircle"></div>
 				<!-- MECHANS TERRITORY -->
-				<div style="position: absolute; top: 1250px; left: 1500px; border-radius: 105px; width: 210px; height: 210px;" class="territorycircle">
-				</div>
-			
+				<div style="position: absolute; top: 1250px; left: 1500px; border-radius: 105px; width: 210px; height: 210px;" class="territorycircle"></div>			
 				<!-- ELOWAN TERRITORY -->
-				<div style="position: absolute; top: 1660px; left: 1530px; border-radius: 205px; width: 420px; height: 420px;" class="territorycircle">
-				</div>
-			
+				<div style="position: absolute; top: 1660px; left: 1530px; border-radius: 205px; width: 420px; height: 420px;" class="territorycircle"></div>
 				<!-- THRYNN TERRITORY -->
-				<div style="position: absolute; top: 1865px; left: 1235px; border-radius: 240px; width: 480px; height: 480px;" class="territorycircle">				</div>
-			
+				<div style="position: absolute; top: 1865px; left: 1235px; border-radius: 240px; width: 480px; height: 480px;" class="territorycircle"></div>			
 				<!-- GAZURTOID TERRITORY -->
-				<div style="position: absolute; top: 1400px; left: 535px; border-radius: 430px; width: 860px; height: 860px;" class="territorycircle">
-				</div>
-			
+				<div style="position: absolute; top: 1400px; left: 535px; border-radius: 430px; width: 860px; height: 860px;" class="territorycircle"></div>
 				<!-- SPEMIN TERRITORY -->
-				<div style="position: absolute; top: 570px; left: 520px; border-radius: 460px; width: 920px; height: 920px;" class="territorycircle">
-				</div>
-			
+				<div style="position: absolute; top: 570px; left: 520px; border-radius: 460px; width: 920px; height: 920px;" class="territorycircle"></div>
 				<!-- UHLEK TERRITORY -->
-				<div style="position: absolute; top: -355px; left: 710px; border-radius: 575px; width: 1100px; height: 1100px;" class="territorycircle">
-				</div>
-
-				<div style="position: absolute; top: -260px; left: -420px; border-radius: 600px; width: 1225px; height: 1225px;" class="territorycircle">
-				</div>
-
-				<div style="position: absolute; top: 920px; left: -225px; border-radius: 455px; width: 890px; height: 890px;" class="territorycircle">
-				</div>
-			
+				<div style="position: absolute; top: -355px; left: 710px; border-radius: 575px; width: 1100px; height: 1100px;" class="territorycircle"></div>
+				<div style="position: absolute; top: -260px; left: -420px; border-radius: 600px; width: 1225px; height: 1225px;" class="territorycircle"></div>
+				<div style="position: absolute; top: 920px; left: -225px; border-radius: 455px; width: 890px; height: 890px;" class="territorycircle"></div>
 				<div style="position: absolute; top: 1730px; left: -430px; height: 870px; overflow: hidden;">
 					<div style="border-radius: 600px; width: 1200px; height: 1200px;" class="territorycircle">
 					</div>
-				</div>
-			
-			</div> <!-- end territories -->
-
+				</div>			
+			</div>
+			<!-- end territories -->
 			<!-- BEGIN DETAILED TERRITORIES -->
 			<div id="territoriesdetail" style="display: none;">
-
 				<!-- VELOX TERRITORY -->
 				<div style="position: absolute; top: 595px; left: 1225px; border-radius: 360px; width: 720px; height: 720px;" class="border-velox">
 					<div style="position: relative; top: 515px; left: 620px;" class="territorylabel text-velox">Velox</div>
 				</div>
-
 				<!-- MECHANS TERRITORY -->
 				<div style="position: absolute; top: 1250px; left: 1500px; border-radius: 105px; width: 210px; height: 210px;" class="border-mechans">
 					<div style="position: relative; top: 135px; left: 155px;" class="territorylabel text-mechans">Mechans</div>
 				</div>
-			
 				<!-- ELOWAN TERRITORY -->
 				<div style="position: absolute; top: 1660px; left: 1530px; border-radius: 205px; width: 420px; height: 420px;" class="border-elowan">
 					<div style="position: relative; top: 110px; left: -35px;" class="territorylabel text-elowan">Elowan</div>
 				</div>
-			
 				<!-- THRYNN TERRITORY -->
 				<div style="position: absolute; top: 1865px; left: 1235px; border-radius: 240px; width: 480px; height: 480px;" class="border-thrynn">
 					<div style="position: relative; top: 270px; left: 430px;" class="territorylabel text-thrynn">Thrynn</div>
 				</div>
-			
 				<!-- GAZURTOID TERRITORY -->
 				<div style="position: absolute; top: 1400px; left: 535px; border-radius: 430px; width: 860px; height: 860px;" class="border-gazurtoid">
 					<div style="position: relative; top: 270px; left: 760px;" class="territorylabel text-gazurtoid">Gazurtoid</div>
 				</div>
-			
 				<!-- SPEMIN TERRITORY -->
 				<div style="position: absolute; top: 570px; left: 520px; border-radius: 460px; width: 920px; height: 920px;" class="border-spemin">
 					<div style="position: relative; top: 725px; left: 755px;" class="territorylabel text-spemin">Spemin</div>
 				</div>
-			
 				<!-- UHLEK TERRITORY -->
-				<div style="position: absolute; top: -355px; left: 710px; border-radius: 575px; width: 1100px; height: 1100px;" class="border-uhlek">
-				</div>
-
-				<div style="position: absolute; top: -260px; left: -420px; border-radius: 600px; width: 1225px; height: 1225px;" class="border-uhlek">
-				</div>
-
+				<div style="position: absolute; top: -355px; left: 710px; border-radius: 575px; width: 1100px; height: 1100px;" class="border-uhlek"></div>
+				<div style="position: absolute; top: -260px; left: -420px; border-radius: 600px; width: 1225px; height: 1225px;" class="border-uhlek"></div>
 				<div style="position: absolute; top: 920px; left: -225px; border-radius: 455px; width: 890px; height: 890px;" class="border-uhlek">
 					<div style="position: relative; top: 35px; left: 625px;" class="territorylabel text-uhlek">Uhlek</div>
-				</div>
-			
+				</div>			
 				<div style="position: absolute; top: 1730px; left: -430px; height: 870px; overflow: hidden;">
-					<div style="border-radius: 600px; width: 1200px; height: 1200px;" class="border-uhlek">
-					</div>
+					<div style="border-radius: 600px; width: 1200px; height: 1200px;" class="border-uhlek"></div>
 				</div>
-			
-			</div> <!-- end detailed territories -->
-			
+			</div>
+			<!-- end detailed territories -->
 			<!-- CONSTELLATIONS -->
 			<div id="constellations" style="display: none;">
-
 				<!-- THE STAFF -->
 				<div style="position: absolute; top: 1125px; left: 1910px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
 					<div style="left: 80px; top: -10px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel">
 						The Staff
 					</div>
 				</div>
-
 				<!-- PYTHAGORUS -->
 				<div style="position: absolute; top: 1520px; left: 2280px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
 					<div style="left: 60px; top: 120px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel">
 						Pythagorus
 					</div>
 				</div>
-			
 				<!-- THE AXE -->
 				<div style="position: absolute; top: 2150px; left: 2410px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
 					<div style="left: 80px; top: 0px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel">
 						The Axe
 					</div>
 				</div>
-			
 				<!-- THE FOUR SEEDLINGS -->
 				<div style="position: absolute; top: 1515px; left: 1730px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
 					<div style="left: 90px; top: 10px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel" >
 						The Four Seedlings
 					</div>
 				</div>
-			
 				<!-- THE CROSS -->
 				<div style="position: absolute; top: 1550px; left: 1060px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
 					<div style="left: 110px; top: 0px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel" >
 						The Cross
 					</div>
 				</div>
-			
-			</div> <!-- end constellations -->
-
+			</div>
+			<!-- end constellations -->
 			<!-- FLUXES -->			
-			<div id="fluxes" style="display: none;">
-				&nbsp;
-			</div> <!-- end fluxes -->
-
-
+			<div id="fluxes" style="display: none;">&nbsp;</div>
+			<!-- end fluxes -->
 			<!-- Arth -->
-				<div class="system" style="top: 1415px; left: 1435px;">
-					<div class="planet maptext">
-						<h5><img src="interface/interstel.png" alt="Starport:" style="height: 15px; position: relative; top: 2px;" /> 125, 100</h5>
-						<ul>
-							<li class="planet">2
-								<ul class="properties">
-									<li class="planetname">Arth</li>
-									<li class="artifactlocation">Whining Orb</li>
-									<li class="artifactlocation">Flat Device</li>
-								</ul>
-							</li>
-							<li class="planet">3
-								<ul class="properties">
-									<li class="mining">Mining</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
+			<div class="system" style="top: 1415px; left: 1435px;">
+				<div class="planet maptext">
+					<h5><img src="interface/interstel.webp" alt="Starport:" style="height: 15px; position: relative; top: 2px;"> 125, 100</h5>
+					<ul>
+						<li class="planet">2
+							<ul class="properties">
+								<li class="text-warning">Arth</li>
+								<li class="text-interest">Whining Orb</li>
+								<li class="text-interest">Flat Device</li>
+							</ul>
+						</li>
+						<li class="planet">3
+							<ul class="properties">
+								<li class="text-activity">Mining</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
+				<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
+			</div>
 			<!-- end arth -->
-
 			<!-- COLONIZABLE PLANETS -->
 			<div id="colonysystems" style="display: none;">
-
 				<div class="system" style="top: 2395px; left: 300px;">
 					<div class="planet maptext">
 						<h5>14, 5</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1300px; left: 320px;">
 					<div class="planet maptext">
 						<h5>12, 112</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -40px; width: 35px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 765px; left: 330px;">
 					<div class="planet maptext">
 						<h5>16, 163</h5>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1335px; left: 345px;">
 					<div class="planet maptext">
 						<h5>17, 108</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 255px; left: 340px;">
 					<div class="planet maptext">
 						<h5>17, 213</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 2385px; left: 495px;">
 					<div class="planet maptext">
 						<h5>33, 6</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1430px; left: 825px;">
 					<div class="planet maptext">
 						<h5>65, 99</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1185px; left: 960px;">
 					<div class="planet maptext">
 						<h5>78, 123</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1620px; left: 945px;">
 					<div class="planet maptext">
 						<h5>86, 80</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 50px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 2040px; left: 1045px;">
 					<div class="planet maptext">
 						<h5>87, 40</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1645px; left: 1055px;">
 					<div class="planet maptext">
 						<h5>88, 78</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 2360px; left: 1110px;">
 					<div class="planet maptext">
 						<h5>90, 8</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -50px; width: 45px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1560px; left: 1085px;">
 					<div class="planet maptext">
 						<h5>91, 86</h5>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1235px; left: 1120px;">
 					<div class="planet maptext">
 						<h5>94, 118</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1595px; left: 1190px;">
 					<div class="planet maptext">
 						<h5>98, 82</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -50px; width: 45px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 550px; left: 1210px;">
 					<div class="planet maptext">
 						<h5>103, 185</h5>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1715px; left: 1220px;">
 					<div class="planet maptext">
 						<h5>104, 71</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 745px; left: 1235px;">
 					<div class="planet maptext">
 						<h5>105, 165</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1025px; left: 1320px;">
 					<div class="planet maptext">
 						<h5>114, 138</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 820px; left: 1400px;">
 					<div class="planet maptext">
 						<h5>121, 159</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1400px; left: 1310px;">
 					<div class="planet maptext">
 						<h5>123, 101</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 550px; left: 1210px;">
 					<div class="planet maptext">
 						<h5>103, 185</h5>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1175px; left: 1465px;">
 					<div class="planet maptext">
 						<h5>128, 124</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="guarded">Guarded</li>
-									<li class="colonybonus">35000</li>
+									<li class="text-danger">Guarded</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 525px; left: 1465px;">
 					<div class="planet maptext">
 						<h5>128, 187</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 870px; left: 1455px;">
 					<div class="planet maptext">
 						<h5>137, 153</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 720px; left: 1635px;">
 					<div class="planet maptext">
 						<h5>145, 168</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1075px; left: 1680px;">
 					<div class="planet maptext">
 						<h5>149, 133</h5>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 							<li class="planet">5
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 665px; left: 1575px;">
 					<div class="planet maptext">
 						<h5>149, 173</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1955px; left: 1630px;">
 					<div class="planet maptext">
 						<h5>160, 48</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 120px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1975px; left: 1820px;">
 					<div class="planet maptext">
 						<h5>163, 46</h5>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 2415px; left: 1885px;">
 					<div class="planet maptext">
 						<h5>169, 2</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1685px; left: 2080px;">
 					<div class="planet maptext">
 						<h5>188, 74</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 585px; left: 2190px;">
 					<div class="planet maptext">
 						<h5>199, 181</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1625px; left: 2185px;">
 					<div class="planet maptext">
 						<h5>209, 80</h5>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 60px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1485px; left: 2305px;">
 					<div class="planet maptext">
 						<h5>211, 93</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1325px; left: 2415px;">
 					<div class="planet maptext">
 						<h5>221, 109</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">35000</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 715px; left: 2375px;">
 					<div class="planet maptext">
 						<h5>226, 167</h5>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 60px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<div class="system" style="top: 1610px; left: 2675px;">
 					<div class="planet maptext">
 						<h5>247, 81</h5>
 						<ul>
 							<li class="planet" style="width: 120px;">1
 								<ul class="properties">
-									<li class="colonybonus">40000</li>
+									<li class="text-success">40000</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
-			</div><!-- end colonizable planets -->
-
+			</div>
+			<!-- end colonizable planets -->
 			<!-- ARTIFACT LOCATIONS -->
 			<div id="artifactsystems" style="display: none;">
-
 				<!-- BLACK EGG 1 -->
 				<div class="system" style="top: 1265px; left: 1620px;">
 					<div class="planet maptext">
@@ -2224,10 +2260,10 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet" style="width: 400px;">4
 								<ul class="properties">
-									<li class="planetname">Veloxi Hive</li>
-									<li class="guarded">Guarded</li>
-									<li class="colonybonus">35000</li>
-									<li class="artifactlocation">Black Egg</li>
+									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-danger">Guarded</li>
+									<li class="text-success">35000</li>
+									<li class="text-interest">Black Egg</li>
 									<li class="landingcoords">28N x 4E</li>
 								</ul>
 							</li>
@@ -2235,7 +2271,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- BLACK EGG 2 -->
 				<div class="system" style="top: 500px; left: 2480px;">
 					<div class="planet maptext">
@@ -2243,8 +2278,8 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="planetname">Phlegmak Base</li>
-									<li class="artifactlocation">Black Egg</li>
+									<li class="text-warning">Phlegmak Base</li>
+									<li class="text-interest">Black Egg</li>
 									<li class="landingcoords">52N x 16E</li>
 								</ul>
 							</li>
@@ -2252,7 +2287,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- BLACK EGG 3 -->
 				<div class="system" style="top: 2245px; left: 2435px; width: 350px;">
 					<div class="planet maptext">
@@ -2260,9 +2294,9 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">Phlegmak Base</li>
-									<li class="colonybonus">35000</li>
-									<li class="artifactlocation">Black Egg</li>
+									<li class="text-warning">Phlegmak Base</li>
+									<li class="text-success">35000</li>
+									<li class="text-interest">Black Egg</li>
 									<li class="landingcoords">35S x 99E</li>
 								</ul>
 							</li>
@@ -2270,7 +2304,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- CRYSTAL CONE -->
 				<div class="system" style="top: 415px; left: 360px;">
 					<div class="planet maptext">
@@ -2278,7 +2311,7 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="artifactlocation">Crystal Cone</li>
+									<li class="text-interest">Crystal Cone</li>
 									<li class="landingcoords">29S x 55W</li>
 								</ul>
 							</li>
@@ -2286,20 +2319,19 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- CRYSTAL ORB -->
 				<div class="system" style="top: 755px; left: 1505px;">
 					<div class="planet maptext">
 						<h5>132, 165</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">Sphexi</li>
-									<li class="guarded">Guarded</li>
-									<li class="artifactlocation">Crystal Orb</li>
+									<li class="text-warning">Sphexi</li>
+									<li class="text-danger">Guarded</li>
+									<li class="text-interest">Crystal Orb</li>
 									<li class="landingcoords">46N x 14E</li>
 								</ul>
 							</li>
@@ -2307,7 +2339,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- CRYSTAL PEARL -->
 				<div class="system" style="top: 965px; left: 735px; width: 400px;">
 					<div class="planet maptext">
@@ -2315,8 +2346,8 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">City of the Ancients</li>
-									<li class="artifactlocation">Crystal Pearl</li>
+									<li class="text-warning">City of the Ancients</li>
+									<li class="text-interest">Crystal Pearl</li>
 									<li class="landingcoords">29N x 13W</li>
 								</ul>
 							</li>
@@ -2324,20 +2355,19 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- DODECAHEDRON -->
 				<div class="system" style="top: 945px; left: 1195px; width: 400px;">
 					<div class="planet maptext">
 						<h5>118, 146</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Veloxi Hive</li>
-									<li class="colonybonus">40000</li>
-									<li class="artifactlocation">Dodecahedron</li>
+									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-success">40000</li>
+									<li class="text-interest">Dodecahedron</li>
 									<li class="landingcoords">16S x 20W</li>
 								</ul>
 							</li>
@@ -2345,7 +2375,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: 130px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- ELLIPSOID -->
 				<div class="system" style="top: 1435px; left: 985px; width: 400px;">
 					<div class="planet maptext">
@@ -2353,9 +2382,9 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">Harrison's Base</li>
-									<li class="colonybonus">50000</li>
-									<li class="artifactlocation">Ellipsoid</li>
+									<li class="text-warning">Harrison's Base</li>
+									<li class="text-success">50000</li>
+									<li class="text-interest">Ellipsoid</li>
 									<li class="landingcoords">44S x 137W</li>
 								</ul>
 							</li>
@@ -2363,20 +2392,19 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- RED CYLINDER -->
 				<div class="system" style="top: 395px; left: 1305px; width: 300px;">
 					<div class="planet maptext">
 						<h5>112, 200</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>		
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="planetname">Kloann 3</li>
-									<li class="colonybonus">40000</li>
-									<li class="artifactlocation">Red Cylinder</li>
+									<li class="text-warning">Kloann 3</li>
+									<li class="text-success">40000</li>
+									<li class="text-interest">Red Cylinder</li>
 									<li class="landingcoords">59N x 64W</li>
 								</ul>
 							</li>
@@ -2384,7 +2412,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- ROD DEVICE -->
 				<div class="system" style="top: 1170px; left: 1995px; width: 300px;">
 					<div class="planet maptext">
@@ -2392,8 +2419,8 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">New Scotland</li>
-									<li class="artifactlocation">Rod Device</li>
+									<li class="text-warning">New Scotland</li>
+									<li class="text-interest">Rod Device</li>
 									<li class="landingcoords">59N x 23E</li>
 								</ul>
 							</li>
@@ -2401,7 +2428,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- RING DEVICE -->
 				<div class="system" style="top: 1570px; left: 2345px; width: 350px;">
 					<div class="planet maptext">
@@ -2409,22 +2435,22 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">Venus</li>
-									<li class="colonybonus">35000</li>
+									<li class="text-warning">Venus</li>
+									<li class="text-success">35000</li>
 								</ul>
 							</li>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="planetname">Earth</li>
-									<li class="colonybonus">35000</li>
-									<li class="artifactlocation">Hypercube</li>
+									<li class="text-warning">Earth</li>
+									<li class="text-success">35000</li>
+									<li class="text-interest">Hypercube</li>
 									<li class="landingcoords">11N x 104W</li>
 								</ul>
 							</li>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Mars</li>
-									<li class="artifactlocation">Ring Device</li>
+									<li class="text-warning">Mars</li>
+									<li class="text-interest">Ring Device</li>
 									<li class="landingcoords">90N x 0</li>
 								</ul>
 							</li>
@@ -2432,20 +2458,19 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- SHIMMERING BALL -->
 				<div class="system" style="top: 1765px; left: 840px; width: 400px;">
 					<div class="planet maptext">
 						<h5>68, 66</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="guarded">Guarded</li>
-									<li class="colonybonus">55000</li>
-									<li class="artifactlocation">Shimmering Ball</li>
+									<li class="text-danger">Guarded</li>
+									<li class="text-success">55000</li>
+									<li class="text-interest">Shimmering Ball</li>
 									<li class="landingcoords">12N x 35E</li>
 								</ul>
 							</li>
@@ -2453,23 +2478,22 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- TESSERACT -->
 				<div class="system" style="top: 1930px; left: 345px;">
 					<div class="planet maptext">
 						<h5>18, 50</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="colonybonus">30000</li>
+									<li class="text-success">30000</li>
 								</ul>
 							</li>
 							<li class="planet">5
 								<ul class="properties">
-									<li class="artifactlocation">Tesseract</li>
+									<li class="text-interest">Tesseract</li>
 									<li class="landingcoords">15N x 44W</li>
 								</ul>
 							</li>
@@ -2477,31 +2501,28 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
-			</div> <!-- end artifacts -->
-
+			</div>
+			<!-- end artifacts -->
 			<!-- ADDITIONAL SYSTEMS  LOCATIONS -->
 			<div id="additionalsystems" style="display: none;">
-
 				<!-- UHLEK HOMEWORLD -->
 				<div class="system" style="top: 1240px; left: 225px;">
 					<div class="planet maptext">
 						<h5>7, 118</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">7
 								<ul class="properties">
-									<li class="planetname">Uhlek Homeworld</li>
-									<li class="mining">Mining</li>
+									<li class="text-warning">Uhlek Homeworld</li>
+									<li class="text-activity">Mining</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- VELOXI MINING PLANET -->
 				<div class="system" style="top: 840px; left: 1560px;">
 					<div class="planet maptext">
@@ -2509,14 +2530,13 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="mining">mining</li>
+									<li class="text-activity">mining</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- UHLEK BRAIN WORLD -->
 				<div class="system" style="top: 2120px; left: 720px;">
 					<div class="planet maptext">
@@ -2524,14 +2544,13 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">Uhlek Brain World</li>
+									<li class="text-warning">Uhlek Brain World</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- SPEWIA -->
 				<div class="system" style="top: 930px; left: 1000px;">
 					<div class="planet maptext">
@@ -2539,99 +2558,94 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">Spewia</li>
-									<li class="guarded">Guarded</li>
+									<li class="text-warning">Spewia</li>
+									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- NIRVANA -->
 				<div class="system" style="top: 1880px; left: 1035px;">
 					<div class="planet maptext">
 						<h5>86, 55</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Nirvana</li>
-									<li class="guarded">Guarded</li>
+									<li class="text-warning">Nirvana</li>
+									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- ELERAN / THOSS -->
 				<div class="system" style="top: 2110px; left: 1470px;">
 					<div class="planet maptext">
 						<h5>129, 33</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">Eleran</li>
-									<li class="colonybonus">35000</li>
+									<li class="text-warning">Eleran</li>
+									<li class="text-success">35000</li>
 									<li class="landingcoords">60S X 45E</li>
 								</ul>
 							</li>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Thoss</li>
-									<li class="guarded">Guarded</li>
+									<li class="text-warning">Thoss</li>
+									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- HEAVEN -->
 				<div class="system" style="top: 1340px; left: 1635px;">
 					<div class="planet maptext">
 						<h5>145, 107</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Heaven</li>
-									<li class="guarded">Guarded</li>
-									<li class="colonybonus">50000</li>
-									<li class="mining">Mining</li>
+									<li class="text-warning">Heaven</li>
+									<li class="text-danger">Guarded</li>
+									<li class="text-success">50000</li>
+									<li class="text-activity">Mining</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- ELAN -->
 				<div class="system" style="top: 1795px; left: 1505px;">
 					<div class="planet maptext">
 						<h5>148, 63</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">Elan</li>
+									<li class="text-warning">Elan</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: 120px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- VOTIPUTOX -->
 				<div class="system" style="top: 925px; left: 1690px;">
 					<div class="planet maptext">
@@ -2639,53 +2653,50 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">Votiputox</li>
-									<li class="guarded">Guarded</li>
+									<li class="text-warning">Votiputox</li>
+									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- VELOX COLONY -->
 				<div class="system" style="top: 670px; left: 1700px;">
 					<div class="planet maptext">
 						<h5>151, 173</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Veloxi Hive</li>
-									<li class="guarded">Guarded</li>
+									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- VELOXI COLONY -->
 				<div class="system" style="top: 1225px; left: 1820px;">
 					<div class="planet maptext">
 						<h5>163, 119</h5>
 						<ul class="properties">
-							<li class="guarded">Guarded</li>
+							<li class="text-danger">Guarded</li>
 						</ul>
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="planetname">Veloxi Hive</li>
-									<li class="guarded">Guarded</li>
+									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- GAAL -->
 				<div class="system" style="top: 1565px; left: 1720px;">
 					<div class="planet maptext">
@@ -2693,8 +2704,8 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul style="position: relative; left: -145px;">
 							<li class="planet">8
 								<ul class="properties">
-									<li class="planetname">Gaal</li>
-									<li class="colonybonus">50000</li>
+									<li class="text-warning">Gaal</li>
+									<li class="text-success">50000</li>
 									<li class="landingcoords">79S X 68E</li>
 								</ul>
 							</li>
@@ -2702,7 +2713,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: 60px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- AKTERON -->
 				<div class="system" style="top: 1585px; left: 1845px;">
 					<div class="planet maptext">
@@ -2710,7 +2720,7 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">6
 								<ul class="properties">
-									<li class="planetname">Akteron 6: The Institute</li>
+									<li class="text-warning">Akteron 6: The Institute</li>
 									<li class="landingcoords">75S X 68E</li>
 								</ul>
 							</li>
@@ -2718,7 +2728,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- NOAH 9 -->
 				<div class="system" style="top: 1480px; left: 1945px;">
 					<div class="planet maptext">
@@ -2726,8 +2735,8 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet" style="width: 400px;">1
 								<ul class="properties">
-									<li class="planetname">Derelict Noah 9 Ship</li>
-									<li class="colonybonus">35000</li>
+									<li class="text-warning">Derelict Noah 9 Ship</li>
+									<li class="text-success">35000</li>
 									<li class="landingcoords">22N X 97W</li>
 								</ul>
 							</li>
@@ -2735,7 +2744,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- OLD EMPIRE RUINS -->
 				<div class="system" style="top: 1215px; left: 1995px;">
 					<div class="planet maptext">
@@ -2743,7 +2751,7 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">Old Empire Ruins</li>
+									<li class="text-warning">Old Empire Ruins</li>
 									<li class="landingcoords">24N X 28E</li>
 								</ul>
 							</li>
@@ -2751,7 +2759,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- CRYSTAL PLANET -->
 				<div class="system" style="top: 885px; left: 2120px;">
 					<div class="planet maptext">
@@ -2759,7 +2766,7 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
-									<li class="planetname">Crystal Planet</li>
+									<li class="text-warning">Crystal Planet</li>
 									<li class="landingcoords">47N X 45E</li>
 								</ul>
 							</li>
@@ -2767,7 +2774,6 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-
 				<!-- MARDAN -->
 				<div class="system" style="top: 1535px; left: 2390px; width: 350px;">
 					<div class="planet maptext">
@@ -2775,15 +2781,15 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 						<ul style="position: relative; left: 10px;">
 							<li class="planet">2
 								<ul class="properties">
-									<li class="planetname">Mardan 2</li>
+									<li class="text-warning">Mardan 2</li>
 									<li class="landingcoords">56N X 16W</li>
 								</ul>
 							</li>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="planetname">Mardan 4</li>
-									<li class="colonybonus">50000</li>
-									<li class="mining">Mining</li>
+									<li class="text-warning">Mardan 4</li>
+									<li class="text-success">50000</li>
+									<li class="text-activity">Mining</li>
 									<li class="landingcoords">0N x 0W</li>
 								</ul>
 							</li>
@@ -2791,12 +2797,10 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 					</div>
 					<div class="pointer" style="left: -40px; width: 35px;">&nbsp;</div>
 				</div>
-
-			</div> <!-- end additional systems -->
-
-		</div> <!-- end starmap -->
-
-
+			</div>
+			<!-- end additional systems -->
+		</div>
+		<!-- end starmap -->
 		<!-- GRID -->
 		<div id="grid" style="display: block;">
 			<div class="x">
@@ -2829,15 +2833,9 @@ $('#starfield').css('top', -$win.scrollTop()/2.8);
 				<div class="ygrid"></div>
 			</div>
 		</div>
-
-
-	</div> <!-- end map -->
-
-</div> <!-- end fullscreen -->
-
-
-
-
-
+	</div>
+	<!-- end map -->
+</div>
+<!-- end fullscreen -->
 </body>
 </html>
