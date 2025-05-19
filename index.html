@@ -5,13 +5,14 @@
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://callmepartario.github.io/starflight-codex">
 	<meta property="og:title" content="Old Gus' Starflight Codex">
-	<meta property="og:description" content="An online reference map, mechanics explainer, and walkthrough for classic PC space exploration game Starflight (1986).">
+	<meta property="og:description" content="An interactive online reference map, mechanics explainer, and hint guide for classic PC space exploration game Starflight (1986).">
 	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/1/1c/Starflight_cover.jpg">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/starflight-codex.css" type="text/css" media="screen">
-	<script src="javascript/jquery183.js"></script>
-	<script src="javascript/scrollto.js"></script>
+	<script src="scripts/jquery-3.7.1.js"></script>
+	<script src="scripts/starflight-scrollto.js"></script>
+	<script src="scripts/starflight-interface.js"></script>
 	<!-- center Arth on load -->
 	<script>
 		$(document).ready(function(){
@@ -24,648 +25,507 @@
 <div id="utilities">
 	<!-- INTERSTEL LOGO -->
 	<div id="interstel"></div>
-	<!-- CODE WHEEL -->
-	<div id="codegen" class="util border-shape border-interstel bg-interstel">
-		<h2>Launch Codes</h2>
-		<script src="javascript/starflightcodes.js"></script>
-		<script>
-			//<![CDATA[
-			printInterface();
-			//]]>
-		</script>
-	</div>
 	<!-- CODEX -->
-	<div id="codex" class="util border-shape border-interstel bg-interstel">
-		<h2>Codex</h2>
+	<div id="codex" class="util border-shape2 border-interstel bg-interstel">
+		<h1><span class="small">Old Gus'</span> Starflight Codex</h1>
 		<div id="legend" class="text-interstel">
-			<h4 class="border-interstel border-shape2">Legend</h4>
-			<script>
-				$(document).ready(function() {
-					$('#show-alienscript').change(function() {
-						$('#alienscript').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-nebulae').change(function() {
-						$('#nebulae').toggle();
-						$('#nebulaedetail').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-territories').change(function() {
-						$('#territories').toggle();
-						$('#territoriesdetail').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-constellations').change(function() {
-						$('#constellations').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-fluxes').change(function() {
-						$('#fluxes').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-starfield').change(function() {
-						$('#starfield').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-colonies').change(function() {
-						$('#colonysystems').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-artifacts').change(function() {
-						$('#artifactsystems').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-additional').change(function() {
-						$('#additionalsystems').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-grid').change(function() {
-						$('#grid').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-history').change(function() {
-						$('#history').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-tech').change(function() {
-						$('#tech').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-science').change(function() {
-						$('#science').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-engineering').change(function() {
-						$('#engineering').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-combat').change(function() {
-						$('#combat').toggle();
-					});
-				});
-			</script>
-			<script>
-				$(document).ready(function() {
-					$('#show-profile').change(function() {
-						$('#profile').toggle();
-					});
-				});
-			</script>
-			<div class="column">
-				<ul>
-					<li>
-						<input type="checkbox" name="show-territories" id="show-territories">
-						<label for="show-territories">
-							<span></span>
-							Territory Detail
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-alienscript" id="show-alienscript" checked>
-						<label for="show-alienscript">
-							<span></span>
-							Alien Script
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-nebulae" id="show-nebulae" checked>
-						<label for="show-nebulae">
-							<span></span>
-							Nebulae Detail
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-grid" id="show-grid" checked>
-							<label for="show-grid">
-							<span></span>
-							Grid Lines
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-starfield" id="show-starfield" checked>
-						<label for="show-starfield">
-							<span></span>
-							Starfield Background
-						</label>
-					</li>
+			<h3 class="border-interstel border-shape2">Legend</h3>
+			<div class="col col-legend">
+				<ul class="menu">
+					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-starfield">Starfield</button></li>
+					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-grid">Grid Lines</button></li>
+					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-alienscript">Alien Script</button></li>
+					<li><button type="button" class="btn btn-primary btn-primary-off" id="toggle-territory">Territory Detail</button></li>
+					<li><button type="button" class="btn btn-primary btn-primary-off" id="toggle-nebulaedetail">Nebulae Detail</button></li>
 				</ul>
 			</div>
-			<div class="column">
-				<ul>
-					<li>
-						<input type="checkbox" name="show-constellations" id="show-constellations">
-						<label for="show-constellations">
-							<span></span>
-							Constellations
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-fluxes" id="show-fluxes">
- 						<label for="show-fluxes">
-							<span></span>
-							Continuum Fluxes
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-colonies" id="show-colonies">
-						<label for="show-colonies">
-							<span></span>
-							Colonizable Planets
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-additional" id="show-additional">
-							<label for="show-additional">
-							<span></span>
-							Additional Planets
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-artifacts" id="show-artifacts">
-						<label for="show-artifacts">
-							<span></span>
-							Artifact Planets
-						</label>
-					</li>
-
+			<div class="col col-legend">
+				<ul class="menu">
+					<li><button type="button" class="btn-primary btn-primary-off" id="toggle-constellations">Constellations</button></li>
+					<li><button type="button" class="btn-primary btn-primary-off" id="toggle-fluxes">Continuum Fluxes</button></li>
+					<li><button type="button" class="btn-primary btn-primary-off" id="toggle-colonies">Colony Worlds</button></li>
+					<li><button type="button" class="btn-primary btn-primary-off" id="toggle-pointsofinterest">Points of Interest</button></li>
+					<li><button type="button" class="btn-primary btn-primary-off" id="toggle-artifactlocations">Artifact Locations</button></li>
 				</ul>
 			</div>
-			<div class="column">
-				<ul>
-					<li>
-						<input type="checkbox" name="show-science" id="show-science">
- 						<label for="show-science">
-							<span></span>
-							Science Station
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-engineering" id="show-engineering">
- 						<label for="show-engineering">
-							<span></span>
-							Engineering Station
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-combat" id="show-combat">
- 						<label for="show-combat">
-							<span></span>
-							Combat Station
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-tech" id="show-tech">
-	 						<label for="show-tech">
-							<span></span>
-							Artifact Technology 
-						</label>
-					</li>
+			<div class="col col-legend-sm">
+				<ul class="menu">
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-history">History</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-science">Science</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-engineering">Engineering</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-combat">Combat</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-artifacttech">Artifacts</button></li>
 				</ul>
 			</div>
-			<div class="column">
-				<ul>
-					<li>
-						<input type="checkbox" name="show-history" id="show-history">
-	 						<label for="show-history">
-							<span></span>
-							Historical Timeline 
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="show-profile" id="show-profile">
- 						<label for="show-profile">
-							<span></span>
-							Alien Fleet Analysis: 
-						</label>
-					</li>
+			<div class="col col-legend-sm">
+				<ul class="menu">
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-interstel">Interstel</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-elowan">Elowan</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-gazurtoid">Gazurtoid</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-mechans">Mechans</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-spemin">Spemin</button></li>
 				</ul>
-				<!-- PROFILE SELECT -->
-				<script>
-					$(document).ready(function () {
-						$('.alienprofile').hide();
-						$('#aliens-interstel').show();
-						$('#profile').hide();
-						$('#profileselect').change(function () {
-							$('.alienprofile').hide();
-							$('#'+$(this).val()).show();
-						});
-					});
-				</script>
-				<select id="profileselect" class="border-shape">
-					<option value="aliens-interstel">Interstel</option>
-					<option value="aliens-velox">Velox</option>
-					<option value="aliens-mechans">Mechans</option>
-					<option value="aliens-elowan">Elowan</option>
-					<option value="aliens-spemin">Spemin</option>
-					<option value="aliens-thrynn">Thrynn</option>
-					<option value="aliens-gazurtoid">Gazurtoid</option>
-					<option value="aliens-uhlek">Uhlek</option>
-					<option value="aliens-misc">Other Aliens</option>
-				</select>
-				<!-- end profile select -->
-				 <p style="padding-top: 5px; text-align: center;"><a class="text-warning" href="https://github.com/callmepartario/starflight-codex">Github</a> | <a class="text-warning" href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a></p>
+			</div>
+			<div class="col col-legend-sm">
+				<ul class="menu">
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-thrynn">Thrynn</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-uhlek">Uhlek</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-velox">Velox</button></li>
+					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-otheraliens">Other Aliens</button></li>
+				</ul>
+				<p id="credits" class="text-center"><a class="text-warning" href="https://github.com/callmepartario/starflight-codex">Github</a> | <a class="text-warning" href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a></p>
 			</div>
 		</div>
 		<!-- end legend -->
+		<!-- CODE WHEEL -->
+		<div id="codegen" class="util border-shape2 border-interstel bg-interstel">
+			<h2>Launch Codes</h2>
+			<script src="scripts/starflight-codewheel.js"></script>
+			<script>
+				//<![CDATA[
+				printInterface();
+				//]]>
+			</script>
+		</div>
 		<!-- HISTORICAL TIMELINE -->
-		<div id="history" style="display: none;" class="border-interstel text-interstel bg-interstel border-shape">
-			<h6 style="text-align: center;">Historical Timeline</h6>
-			<div class="column">
-				<ul>
-					<li>[<span class="text-warning">2100</span>]&nbsp; Humanity discovers <span class="text-activity">Endurium</span> and researches its properties.</li>
-					<li>[<span class="text-warning">2150</span>]&nbsp; Humanity discovers  <span class="text-activity">Endurium</span>'s application to hyperspace travel and begins exploring. <span class="text-warning">Mardan-4</span> is colonized and exploited for its mineral wealth. <span class="text-success">The Empire</span> is born.</li>
-					<li>[<span class="text-warning">2300</span>]&nbsp; Humanity encounters the <span class="text-activity">Velox</span>.</li>
-					<li>[<span class="text-warning">2650</span>]&nbsp; Major  <span class="text-activity">Endurium</span> finds usher in <span class="text-success">The Empire</span>'s <span class="text-warning">Golden Era</span>. Humanity's ships venture deeper into space than ever before.</li>
-					<li>[<span class="text-warning">2675</span>]&nbsp; <span class="text-success">The Empire</span> encounters the <span class="text-activity">Spemin</span>.</li>
-					<li>[<span class="text-warning">2770</span>]&nbsp; <span class="text-success">The Empire</span> encounters the <span class="text-activity">Thrynn</span> and <span class="text-activity">Elowan</span>.</li>
-					<li>[<span class="text-warning">3000</span>]&nbsp; <span class="text-danger">The First Wave</span> begins: <span class="text-activity">Numlox</span> and <span class="text-activity">Phlegmak</span> ships attack from coreward space.</li>
-					<li>[<span class="text-warning">3120</span>]&nbsp; <span class="text-success">The Empire</span> allies with the <span class="text-activity">Velox</span> to combat the <span class="text-activity">Numlox</span> and <span class="text-activity">Phlegmak</span> menace.</li>
-					<li>[<span class="text-warning">3260</span>]&nbsp; <span class="text-danger">The First Wave</span> ends.</li>
-					<li>[<span class="text-warning">3400</span>]&nbsp; <span class="text-danger">The Second Wave</span>: <span class="text-activity">Spemin</span>, <span class="text-activity">Gazurtoid</span>, and <span class="text-activity">Uhlek</span> ships attack from coreward space and settle outward.</li>
+		<div id="history" class="border-shape border-interstel text-interstel bg-interstel d-none">
+			<h4 class="text-center">History</h4>
+			<div class="col col-2">
+				<ul class="table">
+					<li class="tr"><span class="th h7 text-right">2100 &nbsp;&mdash;</span><span class="td">Humanity discovers <span class="text-activity">Endurium</span> and researches its properties.</span></li>
+					<li class="tr"><span class="th h7 text-right">2150 &nbsp;&mdash;</span><span class="td">Humanity discovers <span class="text-activity">Endurium</span>'s application to hyperspace travel and begins exploring. <span class="text-warning">Mardan-4</span> is colonized and exploited for its mineral wealth. <span class="text-success">The Empire</span> is born.</span></li>
+					<li class="tr"><span class="th h7 text-right">2300 &nbsp;&mdash;</span><span class="td">Humanity encounters the <span class="text-activity">Velox</span>.</span></li>
+					<li class="tr"><span class="th h7 text-right">2650 &nbsp;&mdash;</span><span class="td">Major <span class="text-activity">Endurium</span> finds usher in <span class="text-success">The Empire</span>'s <span class="text-warning">Golden Era</span>. Humanity's ships venture deeper into space than ever before.</span></li>
+					<li class="tr"><span class="th h7 text-right">2675 &nbsp;&mdash;</span><span class="td"><span class="text-success">The Empire</span> encounters the <span class="text-activity">Spemin</span>.</span></li>
+					<li class="tr"><span class="th h7 text-right">2770 &nbsp;&mdash;</span><span class="td"><span class="text-success">The Empire</span> encounters the <span class="text-activity">Thrynn</span> and <span class="text-activity">Elowan</span>.</span></li>
+					<li class="tr"><span class="th h7 text-right">3000 &nbsp;&mdash;</span><span class="td"><span class="text-danger">The First Wave</span> begins: <span class="text-activity">Numlox</span> and <span class="text-activity">Phlegmak</span> ships attack from coreward space.</span></li>
+					<li class="tr"><span class="th h7 text-right">3120 &nbsp;&mdash;</span><span class="td"><span class="text-success">The Empire</span> allies with the <span class="text-activity">Velox</span> to combat the <span class="text-activity">Numlox</span> and <span class="text-activity">Phlegmak</span> menace.</span></li>
+					<li class="tr"><span class="th h7 text-right">3260 &nbsp;&mdash;</span><span class="td"><span class="text-danger">The First Wave</span> ends.</span></li>
+					<li class="tr"><span class="th h7 text-right">3400 &nbsp;&mdash;</span><span class="td"><span class="text-danger">The Second Wave</span>: <span class="text-activity">Spemin</span>, <span class="text-activity">Gazurtoid</span>, and <span class="text-activity">Uhlek</span> ships attack from coreward space and settle outward.</span></li>
 				</ul>
 			</div>
-			<div class="column">
-				<ul>
-					<li>[<span class="text-warning">3450</span>]&nbsp; <span class="text-success">The Noah Project</span> is initiated.</li>
-					<li>[<span class="text-warning">3454</span>]&nbsp; <span class="text-success">Noah 2</span> launches and colonizes Arth.</li>
-					<li>[<span class="text-warning">3466</span>]&nbsp; <span class="text-success">Noah 6</span> launches, a deep space expedition in cooperation with the <span class="text-activity">Elowan</span>.</li>
-					<li>[<span class="text-warning">3480</span>]&nbsp; <span class="text-warning">Earth</span>&mdash;The birthplace and heart of <span class="text-success">The Empire</span>&mdash;falls when its sun mysteriously flares.</li>
-					<li>[<span class="text-warning">3505</span>]&nbsp; <span class="text-activity">Uhlek</span> bombs hit <span class="text-warning">Arth</span>, creating a southern hot zone and forcing survivors underground.</li>
-					<li>[<span class="text-warning">3520</span>]&nbsp; <span class="text-warning">Arth</span>'s governments and societies collapse. <span class="text-danger">The Dark Years</span> begin.</li>
-					<li>[<span class="text-warning">4400</span>]&nbsp; <span class="text-warning">Arth</span> forms a new governing council. An industrial revolution begins, and the surface is reclaimed.</li>
-					<li>[<span class="text-warning">4500</span>]&nbsp; Rediscovery of sublight speed space flight.</li>
-					<li>[<span class="text-warning">4594</span>]&nbsp; Rediscovery of <span class="text-success">Noah 2</span> colony and  <span class="text-activity">Endurium</span>.</li>
-					<li>[<span class="text-warning">4615</span>]&nbsp; Humanity ventures beyond the <span class="text-warning">Arth</span> system.</li>
-					<li>[<span class="text-warning">4620</span>]&nbsp; Present day.</li>
+			<div class="col col-2">
+				<ul class="table">
+					<li class="tr"><span class="th h7 text-right">3450 &nbsp;&mdash;</span><span class="td">In a desperate attempt to save humanity, <span class="text-success">The Noah Project</span> is initiated.</span></li>
+					<li class="tr"><span class="th h7 text-right">3454 &nbsp;&mdash;</span><span class="td"><span class="text-success">Noah 2</span> launches and colonizes Arth.</span></li>
+					<li class="tr"><span class="th h7 text-right">3466 &nbsp;&mdash;</span><span class="td"><span class="text-success">Noah 6</span> launches, a deep space expedition in cooperation with the <span class="text-activity">Elowan</span>.</span></li>
+					<li class="tr"><span class="th h7 text-right">3480 &nbsp;&mdash;</span><span class="td"><span class="text-warning">Earth</span>&mdash;The birthplace and heart of <span class="text-success">The Empire</span>&mdash;falls when its sun mysteriously flares.</span></li>
+					<li class="tr"><span class="th h7 text-right">3505 &nbsp;&mdash;</span><span class="td"><span class="text-activity">Uhlek</span> bombs hit <span class="text-warning">Arth</span>, creating a southern hot zone and forcing survivors underground.</span></li>
+					<li class="tr"><span class="th h7 text-right">3520 &nbsp;&mdash;</span><span class="td"><span class="text-warning">Arth</span>'s governments and societies collapse. <span class="text-danger">The Dark Years</span> begin.</span></li>
+					<li class="tr"><span class="th h7 text-right">4400 &nbsp;&mdash;</span><span class="td"><span class="text-warning">Arth</span> forms a new governing council. An industrial revolution begins, and the surface is reclaimed.</span></li>
+					<li class="tr"><span class="th h7 text-right">4500 &nbsp;&mdash;</span><span class="td">Rediscovery of sublight speed space flight.</span></li>
+					<li class="tr"><span class="th h7 text-right">4594 &nbsp;&mdash;</span><span class="td">Rediscovery of <span class="text-success">Noah 2</span> colony and <span class="text-activity">Endurium</span>.</span></li>
+					<li class="tr"><span class="th h7 text-right">4615 &nbsp;&mdash;</span><span class="td">Humanity ventures beyond the <span class="text-warning">Arth</span> system.</span></li>
+					<li class="tr"><span class="th h7 text-right">4620 &nbsp;&mdash;</span><span class="td">Present day.</span></li>
 				</ul>
 			</div>
 		</div>
 		<!-- end history -->
-		<!-- TECHNOLOGY -->
-		<div id="tech" style="display: none;" class="border-interstel text-interstel bg-interstel border-shape">
-			<h6 style="text-align: center;">Artifact Technology</h6>
-			<div class="column">
-				<ul>
-					<li><span class="artifactname">Black Egg</span>: Planetary destruction devices of  <span class="text-danger=">Phlegmak</span> origin. <!-- Obtained from 143, 115 [1] 28N x 4E. A second egg is at 234, 20 [2] 35S x 99E and a third at 238, 189 [3] 52N x 16E. --> </li>
-					<li><span class="artifactname">Crystal Cone</span>: Locates Control Nexus of the <span class="text-warning">Crystal Planet</span>. <!-- Obtained from 20, 198 [1] 29S x 55W. --></li>
-					<li><span class="artifactname">Crystal Orb</span>: Bypasses <span class="text-warning">Crystal Planet</span> defenses and allows ship to land on surface. <span class="text-danger"> Stealing it triggers a conflict with the <span class="text-activity">Velox</span>.</span><!-- Obtained from 132,165 [1] 46N x 14E. --></li>
-					<li><span class="artifactname">Crystal Pearl</span>: Warps ship out of combat if ship systems are damaged.<!-- Obtained from 56, 144 [1] 29N x 13W. --></li>
-					<li><span class="artifactname">Dodecahedron</span>: Increases alien encounter rates. <span class="text-danger">Not recommended when moving through hostile territory.</span><!-- Obtained from 118,146 [4] 16S x 20W. --></li>
-					<li><span class="artifactname">Ellipsoid</span>: Return to <span class="text-activity">Velox</span> (who refer to it as the "<span class="text-warning">Focusing Stone</span>" to establish friendly relations.<!-- Obtained from 81,98 [1] 44S x 137W. --></li>
-					<li><span class="artifactname">Flat Device</span>: Projects a shield around Terrain Vehicle, defending it from hostile lifeforms.</li>
-				</ul>
-			</div>
-			<div class="column">
-				<ul>
-					<li><span class="artifactname">Hypercube</span>: Hours of fun for the kids!<!-- Obtained from 215,86 [3] 11N x 104W. --></li>
-					<li><span class="artifactname">Red Cylinder</span>: Displays Ancient Ruins and Artifacts on the captain's Landing interface.<!-- Obtained from 112,200 [3] 59N x 64W. --></li>
-					<li><span class="artifactname">Ring Device</span>: Detects nearby continuum fluxes.<!-- Obtained from 215,86 [4] 90N x 0. --></li>
-					<li><span class="artifactname">Rod Device</span>: Occasionally causes shields to deflect laser attacks.<!-- Obtained from 180, 124 [2] 59N x 23E. --></li>
-					<li><span class="artifactname">Shimmering Ball</span>: A cloaking device that allows the ship to dodge incoming attacks. <span class="text-danger">This effect can make outruning a <span class="text-activity">Uhlek</span> plasma bolt more difficult.</span> <!-- Obtained from 68,66 [1] 12N x 35E. --></li>
-					<li><span class="artifactname">Tesseract</span>: Halves the <span class="text-activity">Endurium</span> fuel consumption for hyperspace travel.<!-- Obtained from 18, 50 [5] 15N x 44W. --></li>
-					<li><span class="artifactname">Whining Orb</span>: Translates <span class="text-activity">Spemin</span> language.</li>
-				</ul>
-			</div>
-		</div>
-		<!-- end tech -->
 		<!-- SCIENCE -->
-		<div id="science" class="border-shape border-interstel text-interstel bg-interstel" style="display: none;">
-			<div class="column">
-				<h6>Colonization Requirements</h6>
-				<table>
-					<tr><th class="text-activity">Temperature</th><td>Temperate-Tropical</td></tr>
-					<tr><th class="text-activity">Gravity</th><td>0.7 - 2.0 G</td></tr>
-					<tr><th class="text-activity">Atmosphere</th><td>Oxygen</td></tr>
-					<tr><th class="text-activity">Hydrosphere</th><td>Water</td></tr>
-					<tr><th class="text-activity">Weather</th><td>None, Calm, Moderate</td></tr>
+		<div id="science" class="border-shape border-interstel text-interstel bg-interstel d-none">
+			<h4 class="text-center">Science</h4>
+			<div class="col col-4">
+				<h5>Colonization</h5>
+				<table class="spaced h7">
+					<tr><th class="text">Temperature</th><td>Temperate&ndash;Tropical</td></tr>
+					<tr><th class="text">Gravity</th><td>0.7&ndash;2.0 G</td></tr>
+					<tr><th class="text">Atmosphere</th><td>Oxygen</td></tr>
+					<tr><th class="text">Hydrosphere</th><td>Water</td></tr>
+					<tr><th class="text">Weather</th><td>None, Calm, Moderate</td></tr>
 				</table>
+				<p>Recommending a world for colonization pays a significant sum. The amount increases if the planet is particularly ideal for human life.</p>
 				<p class="text-success">Planets with rich biological and mineral density are more valuable.</p>
 				<p class="text-warning">Humans can survive on planets up to 2.0 G, but are more comfortable ton a planet with less than 1.3 G.</p>
 				<p><span class="text-danger">Planets with 8.0 G or more crush the hull upon landing.</span></p>
 			</div>
-			<div class="column">
-				<h6>Star Temperatures</h6>
-				<div class="startypes border-shape2 border-interstel">
-					<ul style="margin-bottom: 10px;">
-						<li><img src="map/star-red.webp" alt="Red Star">&nbsp;&nbsp; <strong>M</strong> (coolest)</li>
-						<li><img src="map/star-orange.webp" alt="Orange Star">&nbsp;&nbsp; <strong>K</strong></li>
-						<li><img src="map/star-yellow.webp" alt="Yellow Star">&nbsp;&nbsp; <strong>G</strong></li>
-						<li><img src="map/star-white.webp" alt="White Star">&nbsp;&nbsp; <strong>F</strong></li>
-						<li><img src="map/star-green.webp" alt="Green Star">&nbsp;&nbsp; <strong>A</strong></li>
-						<li><img src="map/star-teal.webp" alt="Teal Star">&nbsp;&nbsp; <strong>B</strong></li>
-						<li><img src="map/star-blue.webp" alt="Blue Star">&nbsp;&nbsp; <strong>O</strong> (hottest)</li>
+			<div class="col col-4">
+				<h5>Star Temperatures</h5>
+				<div class="border-interstel bg-interstel border-shape2">
+					<ul class="table h7">
+						<li class="tr"><span class="th"><img class="startype" src="map/star-red.webp" alt="Red Star"></span><span class="td"><strong>M</strong> (coolest)</span></li>
+						<li class="tr"><span class="th"><img class="startype" src="map/star-orange.webp" alt="Orange Star"></span><span class="td"><strong>K</strong></span></li>
+						<li class="tr"><span class="th"><img class="startype" src="map/star-yellow.webp" alt="Yellow Star"></span><span class="td"><strong>G</strong></span></li>
+						<li class="tr"><span class="th"><img class="startype" src="map/star-white.webp" alt="White Star"></span><span class="td"><strong>F</strong></span></li>
+						<li class="tr"><span class="th"><img class="startype" src="map/star-green.webp" alt="Green Star"></span><span class="td"><strong>A</strong></span></li>
+						<li class="tr"><span class="th"><img class="startype" src="map/star-teal.webp" alt="Teal Star"></span><span class="td"><strong>B</strong></span></li>
+						<li class="tr"><span class="th"><img class="startype" src="map/star-blue.webp" alt="Blue Star"></span><span class="td"><strong>O</strong> (hottest)</span></li>
 					</ul>
 				</div>
-				<h6 style="margin-top: 20px;">Goldilocks Zones</h6>
 				<p>The hotter a star is, the further away habitable planets must orbit it.</p>
 			</div>
-			<div class="column">
-				<h6>Planet Primary Surface</h6>
-				<div class="startypes border-shape2 border-interstel">
-					<ul style="margin-top: 15px;">
-						<li><div class="planettype" style="background-color: #800; border: 1px solid #400;"></div> &nbsp;&nbsp; Molten</li>
-						<li><div class="planettype" style="background-color: #840; border: 1px solid #420;"></div> &nbsp;&nbsp; Rock</li>
-						<li><div class="planettype" style="background-color: #0aa; border: 1px solid #088;"></div> &nbsp;&nbsp; Liquid</li>
-						<li><div class="planettype" style="background-color: #bbb; border: 1px solid #888;"></div> &nbsp;&nbsp; Frozen</li>
-						<li><div class="planettype" style="background-color: #808; border: 1px solid #404;"></div> &nbsp;&nbsp; Gas Giant</li>
+			<div class="col col-4">
+				<h5>Planetary Surface</h5>
+				<div class="border-interstel bg-interstel border-shape2">
+					<ul class="table h7">
+						<li class="tr"><span class="th"><span class="planettype" style="background-color: #800; border: 1px solid #400;"></span></span><span class="td">Molten</span></li>
+						<li class="tr"><span class="th"><span class="planettype" style="background-color: #840; border: 1px solid #420;"></span></span><span class="td">Rock</span></li>
+						<li class="tr"><span class="th"><span class="planettype" style="background-color: #0aa; border: 1px solid #088;"></span></span><span class="td">Liquid</span></li>
+						<li class="tr"><span class="th"><span class="planettype" style="background-color: #bbb; border: 1px solid #888;"></span></span><span class="td">Frozen</span></li>
+						<li class="tr"><span class="th"><span class="planettype" style="background-color: #808; border: 1px solid #404;"></span></span><span class="td">Gas Giant</span></li>
 					</ul>
 				</div>
-					<h6>Lifeform</h6>
-					<p class="text-success">Lifeform value is increased if it is previously unencountered, larger, more intelligent, or predatory. The distance of the creature's origin from Arth also increases value.</p>
-					<p class="text-warning">Hostile lifeforms are easier to capture when stunned. Floating or flying lifeforms can't be captured.</p>
-					<p class="text-danger">Dead lifeforms are worthless.</p>
+				<h5>Lifeforms</h5>
+				<p>Interstel pays for lifeforms and lifeform scan data at <span class="text-warning">Arth's</span> Starport.</p>
+				<p class="text-success">Lifeform value is increased if it is previously unencountered, larger, more intelligent, or predatory. The distance of the creature's origin from Arth also increases value.</p>
+				<p class="text-warning">Hostile lifeforms must be stunned before capture. Floating and flying lifeforms can't be captured.</p>
+				<p class="text-danger">Dead lifeforms are worthless.</p>
 			</div>
-			<div class="column">
-				<h6>Star Flare Schedule</h6>
-				<table style="text-align: center;">
+			<div class="col col-4">
+				<h5>Star Flare Schedule</h5>
+				<table class="h7">
 					<thead>
 						<tr>
-							<th class="border-interstel bg-interstel border-shape2"><strong>M-Y</strong></th>
-							<th class="border-interstel bg-interstel border-shape2"><strong>Flaring (X)</strong></th>
+							<th class="border-interstel bg-interstel border-shape2 text-center">MM-YYYY</th>
+							<th class="border-interstel bg-interstel border-shape text-center">Sector (X)</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>01-4620</td>
-							<td>200-193</td>
+							<td class="text-center">01-4620</td>
+							<td class="text-center">200&ndash;193</td>
 						</tr>
 						<tr>
-							<td>02-4620</td>
-							<td>192-186</td>
+							<td class="text-center">02-4620</td>
+							<td class="text-center">192&ndash;186</td>
 						</tr>
 						<tr>
-							<td>03-4620</td>
-							<td>185-178</td>
+							<td class="text-center">03-4620</td>
+							<td class="text-center">185&ndash;178</td>
 						</tr>
 						<tr>
-							<td>04-4620</td>
-							<td>177-171</td>
+							<td class="text-center">04-4620</td>
+							<td class="text-center">177&ndash;171</td>
 						</tr>
 						<tr>
-							<td>05-4620</td>
-							<td>170-163</td>
+							<td class="text-center">05-4620</td>
+							<td class="text-center">170&ndash;163</td>
 						</tr>
 						<tr>
-							<td>06-4620</td>
-							<td>162-155</td>
+							<td class="text-center">06-4620</td>
+							<td class="text-center">162&ndash;155</td>
 						</tr>
 						<tr>
-							<td>07-4620</td>
-							<td>154-148</td>
+							<td class="text-center">07-4620</td>
+							<td class="text-center">154&ndash;148</td>
 						</tr>
 						<tr>
-							<td>08-4620</td>
-							<td>147-141</td>
+							<td class="text-center">08-4620</td>
+							<td class="text-center">147&ndash;141</td>
 						</tr>
 						<tr>
-							<td>09-4620</td>
-							<td>140-133</td>
+							<td class="text-center text-warning">09-4620</td>
+							<td class="text-center text-warning">140&ndash;133</td>
 						</tr>
 						<tr>
-							<td class="text-danger">10-4620</td>
-							<td class="text-danger">132-126</td>
+							<td class="text-center text-danger">10-4620</td>
+							<td class="text-center text-danger">132&ndash;126</td>
 						</tr>
 					<tbody>
 				</table>
 				<p>Stellar flare phenomena are moving coreward (right) to outward (left) at a rate 7 clicks per month.</p>
 				<p class="text-warning">Your mission is to determine the cause of the solar flares.</p>
-				<p class="text-danger">Ships caught in a flaring star system are destroyed. Arth is destroyed at 10-4620.</p>
+				<p class="text-danger">Ships caught in a flaring star system are destroyed. Arth will be destroyed in 10-4620.</p>
 			</div>
 		</div>
 		<!-- end science -->
 		<!-- ENGINEERING -->
-		<div id="engineering" class="border-shape border-interstel text-interstel bg-interstel" style="display: none;">
-			<div class="column">
-				<h6>Fuel Consumption</h6>
-				<p>Endurium fuel is consumed at a rate measured in cubic meters (CM).</p>
-				<table>
-					<tr>
-						<th class="text-activity">Travel 1 Click</th>
-						<td>
-							<ul style="margin-left: 0px;">
-								<li><span class="text-warning">Class 1</span>: 0.49</li>
-								<li><span class="text-warning">Class 2</span>: 0.41</li>
-								<li><span class="text-warning">Class 3</span>: 0.33</li>
-								<li><span class="text-warning">Class 4</span>: 0.25</li>
-								<li><span class="text-warning">Class 5</span>: 0.16</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<th class="text-activity">Land/<span class="linebreak">Launch</span></th>
-						<td>0.25/G</td>
-					</tr>
-					<tr>
-						<th class="text-activity">Shields</th>
-						<td>0.1/HOUR</td>
-					</tr>
-					<tr>
-						<th class="text-activity">Laser</th>
-						<td>0.01/HOUR</td>
-					</tr>
-					<tr>
-						<th class="text-activity">Missile</th>
-						<td>0.05/HOUR</td>
-					</tr>
-				</table>
-				<br>
-				<h6>Endurium Price Schedule</h6>
-				<p>The price of Endurium fuel increases over time.</p>
-				<table style="text-align: center;">
-					<tr>
-						<th class="border-interstel bg-interstel border-shape2"><strong>D-M-Y</strong></th>
-						<th class="border-interstel bg-interstel border-shape2"><strong>Price/(CM)</strong></th>
-					</tr>
-					<tr>
-						<td>01-01-4620</td>
-						<td class="text-success">1000 MU</td>
-					</tr>
-					<tr>
-						<td>20-02-4620</td>
-						<td class="text-warning">1500 MU</td>
-					</tr>
-					<tr>
-						<td>15-05-4620</td>
-						<td class="text-danger">2000 MU</td>
-					</tr>
-				</table>
-			</div>
-			<div class="column">
-				<h6>Mineral Prices</h6>
-				<p>Mining is profitable enterprise. If shipe equipment is broken, <span class="text-activity">Repair Elements</span> are needed to get it working again:</p>
-				<table style="margin-top: 5px; margin-left: 10px; text-transform: none;">
+		<div id="engineering" class="border-shape border-interstel text-interstel bg-interstel d-none">
+			<h4 class="text-center">Engineering</h4>
+			<div class="col col-3">
+				<h5>Hyperspace Travel</h5>
+				<table class="h7">
 					<thead>
 						<tr>
-							<th class="border-interstel bg-interstel border-shape2">Mineral</th>
-							<th class="border-interstel bg-interstel border-shape2">Price/CM</th>
+							<th class="border-interstel bg-interstel border-shape2">Engines</th>
+							<th class="border-interstel bg-interstel border-shape text-righ">Fuel (CM)</th>
+							<th class="border-interstel bg-interstel border-shape">Unit</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Aluminum</strong></td><td>&nbsp;&nbsp;220 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Antimony</strong></td><td>&nbsp;&nbsp;280 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Chromium</strong></td><td>&nbsp;&nbsp;260 MU</td></tr>
-						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Cobalt</strong></td><td>&nbsp;&nbsp;80 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Copper</strong></td><td>&nbsp;&nbsp;120 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Gold</strong></td><td>&nbsp;&nbsp;380 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Iron</strong></td><td>&nbsp;&nbsp;60 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Lead</strong></td><td>&nbsp;&nbsp;40 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Magnesium</strong></td><td>&nbsp;&nbsp;200 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Mercury</strong></td><td>&nbsp;&nbsp;320 MU</td></tr>
-						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Molybdenum</strong></td><td>&nbsp;&nbsp;160 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Nickel</strong></td><td>&nbsp;&nbsp;100 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Platinum</strong></td><td>&nbsp;&nbsp;400 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Plutonium</strong></td><td>&nbsp;&nbsp;420 MU</td></tr>
-						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Promethium</strong></td><td>&nbsp;&nbsp;300 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Rodnium</strong></td><td>&nbsp;&nbsp;440 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Silver</strong></td><td>&nbsp;&nbsp;360 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Tin</strong></td><td>&nbsp;&nbsp;180 MU</td></tr>
-						<tr><td class="text-activity">&nbsp;&nbsp;<strong>Titanium</strong></td><td>&nbsp;&nbsp;240 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Tungsten</strong></td><td>&nbsp;&nbsp;340 MU</td></tr>
-						<tr><td>&nbsp;&nbsp;<strong>Zinc</strong></td><td>&nbsp;&nbsp;140 MU</td></tr>
+						<tr><td class="text-warning">Class 1</td><td class="text-right">0.49</td><td>Click</td></tr>
+						<tr><td class="text-warning">Class 2</td><td class="text-right">0.41</td><td>Click</td></tr>
+						<tr><td class="text-warning">Class 3</td><td class="text-right">0.33</td><td>Click</td></tr>
+						<tr><td class="text-warning">Class 4</td><td class="text-right">0.25</td><td>Click</td></tr>
+						<tr><td class="text-warning">Class 5</td><td class="text-right">0.16</td><td>Click</td></tr>
 					</tbody>
-				</table>			
+				</table>
+				<p>Hyperspace travel consumes <span class="text-activity">Endurium</span> fuel, measured in cubic meters (CM). A click measures 1 unit on the starmap.</p>
+				<p class="text-warning">In combat, superior engines allow the ship to move before enemy ships.</p>
+				<p class="text-danger">Carrying heavy cargo or equipping armor also slows the ship down in combat.</p>
+				<h5>System Power</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2">Activity</th>
+							<th class="border-interstel bg-interstel border-shape text-right">Fuel (CM)</th>
+							<th class="border-interstel bg-interstel border-shape">Unit</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Land</td>
+							<td class="text-right">0.25</td><td>G</td>
+						</tr>
+						<tr>
+							<td>Launch</td>
+							<td class="text-right">0.25</td><td>G</td>
+						</tr>
+						<tr>
+							<td>Shields Raised</td>
+							<td class="text-right">0.1</td><td>Hour</td>
+						</tr>
+						<tr>
+							<td>Lasers Armed</td>
+							<td class="text-right">0.01</td><td>Hour</td>
+						</tr>
+						<tr>
+							<td>Missiles Armed</td>
+							<td class="text-right">0.05</td><td>Hour</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Performing planetary maneuvers and arming weapon systems consumes <span class="text-activity">Endurium</span> fuel.</p>
 			</div>
-			<div class="column">
-				<h6>Cargo Capacity</h6>
-				<p>Interstel Ships have 50 CM cargo capacity: Endurium fuel, minerals, lifeforms, and Artifacts all contribute to the total.</p>
-				<p>The Terrain Vehicle also includes an additional 50 CM of storage space, which is loaded into the ship upon returning.</p>
+			<div class="col col-3">
+				<h5>Endurium (Fuel)</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2 text-center">DD-MM-YYYY</th>
+							<th class="border-interstel bg-interstel border-shape text-right">MU/CM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">01-01-4620</td>
+							<td class="text-activity text-right">1000</td>
+						</tr>
+						<tr>
+							<td class="text-center">20-02-4620</td>
+							<td class="text-activity text-right">1500</td>
+						</tr>
+						<tr>
+							<td class="text-center">15-05-4620</td>
+							<td class="text-activity text-right">2000</td>
+						</tr>
+					</tbody>
+				</table>
+				<p><span class="text-activity">Endurium</span> fuel cost increases over time.</p>
+				<h5>Cargo Capacity</h5>
+				<p>Interstel ships have 50 CM cargo capacity. <span class="text-activity">Endurium</span> fuel, minerals, lifeforms, and artifacts all contribute to the total.</p>
 				<p class="text-success">Cargo Pods add 50 CM of cargo capacity.</p>
-				<h6>Terrain Vehicle Mining</h6>
-				<p>Minerals appear in higher concentrations on rocky planets, and in higher elevations. Difficult terrain and inclement weather increase the drain the Terrain Vehicles energy reserves.</p>
-				<p class="text-warning">Running out of energy means returning to ship on foot, which can be hazardous.</p>
-				<p class="text-danger">Replacing terrain vehicle is also expensive!</p>
+				<h5>Terrain Vehicle (TV)</h5>
+				<p>After landing on a planet, the crew can disembark in TV to search for minerals, lifeforms, ruins, <span class="text-activity">Endurium</span> fuel, message logs or artifacts.</p>
+				<p>The TV has a cargo capcity of 50 CM. Cargo is loaded into the ship upon return. If the ship is full, the remainder remains in the TV.</p>
+				<p>Minerals appear in higher concentrations on rocky planets in higher elevations.</p>
+				<p><span class="text-warning">Difficult terrain and violent weather decrease TV energy efficiency.</span> <span class="text-danger">If the TV runs out of energy, the crew must return to the ship on foot. Replacing Terrain Vehicle also expensive!</span></p>
+			</div>
+			<div class="col col-3">
+				<h5>Minerals</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2">Element</th>
+							<th class="border-interstel bg-interstel border-shape text-right">MU/CM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="text-success"><td>Aluminum</td><td class="text-right">220</td></tr>
+						<tr><td>Antimony</td><td class="text-right">280</td></tr>
+						<tr><td>Chromium</td><td class="text-right">260</td></tr>
+						<tr class="text-success"><td>Cobalt</td><td class="text-right">80</td></tr>
+						<tr><td>Copper</td><td class="text-right">120</td></tr>
+						<tr><td>Gold</td><td class="text-right">380</td></tr>
+						<tr><td>Iron</td><td class="text-right">60</td></tr>
+						<tr><td>Lead</td><td class="text-right">40</td></tr>
+						<tr><td>Magnesium</td><td class="text-right">200</td></tr>
+						<tr><td>Mercury</td><td class="text-right">320</td></tr>
+						<tr class="text-success"><td>Molybdenum</td><td class="text-right">160</td></tr>
+						<tr><td>Nickel</td><td class="text-right">100</td></tr>
+						<tr><td>Platinum</td><td class="text-right">400</td></tr>
+						<tr><td>Plutonium</td><td class="text-right">420</td></tr>
+						<tr class="text-success"><td>Promethium</td><td class="text-right">300</td></tr>
+						<tr><td>Rodnium</td><td class="text-right">440</td></tr>
+						<tr><td>Silver</td><td class="text-right">360</td></tr>
+						<tr><td>Tin</td><td class="text-right">180</td></tr>
+						<tr class="text-success"><td>Titanium</td><td class="text-right">240</td></tr>
+						<tr><td>Tungsten</td><td class="text-right">340</td></tr>
+						<tr><td>Zinc</td><td class="text-right">140</td></tr>
+					</tbody>
+				</table>
+				<p>If ship equipment is damaged, <span class="text-success">Repair Elements</span> allow a skilled engineer to get it working again:</p>
 			</div>
 		</div>
 		<!-- end engineering -->
 		<!-- COMBAT -->
-		<div id="combat" class="border-shape border-interstel text-interstel bg-interstel" style="display: none;">
-			<div class="column">
+		<div id="combat" class="border-shape border-interstel text-interstel bg-interstel d-none">
+			<h4 class="text-center">Combat</h4>
+			<div class="col col-4">
 				<img src="interface/interstelship.webp" alt="Interstel Ship Diagram">
 			</div>
-			<div class="column">
-				<h6 class="text-success">Lasers</h6>
-				<p>Lasers have a maximum range of 6 spaces, and dissipate by 5% per space traveled to the target ship.</p>
-				<ul>
-					<li><span class="text-warning">Class 1</span>: 90</li>
-					<li><span class="text-warning">Class 2</span>: 210</li>
-					<li><span class="text-warning">Class 3</span>: 360</li>
-					<li><span class="text-warning">Class 4</span>: 510</li>
-					<li><span class="text-warning">Class 5</span>: 660</li>
-				</ul>
-
-				<h6 class="text-success">Missiles</h6>
-				<ul>
-					<li><span class="text-warning">Class 1</span>: 200</li>
-					<li><span class="text-warning">Class 2</span>: 400</li>
-					<li><span class="text-warning">Class 3</span>: 700</li>
-					<li><span class="text-warning">Class 4</span>: 1000</li>
-					<li><span class="text-warning">Class 5</span>: 1500</li>
-					<li><span class="text-danger">Plasma Bolt: 4000</span></li>
-				</ul>
-				<p class="text-danger">Plasma Bolts home in on enemy ships.</p>
+			<div class="col col-4">
+				<h5 class="text-success">Lasers</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2 text-left">Laser</th>
+							<th class="border-interstel bg-interstel border-shape text-right">Damage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-warning">Class 1</td><td class="text-right">90</td></tr>
+						<tr><td class="text-warning">Class 2</td><td class="text-right">210</td></tr>
+						<tr><td class="text-warning">Class 3</td><td class="text-right">360</td></tr>
+						<tr><td class="text-warning">Class 4</td><td class="text-right">510</td></tr>
+						<tr><td class="text-warning">Class 5</td><td class="text-right">660</td></tr>
+					</tbody>
+				</table>
+				<p>Lasers have a maximum range of 6 spaces, and their damage is reduced by 5% each space traveled to the target ship.</p>
+				<h5 class="text-success">Missiles</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2 text-left">Missile</th>
+							<th class="border-interstel bg-interstel border-shape text-right">Damage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-warning">Class 1</td><td class="text-right">200</td></tr>
+						<tr><td class="text-warning">Class 2</td><td class="text-right">400</td></tr>
+						<tr><td class="text-warning">Class 3</td><td class="text-right">700</td></tr>
+						<tr><td class="text-warning">Class 4</td><td class="text-right">1000</td></tr>
+						<tr><td class="text-warning">Class 5</td><td class="text-right">1500</td></tr>
+						<tr class="text-danger"><td>Plasma Bolt</td><td class="text-right">4000</td></tr>
+					</tbody>
+				</table>
+				<p><span class="text-danger">Plasma bolts</span> home in on enemy ships.</p>
 			</div>
-			<div class="column">
-				<h6 class="text-interest">Interstel Shields</h6>
-				<ul>
-					<li><span class="text-warning">Class 1</span>: 400</li>
-					<li><span class="text-warning">Class 2</span>: 600 + 20% DR</li>
-					<li><span class="text-warning">Class 3</span>: 800 + 40% DR</li>
-					<li><span class="text-warning">Class 4</span>: 1000 + 60% DR</li>
-					<li><span class="text-warning">Class 5</span>: 1000 + 80% DR</li>
-				</ul>
-				<p class="text-success">DR means damage resistance.</p>
+			<div class="col col-4">
+				<h5 class="text-interest">Interstel Shields</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2 text-left">Shields</th>
+							<th class="border-interstel bg-interstel border-shape text-right">DEF</th>
+							<th class="border-interstel bg-interstel border-shape text-right">DR</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-warning">Class 1</td><td class="text-right">400</td><td class="text-right">&mdash;</td></tr>
+						<tr><td class="text-warning">Class 2</td><td class="text-right">600</td><td class="text-right">20%</td></tr>
+						<tr><td class="text-warning">Class 3</td><td class="text-right">800</td><td class="text-right">40%</td></tr>
+						<tr><td class="text-warning">Class 4</td><td class="text-right">1000</td><td class="text-right">60%</td></tr>
+						<tr><td class="text-warning">Class 5</td><td class="text-right">1000</td><td class="text-right">80%</td></tr>
+					</tbody>
+				</table>
+				<p>Damage resistance (DR) subtracts a percentage of incoming damage while defenses function.</p>
 				<p class="text-danger">Shields don't function in nebulae.</p>
-				<h6 class="text-interest">Interstel Armor</h6>
-				<ul>
-					<li><span class="text-warning">Ship Hull:</span> 250</li>
-					<li><span class="text-warning">Class 1</span>: 500</li>
-					<li><span class="text-warning">Class 2</span>: 750 + 20% DR</li>
-					<li><span class="text-warning">Class 3</span>: 1000 + 40% DR</li>
-					<li><span class="text-warning">Class 4</span>: 1250 + 60% DR</li>
-					<li><span class="text-warning">Class 5</span>: 1500 + 80% DR</li>
-				</ul>
+				<h5 class="text-interest">Interstel Armor</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2 text-left">Armor</th>
+							<th class="border-interstel bg-interstel border-shape text-right">DEF</th>
+							<th class="border-interstel bg-interstel border-shape text-right">DR</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>Ship Hull</td><td class="text-right">250</td><td class="text-right">&mdash;</td></tr>
+						<tr><td class="text-warning">Class 1</td><td class="text-right">500</td><td class="text-right">&mdash;</td></tr>
+						<tr><td class="text-warning">Class 2</td><td class="text-right">750</td><td class="text-right">20%</td></tr>
+						<tr><td class="text-warning">Class 3</td><td class="text-right">1000</td><td class="text-right">40%</td></tr>
+						<tr><td class="text-warning">Class 4</td><td class="text-right">1250</td><td class="text-right">60%</td></tr>
+						<tr><td class="text-warning">Class 5</td><td class="text-right">1500</td><td class="text-right">80%</td></tr>
+					</tbody>
+				</table>
 				<p class="text-warning">As armor is damaged, DR rounds to nearest class.</p>
-				<p class="text-danger">Heavier armor slows ship accelleration in combat.</p>
+				<p class="text-danger">Armor slows ship accelleration in combat.</p>
 			</div>
-			<div class="column">
-				<h6 class="text-activity">Alien Defense Ratings</h6>
-				<p>200 + [ (Armor + Shields ) / 200 ]</p>
-				<ul>
-					<li><span class="text-warning">Ship Hull</span>: 0-199</li>
-					<li><span class="text-warning">Class 1</span>: 200-399</li>
-					<li><span class="text-warning">Class 2</span>: 400-599</li>
-					<li><span class="text-warning">Class 3</span>: 600-799</li>
-					<li><span class="text-warning">Class 4</span>: 800-999</li>
-					<li><span class="text-warning">Class 5</span>: 1000-1199</li>
-					<li><span class="text-warning">Class 6</span>: 1200-1399</li>
-					<li><span class="text-warning">Class 7</span>: 1400-1599</li>
-					<li>etc.</li>
+			<div class="col col-4">
+				<h5 class="text-activity">Alien Defense</h5>
+				<table class="h7">
+					<thead>
+						<tr>
+							<th class="border-interstel bg-interstel border-shape2 text-left">Tech</th>
+							<th class="border-interstel bg-interstel border-shape text-right">DEF</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>Ship Hull</td><td class="text-right">0&ndash;199</td></tr>
+						<tr><td class="text-warning">Class 1</td><td class="text-right">200&ndash;399</td></tr>
+						<tr><td class="text-warning">Class 2</td><td class="text-right">400&ndash;599</td></tr>
+						<tr><td class="text-warning">Class 3</td><td class="text-right">600&ndash;799</td></tr>
+						<tr><td class="text-warning">Class 4</td><td class="text-right">800&ndash;999</td></tr>
+						<tr><td class="text-warning">Class 5</td><td class="text-right">1000&ndash;1199</td></tr>
+						<tr class="text-danger"><td>Class 6</td><td class="text-right">1200&ndash;1399</td></tr>
+						<tr class="text-danger"><td>Class 7</td><td class="text-right">1400&ndash;1599</td></tr>
+					</tbody>
+				</table>
+				<p>Total alien ship defenses are equal to:</p>
+				<p class="text-center h7 text-activity">200 + [ (Armor + Shields) / 200 ]</p>
+				<p class="text-warning">Aliens adapt defenses each time a ship is destroyed, raising defense levels after the encounter.</p>
+				<p class="text-danger">This pattern continues until a fleet is destroyed. Powerful aliens with large fleets can gain defenses beyond class 5.</p>
+			</div>
+		</div>
+		<!-- end combat -->
+		<!-- TECHNOLOGY -->
+		<div id="artifacttech" class="border-shape border-interstel text-interstel bg-interstel d-none">
+			<h4 class="text-center">Artifacts</h4>
+			<div class="col col-2">
+				<ul class="table">
+					<li class="tr"><span class="th text-right h7"><span class="text-success">Valuables</span>&nbsp;&mdash;</span><span class="td">Not all artifacts have functions useful for hyperspace travel. You can sell artifacts to starport or to interested aliens.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Black Egg</span>&nbsp;&mdash;</span><span class="td">Planetary destruction devices of <span class="text-activity">Phlegmak</span> origin. <span class="text-danger">A black egg's destructive power increases with volume (CM).</span></span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Crystal Cone</span>&nbsp;&mdash;</span><span class="td">Locates Control Nexus of the <span class="text-warning">Crystal Planet</span>.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Crystal Orb</span>&nbsp;&mdash;</span><span class="td">Bypasses <span class="text-warning">Crystal Planet</span> defenses and allows ship to land on surface. <span class="text-danger">Stealing it triggers a conflict with the <span class="text-activity">Velox</span></span>.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Crystal Pearl</span>&nbsp;&mdash;</span><span class="td">Warps ship out of combat if ship systems are damaged.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Dodecahedron</span>&nbsp;&mdash;</span><span class="td">Increases alien encounter rates. <span class="text-danger">Not recommended when moving through hostile territory.</span></span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Ellipsoid</span>&nbsp;&mdash;</span><span class="td">Return to <span class="text-activity">Velox</span>&mdash;who refer to it as a <span class="text-warning">Focusing Stone</span>&mdash;to establish friendly relations.</span></li>
 				</ul>
-				<p class="text-danger">Aliens adapt defenses each time a ship is destroyed, raising defense levels after the encounter.</p>
 			</div>
-		</div> <!-- end combat -->
+			<div class="col col-2">
+				<ul class="table">
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Flat Device</span>&nbsp;&mdash;</span><span class="td">Protects the terrain vehicle (TV) from hostile lifeforms.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Hypercube</span>&nbsp;&mdash;</span><span class="td">Hours of fun for the kids!</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Red Cylinder</span>&nbsp;&mdash;</span><span class="td">Scans for ancient ruins and artifacts on the captain's Landing interface.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Ring Device</span>&nbsp;&mdash;</span><span class="td">Scans for nearby continuum fluxes.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Rod Device</span>&nbsp;&mdash;</span><span class="td">Causes shields to occasionally deflect laser attacks.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Shimmering Ball</span>&nbsp;&mdash;</span><span class="td">A cloaking device allows the ship to occasionally avoid enemy fire. <span class="text-danger">This effect can make outruning a <span class="text-activity">Uhlek</span> plasma bolt more difficult.</span> </span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Tesseract</span>&nbsp;&mdash;</span><span class="td">Halves <span class="text-activity">Endurium</span> fuel consumption for hyperspace travel.</span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Whining Orb</span>&nbsp;&mdash;</span><span class="td">Translates <span class="text-activity">Spemin</span> language.</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- end tech -->
 		<!-- PROFILES -->
-		<div id="profile" style="display: none;">
+		<div id="profile">
 			<!-- PROFILE: INTERSTEL -->
-			<div id="aliens-interstel" class="alienprofile border-interstel text-interstel bg-interstel">
-				<h5><span>Profile:</span> Interstel</h5>
+			<div id="aliens-interstel" class="alienprofile border-interstel text-interstel bg-interstel d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Interstel</h5>
 				<div>
 					<img src="interface/alien-interstel.webp" alt="Starport" class="race border-interstel border-shape2">
 				</div>
-				<p>Captains of the fleet, the situation has never been more grave. Within two years, the star our home planet of Arth's orbits will flare, killing off all life in the system. This phenomenon is not local to our star system: stars all over our region of space are flaring, coreward to outward. Your mission is to do anything it takes to find out why this is happening and put a stop to it. Failing that, find as many coloinzable worlds as you can. We'll need somewhere to begin again if Arth can't be saved.</p>
+				<p><strong>Captains of the fleet, the situation has never been more grave.</strong> Within two years, the star our home planet of <span class="text-warning">Arth</span> orbits will flare, killing all life in the system. This phenomenon is not unique to our star: flares have been deted all over this region of space, moving coreward to outward. Your mission is to find out why this is happening, and put a stop to it. Failing that, find as many <span class="text-interest">colony worlds</span> as you can. We'll need somewhere to begin again if <span class="text-warning">Arth</span> can't be saved.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
 						<img src="ships/ship-interstel-iss.webp" alt="[Ship]">
 						<h5>Interstel Ship</h5>
 						<ul>
-							<li><strong>Shields</strong>: 1-5</li>
-							<li><strong>Armor</strong>: 1-5</li>
-							<li><strong>Lasers</strong>: 1-5</li>
-							<li><strong>Missiles</strong>: 1-5</li>
-							<li class="notes"><strong>Repairs</strong>: Aluminum, Colbalt, Molybdenum, Promethium, Titanium</li>
-							<li class="notes"><strong>Extra Tech</strong>: <span class="blink">Artifact Techs</span></li>
+							<li><strong>Shields</strong>: 0&ndash;5</li>
+							<li><strong>Armor</strong>: 0&ndash;5</li>
+							<li><strong>Lasers</strong>: 0&ndash;5</li>
+							<li><strong>Missiles</strong>: 0&ndash;5</li>
+							<li><strong>Tech</strong>: <span class="text-interest blink">Artifacts</span></li>
+						</ul>
+						<ul>
+							<li><strong>Repairs</strong>:
+								<ul class="text-success">
+									<li>Aluminum</li>
+									<li>Colbalt</li>
+									<li>Molybdenum</li>
+									<li>Promethium</li>
+									<li>Titanium</li>
+								</ul>
+							</li>
  						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
@@ -674,10 +534,19 @@
 						<ul>
 							<li><strong>Shields</strong>: 15000</li>
 							<li><strong>Armor</strong>: 15000</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 3</li>
-							<li class="notes"><strong>Components</strong>: Gold (20) Silver (20), Platiunum (20), Endurium (25)</li>
-							<li class="notes"><strong>Extra Tech</strong>: <span class="blink">Engine Disruptor</span></li>
+							<li><strong>Tech</strong>: <span class="text-danger blink">Engine Disruptor</span></li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Gold (20)</li>
+									<li>Silver (20)</li>
+									<li>Platiunum (20)</li>
+									<li><span class="text-activity fw-bold">Endurium (25)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
@@ -686,27 +555,34 @@
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
 							<li><strong>Armor</strong>: 5</li>
-							<li><strong>Lasers</strong>: 0</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Iron, Magnesium, Endurium</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Iron</li>
+									<li>Magnesium</li>
+									<li>Endurium</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div> <!-- end interstel -->
 			<!-- PROFILE: VELOX -->
-			<div id="aliens-velox" class="alienprofile border-velox text-velox bg-velox">
-				<h5><span>Profile:</span> Velox</h5>
+			<div id="aliens-velox" class="alienprofile border-velox text-velox bg-velox d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Velox</h5>
 				<div>
 					<img src="interface/alien-velox.webp" alt="Veloxi" class="race border-velox border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: Insectoid</li>
-					<li><strong>Approx Fleet Size</strong>: 300 ships</li>
-					<li><strong>Political Info</strong>: Stable (Queen Rule)</li>
+					<li><strong>Approx. Fleet Size</strong>: 300 ships</li>
+					<li><strong>Political Info</strong>: Stable Monarchy</li>
 					<li><strong>Disposition</strong>: Gregarious</li>
-					<li><strong>Holy Number: 6</strong></li>
 				</ul>
-				<p>Velox ships are piloted by males, servants of the Veloxi Queen. Their fleet patrols their territory constantly and may demand a tribute of Endurium fuel from ships passing through it. Veloxi colonies are often orbited by robotic Drone security satellites.</p>
+				<p>Spacefaring Velox are exlusively male servants of a queen. The veloxi fleet patrols the are around their home world of <span class="text-warning">Votiputox</span> and four <span class="text-warning">Veloxi Hive Worlds</span>, demanding <span class="text-activity">Endurium</span> tributes from ships passing through it. Veloxi colonies are orbited by Drone security satellites. Six is a holy number to the Velox.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-velox text-velox bg-velox">
 						<img src="ships/ship-velox-scout.webp" alt="[Ship]">
@@ -714,9 +590,17 @@
 						<ul>
 							<li><strong>Shields</strong>: 600</li>
 							<li><strong>Armor</strong>: 100</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 2</li>
-							<li class="notes"><strong>Components</strong>: Cobalt (7), Molybdenum (2), Endurium (3)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Cobalt (7)</li>
+									<li>Molybdenum (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (3)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="border-shape ship border-velox text-velox bg-velox2">
@@ -727,7 +611,15 @@
 							<li><strong>Armor</strong>: 500</li>
 							<li><strong>Lasers</strong>: 3</li>
 							<li><strong>Missiles</strong>: 4</li>
-							<li class="notes"><strong>Components</strong>: Cobalt (10), Molybdenum (2), Endurium (8)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Cobalt (10)</li>
+									<li>Molybdenum (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (8)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-velox text-velox bg-velox2">
@@ -737,8 +629,16 @@
 							<li><strong>Shields</strong>: 400</li>
 							<li><strong>Armor</strong>: 200</li>
 							<li><strong>Lasers</strong>: 1</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Cobalt (12), Molybdenum (4), Endurium (4)</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Cobalt (12)</li>
+									<li>Molybdenum (4)</li>
+									<li><span class="text-activity fw-bold">Endurium (4)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-velox text-velox bg-velox">
@@ -749,26 +649,34 @@
 							<li><strong>Armor</strong>: 1000</li>
 							<li><strong>Lasers</strong>: 3</li>
 							<li><strong>Missiles</strong>: 3</li>
-							<li class="notes"><strong>Components</strong>: Cobalt (3), Molybdenum (1), Endurium (10)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Cobalt (3)</li>
+									<li>Molybdenum (1)</li>
+									<li><span class="text-activity fw-bold">Endurium (10)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- end velox -->
 			<!-- PROFILE: ELOWAN -->
-			<div id="aliens-elowan" class="alienprofile border-elowan text-elowan bg-elowan">
-				<h5><span>Profile:</span> Elowan</h5>
+			<div id="aliens-elowan" class="alienprofile border-elowan text-elowan bg-elowan d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Elowan</h5>
 				<div>
-					<img src="interface/alien-elowan.webp" alt="Elowan"  class="race border-elowan border-shape2">
+					<img src="interface/alien-elowan.webp" alt="Elowan" class="race border-elowan border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: Plant</li>
-					<li><strong>Approx Fleet Size</strong>: 50 ships</li>
-					<li><strong>Political Info</strong>: At War (w/ Thrynn)</li>
+					<li><strong>Approx. Fleet Size</strong>: 50 ships</li>
+					<li><strong>Political Info</strong>: At war with <span class="text-activity">Thrynn</span></li>
 					<li><strong>Disposition</strong>: Friendly</li>
 					<li><strong></strong></li>
 				</ul>
-				<p>Elowans have been extremely receptive to human presense in their territory, having known our kind since the days of the Old Empire. It is advised to have no Thrynn crew members on board when speaking with Elowan captains.</p>
+				<p>Elowans have been extremely receptive to human presense in their territory, having known our kind since the days of the <span class="text-success">Old Empire</span>. They harbor deep distrust for the <span class="text-activity">Thrynn</span> of <span class="text-warning">Thoss</span>, who polluted their homeworld of <span class="text-warning">Eleran</span>, making it impossible for Elowan to reproduce. They have recently settled a colony world on <span class="text-warning">Elan</span>.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-elowan text-elowan bg-elowan">
 						<img src="ships/ship-elowan-scout.webp" alt="[Ship]">
@@ -776,9 +684,18 @@
 						<ul>
 							<li><strong>Shields</strong>: 800</li>
 							<li><strong>Armor</strong>: 50</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 2</li>
-							<li class="notes"><strong>Components</strong>: Nickel (2) Molybdenum (1), Plutonium (1), Endurium (1)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Nickel (2)</li>
+									<li>Molybdenum (1)</li>
+									<li>Plutonium (1)</li>
+									<li><span class="text-activity fw-bold">Endurium (1)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-elowan text-elowan bg-elowan2">
@@ -787,9 +704,18 @@
 						<ul>
 							<li><strong>Shields</strong>: 1000</li>
 							<li><strong>Armor</strong>: 50</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 3</li>
-							<li class="notes"><strong>Components</strong>: Nickel (4), Molybdenum (4), Plutonium (2), Endurium (6)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Nickel (4)</li>
+									<li>Molybdenum (4)</li>
+									<li>Plutonium (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (6)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-elowan text-elowan bg-elowan2">
@@ -798,27 +724,36 @@
 						<ul>
 							<li><strong>Shields</strong>: 600</li>
 							<li><strong>Armor</strong>: 50</li>
-							<li><strong>Lasers</strong>: 0</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Nickel (5), Molybdenum (3), Plutonium (2), Endurium (3)</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Nickel (5)</li>
+									<li>Molybdenum (3)</li>
+									<li>Plutonium (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (3)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>			
 				</div>
 			</div><!-- end elowan -->
 			<!-- PROFILE: GAZURTOID -->
-			<div id="aliens-gazurtoid" class="alienprofile border-gazurtoid text-gazurtoid bg-gazurtoid">
-				<h5><span>Profile:</span> Gazurtoid</h5>
+			<div id="aliens-gazurtoid" class="alienprofile border-gazurtoid text-gazurtoid bg-gazurtoid d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Gazurtoid</h5>
 				<div>
 					<img src="interface/alien-gazurtoid.webp" alt="Gazurtoid" class="race border-gazurtoid border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: Mollusk</li>
-					<li><strong>Approx Fleet Size</strong>: 250 ships</li>
+					<li><strong>Approx. Fleet Size</strong>: 250 ships</li>
 					<li><strong>Political Info</strong>: Religious Oligarchy</li>
 					<li><strong>Disposition</strong>: Hostile</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-				<p>Gazurtoid are squid-like aliens with a penchant for guns and religion. Conversation with them is rare, and usually ends like most Gazurtoid encoutners do: with laser fire coming from the many cannons atop their giant cathedral-ships. Special shielding makes their ships impervious to missiles.</p>
+				<p>Gazurtoid are squid-like aliens from the planet <span class="text-warning">Nirvana</span> with a penchant for guns and religion. Conversation usually ends with laser fire blasting from the many cannons atop their giant cathedral-like colony ships. Special shielding renders their fleet impervious to Interstel missiles.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-gazurtoid text-gazurtoid bg-gazurtoid">
 						<img src="ships/ship-gazurtoid-scout.webp" alt="[Ship]">
@@ -827,9 +762,18 @@
 							<li><strong>Shields</strong>: 200</li>
 							<li><strong>Armor</strong>: 500</li>
 							<li><strong>Lasers</strong>: 4</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Molybdenum (12), Tin (5), Magnesium (2), Endurium (10)</li>
-							<li class="notes"><strong>Extra Tech</strong>: <span class="blink">Missile Immunity</span></li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+							<li><strong>Tech</strong>: <span class="text-danger blink">Missile Immunity</span></li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Molybdenum (12)</li>
+									<li>Tin (5)</li>
+									<li>Magnesium (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (10)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-gazurtoid text-gazurtoid bg-gazurtoid2">
@@ -839,28 +783,37 @@
 							<li><strong>Shields</strong>: 800</li>
 							<li><strong>Armor</strong>: 200</li>
 							<li><strong>Lasers</strong>: 5</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Molybdenum (13), Tin (7), Magnesium (4), Endurium (15)</li>
-							<li class="notes"><strong>Extra Tech</strong>: <span class="blink">Missile Immunity</span></li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+							<li><strong>Tech</strong>: <span class="text-danger blink">Missile Immunity</span></li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Molybdenum (13)</li>
+									<li>Tin (7)</li>
+									<li>Magnesium (4)</li>
+									<li><span class="text-activity fw-bold">Endurium (15)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- end gazurtoid -->
 			<!-- PROFILE: MECHAN 9 -->
-			<div id="aliens-mechans" class="alienprofile border-mechans text-mechans bg-mechans">
-				<h5><span>Profile:</span> Mechan 9</h5>
+			<div id="aliens-mechans" class="alienprofile border-mechans text-mechans bg-mechans d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Mechan 9</h5>
 				<div>
-					<img src="interface/alien-mechan.webp" alt="Mechan 9"  class="race border-mechans border-shape2">
+					<img src="interface/alien-mechan.webp" alt="Mechan 9" class="race border-mechans border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: Android</li>
-					<li><strong>Approx Fleet Size</strong>: 75 ships</li>
+					<li><strong>Approx. Fleet Size</strong>: 75 ships</li>
 					<li><strong>Origin</strong>: Old Empire</li>
 					<li><strong>Disposition</strong>: Erratic</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-				<p>While the design of their ships suggests Old Empire origin, all else about these androids is shrouded in mystery. They appear to be waiting for something, or someone. Several Interstel ships have been lost Mechan missiles; approach the space coreward of Arth with caution.</p>
+				<p>While the design of their ships suggests <span class="text-success">Old Empire</span> origin, all else about these androids is shrouded in mystery. They appear to be waiting for something or someone, with a base of operations in orbit around the planet <a class="text-warning">Heaven</a>, coreward of <span class="text-warning">Arth</span> with caution. The androids have destroyed several Interstel ships.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-mechans text-mechans bg-mechans">
 						<img src="ships/ship-mechan-scout.webp" alt="[Ship]">
@@ -868,9 +821,17 @@
 						<ul>
 							<li><strong>Shields</strong>: 400</li>
 							<li><strong>Armor</strong>: 100</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 2</li>
-							<li class="notes"><strong>Components</strong>: Iron (10), Magnesium (4), Endurium (3)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Iron (10)</li>
+									<li>Magnesium (4)</li>
+									<li><span class="text-activity fw-bold">Endurium (3)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-mechans text-mechans bg-mechans">
@@ -879,27 +840,27 @@
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
 							<li><strong>Armor</strong>: 100</li>
-							<li><strong>Lasers</strong>: 0</li>
-							<li><strong>Missiles</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- end mechans -->
 			<!-- PROFILE: SPEMIN -->
-			<div id="aliens-spemin" class="alienprofile border-spemin text-spemin bg-spemin">
-				<h5><span>Profile:</span> Spemin</h5>
+			<div id="aliens-spemin" class="alienprofile border-spemin text-spemin bg-spemin d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Spemin</h5>
 				<div>
-					<img src="interface/alien-spemin.webp" alt="Spemin"  class="race border-spemin border-shape2">
+					<img src="interface/alien-spemin.webp" alt="Spemin" class="race border-spemin border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: Invertebrate</li>
-					<li><strong>Approx Fleet Size</strong>: 225 ships</li>
-					<li><strong>Political Info</strong>: Unkown</li>
+					<li><strong>Approx. Fleet Size</strong>: 225 ships</li>
+					<li><strong>Political Info</strong>: Unknown</li>
 					<li><strong>Disposition</strong>: Treacherous</li>
 					<li><strong>&nbsp;</strong></li>
 				</ul>
-				<p>While Spemin ships are unimpressive by sector standards, they've survived on the edge of Uhlek *and* Gazurtoid space for centuries. Spemin are known to lack a spine in more ways that one: avoid them unless you have the upper hand, then give them a good thrashing to get them talking.</p>
+				<p>Spemin ships are thoroughly unimpressive by sector standards, but their homeworld of <span class="text-warning">Spewia</span> has survived on the borders by the <span class="text-activity">Uhlek</span> and <span class="text-activity">Gazurtoid</span> space for centuries. Spemin lack a spine in more ways that one: avoid them unless you have the upper hand, then give them a good thrashing to get them talking.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-spemin text-spemin bg-spemin">
 						<img src="ships/ship-spemin-scout.webp" alt="[Ship]">
@@ -908,8 +869,16 @@
 							<li><strong>Shields</strong>: 0</li>
 							<li><strong>Armor</strong>: 500</li>
 							<li><strong>Lasers</strong>: 2</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Lead (6), Iron 4), Endurium (1)</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Lead (6)</li>
+									<li>Iron (4)</li>
+									<li><span class="text-activity fw-bold">Endurium (1)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-spemin text-spemin bg-spemin2">
@@ -920,7 +889,16 @@
 							<li><strong>Armor</strong>: 1000</li>
 							<li><strong>Lasers</strong>: 2</li>
 							<li><strong>Missiles</strong>: 1</li>
-							<li class="notes"><strong>Components</strong>: Lead (10), Iron (7), Cobalt (4), Endurium (5)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Lead (10)</li>
+									<li>Iron (7)</li>
+									<li>Cobalt (4)</li>
+									<li><span class="text-activity fw-bold">Endurium (5)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-spemin text-spemin bg-spemin2">
@@ -929,28 +907,36 @@
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
 							<li><strong>Armor</strong>: 200</li>
-							<li><strong>Lasers</strong>: 0</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Lead (11), Iron (7), Cobalt (2), Endurium (3)</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Lead (11)</li>
+									<li>Iron (7)</li>
+									<li>Cobalt (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (3)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- end spemin -->
 			<!-- PROFILE: THRYNN -->
-			<div id="aliens-thrynn" class="alienprofile border-thrynn text-thrynn bg-thrynn">
-				<h5><span>Profile:</span> Thrynn</h5>
+			<div id="aliens-thrynn" class="alienprofile border-thrynn text-thrynn bg-thrynn d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Thrynn</h5>
 				<div>
-					<img src="interface/alien-thrynn.webp" alt="Thrynn"  class="race border-thrynn border-shape2">
+					<img src="interface/alien-thrynn.webp" alt="Thrynn" class="race border-thrynn border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: Reptilian</li>
-					<li><strong>Approx Fleet Size</strong>: 100 ships</li>
-					<li><strong>Political Info</strong>: At War (w/ Elowan)</li>
+					<li><strong>Approx. Fleet Size</strong>: 100 ships</li>
+					<li><strong>Political Info</strong>: At war with <span class="text-activity">Elowan</span></li>
 					<li><strong>Disposition</strong>: Commcercial</li>
-					<li><strong>Trafficking</strong>: Artifacts, Plutonium</li>
 				</ul>
-				<p>Thrynn are prideful and see themselves as the apex of natural selection. Their transformation to a spacefaring society has made them fiercely competetive traders and information brokers. They are knowledgeable about the locations of artifacts in the sector.</p>
+				<p>Fiercely competetive traders and information brokers, the Thrynn believe themselves the apex of natural selection. Their homeworld of <span class="text-warning">Thoss</span> is in the same system as the <span class="text-activity">Elowan</span> homeworld of <span class="text-warning">Eleran</span>. They are knowledgeable about <span class="text-interest">artifact</span> locations in the sector, and will pay in <span class="text-activity">Endurium</span> for <span class="text-interest">artifacts</span> or plutonium.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-thrynn text-thrynn bg-thrynn">
 						<img src="ships/ship-thrynn-scout.webp" alt="[Ship]">
@@ -959,8 +945,17 @@
 							<li><strong>Shields</strong>: 400</li>
 							<li><strong>Armor</strong>: 400</li>
 							<li><strong>Lasers</strong>: 5</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Copper (4), Zinc (2), Magnesium (1), Endurium (2)</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Copper (4)</li>
+									<li>Zinc (2)</li>
+									<li>Magnesium (1)</li>
+									<li><span class="text-activity fw-bold">Endurium (2)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-thrynn text-thrynn bg-thrynn2">
@@ -971,7 +966,16 @@
 							<li><strong>Armor</strong>: 500</li>
 							<li><strong>Lasers</strong>: 5</li>
 							<li><strong>Missiles</strong>: 3</li>
-							<li class="notes"><strong>Components</strong>: Copper (6), Zinc (3), Magnesium (2), Endurium (7)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Copper (6)</li>
+									<li>Zinc (3)</li>
+									<li>Magnesium (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (7)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-thrynn text-thrynn bg-thrynn2">
@@ -981,27 +985,35 @@
 							<li><strong>Shields</strong>: 200</li>
 							<li><strong>Armor</strong>: 300</li>
 							<li><strong>Lasers</strong>:20</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Copper (8), Zinc (4), Magnesium (2), Endurium (4)</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Copper (8)</li>
+									<li>Zinc (4)</li>
+									<li>Magnesium (2)</li>
+									<li><span class="text-activity fw-bold">Endurium (4)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- end thrynn -->
 			<!-- PROFILE: UHLEK -->
-			<div id="aliens-uhlek" class="alienprofile border-uhlek text-uhlek bg-uhlek">
-				<h5><span>Profile:</span> Uhlek</h5>
+			<div id="aliens-uhlek" class="alienprofile border-uhlek text-uhlek bg-uhlek d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Uhlek</h5>
 				<div>
-					<img src="interface/alien-uhlek.webp" alt="Uhlek"  class="race border-uhlek border-shape2">
+					<img src="interface/alien-uhlek.webp" alt="Uhlek" class="race border-uhlek border-shape2">
 				</div>
-				<ul class="race">
+				<ul class="race h7">
 					<li><strong>Phenotype</strong>: ???</li>
-					<li><strong>Approx Fleet Size</strong>: 300 ships</li>
+					<li><strong>Approx. Fleet Size</strong>: 300 ships</li>
 					<li><strong>Political Info</strong>: ???</li>
 					<li><strong>Disposition</strong>: Hostile</li>
-					<li><strong>&nbsp;</strong></li>
 				</ul>
-				<p>Huge Uhlek fleets dominate the outward and upspin areas of our sector and have not communicated in centuries. Their warships are armed with plasma bolts, which have double the destructive capacity of Interstel's Class 5 missiles. Venture into Uhlek space at your own risk.</p>
+				<p>Huge Uhlek fleets dominate the outward and upspin areas of our sector and have not communicated with others in centuries. Their warships are armed with deadly <span class="text-danger">plasma bolts</span>, which have double the destructive capacity of Interstel's Class 5 missiles, and home in on interstel ships. Venture into Uhlek space at your own risk.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-uhlek text-uhlek bg-uhlek2">
 						<img src="ships/ship-uhlek-scout.webp" alt="[Ship]">
@@ -1009,9 +1021,17 @@
 						<ul>
 							<li><strong>Shields</strong>: 1000</li>
 							<li><strong>Armor</strong>: 1000</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 5</li>
-							<li class="notes">Aluminum (14), Titanium (11), Endurium (20)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Aluminum (14)</li>
+									<li>Titanium (11)</li>
+									<li><span class="text-activity fw-bold">Endurium (20)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-uhlek text-uhlek bg-uhlek">
@@ -1020,22 +1040,31 @@
 						<ul>
 							<li><strong>Shields</strong>: 1400</li>
 							<li><strong>Armor</strong>: 1000</li>
-							<li><strong>Lasers</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
 							<li><strong>Missiles</strong>: 5</li>
-							<li class="notes">Aluminum (19), Titanium (14), Endurium (25)</li>
-							<li class="notes"><strong>Extra Tech:</strong> <span class="blink">Plasma Bolt</span></li>
+							<li><strong>Tech</strong>: <span class="text-danger blink">Plasma Bolt</span></li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Aluminum (19)</li>
+									<li>Titanium (14)</li>
+									<li><span class="text-activity fw-bold">Endurium (25)</span></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!-- end uhlek -->
 			<!-- PROFILE: MISC -->
-			<div id="aliens-misc" class="alienprofile border-interstel text-interstel bg-interstel">
-				<h5><span>Profile:</span> Other Alien Life</h5>
+			<div id="aliens-otheraliens" class="alienprofile border-interstel text-interstel bg-interstel d-none">
+				<h5><span>Species Profile&nbsp;:&nbsp;</span>Other Alien Life</h5>
 				<div>
-					<img src="interface/alien-minstrel.webp" alt="Minstrel"  class="race border-interstel border-shape2">
+					<img src="interface/alien-minstrel.webp" alt="Minstrel" class="race border-interstel border-shape2">
 				</div>
-				<p>The Elowan tales of Delasa'Alia (wandering minstrels) appear to be true, and Interstel has recieved scattered reports of a few other ships exploring the deep. There is also terrestrial life on planet surfaces, Interstel will pay for lifeforms or lifeform scans brought back to starport.</p>
+				<p>Interstel has recieved scattered reports of a few other alien ships exploring hyperspace.</p>
+				<p>The <span class="text-activity">Elowan</span> tales of <span class="text-interest">Delasa'Alia</span> (wandering minstrels) appear to be true. There are many undiscovered lifeforms on planet surfaces.</p>
 				<div class="fleet">
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
 						<img src="ships/ship-misc-minstrel.webp" alt="[Ship]">
@@ -1043,8 +1072,8 @@
 						<ul>
 							<li><strong>Shields</strong>: 0</li>
 							<li><strong>Armor</strong>: 5</li>
-							<li><strong>Lasers</strong>: 0</li>
-							<li><strong>Missiles</strong>: 0</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
@@ -1053,9 +1082,15 @@
 						<ul>
 							<li><strong>Shields</strong>: 15000</li>
 							<li><strong>Armor</strong>: 15000</li>
-							<li><strong>Lasers</strong>: 0</li>
-							<li><strong>Missiles</strong>: 0</li>
-							<li class="notes"><strong>Components</strong>: Rodnium (75)</li>
+							<li><strong>Lasers</strong>: &mdash;</li>
+							<li><strong>Missiles</strong>: &mdash;</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Rodnium (75)</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="ship border-shape border-interstel text-interstel bg-interstel">
@@ -1066,7 +1101,15 @@
 							<li><strong>Armor</strong>: 1000</li>
 							<li><strong>Lasers</strong>: 5</li>
 							<li><strong>Missiles</strong>: 5</li>
-							<li class="notes"><strong>Components</strong>: Promethium (4), Tungsten (4), Titanium (3)</li>
+						</ul>
+						<ul>
+							<li><strong>Components</strong>:
+								<ul>
+									<li>Promethium (4)</li>
+									<li>Tungsten (4)</li>
+									<li>Titanium (3)</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -1081,7 +1124,7 @@
 <!-- SET FULL SCREEN -->
 <div id="fullscreen">
 	<!-- MAP CONTAINER -->
-	<div id="map">
+	<div id="map" class="fullscreen">
 		<!-- SCROLLING JS FOR STARFIELD AND COORDS -->
 		<script>
 			$(window).scroll(function(){
@@ -1096,7 +1139,7 @@
 			});
 		</script>
 		<!-- STARFIELD BACKGROUND -->
-		<div id="starfield" style="display: block;">&nbsp;</div>
+		<div id="starfield" class="d-block">&nbsp;</div>
 		<!-- COORDINATES OVERLAY -->
 		<div id="coordinates">
 			<!-- COORDINATES - BOTTOM -->
@@ -1162,7 +1205,7 @@
 		<!-- BEGIN STARMAP -->
 		<div class="starmap maptext">
 			<!-- BEGIN NEBULAE -->
-			<div id="nebulae" style="display: none;">
+			<div id="nebulae" class="fullscreen d-block">
 				<!-- sw, uhlek territory -->			
 				<div class="nebulae" style="top: 1920px; left: 98px;">
 					<img src="map/nebulae-01.webp" alt="nebulae">
@@ -1209,7 +1252,7 @@
 				</div>
 			</div> <!-- end nebulae -->
 			<!-- BEGIN NEBULAE -->
-			<div id="nebulaedetail" style="display: block;">
+			<div id="nebulaedetail" class="fullscreen d-none">
 				<!-- sw, uhlek territory -->			
 				<div class="nebulae" style="top: 1920px; left: 98px;">
 					<img src="map/nebulae2-01.webp" alt="nebulae">
@@ -1256,7 +1299,7 @@
 				</div>
 			</div> <!-- end nebulae detail -->
 			<!-- BEGIN STARS -->
-			<div id="stars">
+			<div id="stars" class="fullscreen">
 				<!-- WHITE STARS -->
 				<div id="wstars" >
 					<!-- unknkown star types -->
@@ -1532,7 +1575,7 @@
 					<div id="s164-184" style="left: 1750px; top: 1485px;" class="star"></div> <!-- four seedlings, sw -->
 					<div id="s164-185" style="left: 1755px; top: 1465px;" class="star"></div> <!-- four seedlings, gaal -->
 					<div id="s165-184" style="left: 1770px; top: 1485px;" class="star"></div> <!-- four seedlings, akteron -->
-					<div id="s165-185"  style="left: 1770px; top: 1465px;" class="star"></div> <!-- four seedlings, ne -->
+					<div id="s165-185" style="left: 1770px; top: 1465px;" class="star"></div> <!-- four seedlings, ne -->
 					<div id="s208-159" style="left: 2215px; top: 710px;" class="star"></div>
 					<div id="s227-024" style="left: 2400px; top: 2100px;" class="star"></div>
 				</div>
@@ -1551,7 +1594,7 @@
 			</div>
 			<!-- end stars-->
 			<!-- BEGIN ALIEN SCRIPT -->
-			<div id="alienscript" style="display: block;">
+			<div id="alienscript" class="d-block">
 				<!-- VELOX -->
 				<div class="writing" style="top: 720px; left: 1700px;">
 					<img src="interface/script-velox.webp" alt="Alien Script: Velox"> 
@@ -1593,7 +1636,7 @@
 			</div>
 			<!-- end alien script -->
 			<!-- BEGIN TERRITORIES -->
-			<div id="territories" style="display: block;">
+			<div id="territories" class="d-block">
 				<!-- VELOX TERRITORY -->
 				<div style="position: absolute; top: 595px; left: 1225px; border-radius: 360px; width: 720px; height: 720px;" class="territorycircle"></div>
 				<!-- MECHANS TERRITORY -->
@@ -1617,7 +1660,7 @@
 			</div>
 			<!-- end territories -->
 			<!-- BEGIN DETAILED TERRITORIES -->
-			<div id="territoriesdetail" style="display: none;">
+			<div id="territoriesdetail" class="d-none">
 				<!-- VELOX TERRITORY -->
 				<div style="position: absolute; top: 595px; left: 1225px; border-radius: 360px; width: 720px; height: 720px;" class="border-velox">
 					<div style="position: relative; top: 515px; left: 620px;" class="territorylabel text-velox">Velox</div>
@@ -1654,41 +1697,41 @@
 			</div>
 			<!-- end detailed territories -->
 			<!-- CONSTELLATIONS -->
-			<div id="constellations" style="display: none;">
+			<div id="constellations" class="d-none">
 				<!-- THE STAFF -->
 				<div style="position: absolute; top: 1125px; left: 1910px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
-					<div style="left: 80px; top: -10px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel">
-						The Staff
+					<div style="left: 80px; top: -10px; position: absolute;">
+						<h5>The Staff</h5>
 					</div>
 				</div>
 				<!-- PYTHAGORUS -->
 				<div style="position: absolute; top: 1520px; left: 2280px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
-					<div style="left: 60px; top: 120px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel">
-						Pythagorus
+					<div style="left: 40px; top: 130px; position: absolute;">
+						<h5>Pythagorus</h5>
 					</div>
 				</div>
 				<!-- THE AXE -->
 				<div style="position: absolute; top: 2150px; left: 2410px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
-					<div style="left: 80px; top: 0px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel">
-						The Axe
+					<div style="left: 80px; top: 0px; position: absolute;">
+						<h5>The Axe</h5>
 					</div>
 				</div>
 				<!-- THE FOUR SEEDLINGS -->
 				<div style="position: absolute; top: 1515px; left: 1730px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
-					<div style="left: 90px; top: 10px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel" >
-						The Four Seedlings
+					<div style="left: 60px; top: -20px; position: absolute;">
+						<h5>The Four Seedlings</h5>
 					</div>
 				</div>
 				<!-- THE CROSS -->
 				<div style="position: absolute; top: 1550px; left: 1060px; border-radius: 355px; width: 150px; height: 150px;" class="border-interstel">
-					<div style="left: 110px; top: 0px; position: absolute; font-weight: normal; font-size: 14px; " class="text-interstel" >
-						The Cross
+					<div style="left: 110px; top: -15px; position: absolute;">
+						<h5>The Cross</h5>
 					</div>
 				</div>
 			</div>
 			<!-- end constellations -->
 			<!-- FLUXES -->			
-			<div id="fluxes" style="display: none;">&nbsp;</div>
+			<div id="fluxes" class="d-none">&nbsp;</div>
 			<!-- end fluxes -->
 			<!-- Arth -->
 			<div class="system" style="top: 1415px; left: 1435px;">
@@ -1713,7 +1756,7 @@
 			</div>
 			<!-- end arth -->
 			<!-- COLONIZABLE PLANETS -->
-			<div id="colonysystems" style="display: none;">
+			<div id="colonies" class="d-none">
 				<div class="system" style="top: 2395px; left: 300px;">
 					<div class="planet maptext">
 						<h5>14, 5</h5>
@@ -1730,7 +1773,7 @@
 					</div>
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
-				<div class="system" style="top: 1300px; left: 320px;">
+				<div class="system" style="top: 1295px; left: 295px;">
 					<div class="planet maptext">
 						<h5>12, 112</h5>
 						<ul>
@@ -1741,7 +1784,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pointer" style="left: -40px; width: 35px;">&nbsp;</div>
+					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
 				<div class="system" style="top: 765px; left: 330px;">
 					<div class="planet maptext">
@@ -2195,7 +2238,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pointer" style="left: 60px; width: 15px;">&nbsp;</div>
+					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
 				<div class="system" style="top: 1485px; left: 2305px;">
 					<div class="planet maptext">
@@ -2252,7 +2295,7 @@
 			</div>
 			<!-- end colonizable planets -->
 			<!-- ARTIFACT LOCATIONS -->
-			<div id="artifactsystems" style="display: none;">
+			<div id="artifactlocations" class="d-none">
 				<!-- BLACK EGG 1 -->
 				<div class="system" style="top: 1265px; left: 1620px;">
 					<div class="planet maptext">
@@ -2260,11 +2303,11 @@
 						<ul>
 							<li class="planet" style="width: 400px;">4
 								<ul class="properties">
-									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-warning">Veloxi Hive World</li>
 									<li class="text-danger">Guarded</li>
 									<li class="text-success">35000</li>
 									<li class="text-interest">Black Egg</li>
-									<li class="landingcoords">28N x 4E</li>
+									<li>28 N &times; 4 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2280,7 +2323,7 @@
 								<ul class="properties">
 									<li class="text-warning">Phlegmak Base</li>
 									<li class="text-interest">Black Egg</li>
-									<li class="landingcoords">52N x 16E</li>
+									<li>52 N &times; 16 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2288,7 +2331,7 @@
 					<div class="pointer" style="left: 65px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- BLACK EGG 3 -->
-				<div class="system" style="top: 2245px; left: 2435px; width: 350px;">
+				<div class="system" style="top: 2245px; left: 2435px;">
 					<div class="planet maptext">
 						<h5>234, 20</h5>
 						<ul>
@@ -2297,7 +2340,7 @@
 									<li class="text-warning">Phlegmak Base</li>
 									<li class="text-success">35000</li>
 									<li class="text-interest">Black Egg</li>
-									<li class="landingcoords">35S x 99E</li>
+									<li>35 S &times; 99 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2312,7 +2355,7 @@
 							<li class="planet">1
 								<ul class="properties">
 									<li class="text-interest">Crystal Cone</li>
-									<li class="landingcoords">29S x 55W</li>
+									<li>29 S &times; 55 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2332,7 +2375,7 @@
 									<li class="text-warning">Sphexi</li>
 									<li class="text-danger">Guarded</li>
 									<li class="text-interest">Crystal Orb</li>
-									<li class="landingcoords">46N x 14E</li>
+									<li>46 N &times; 14 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2348,7 +2391,7 @@
 								<ul class="properties">
 									<li class="text-warning">City of the Ancients</li>
 									<li class="text-interest">Crystal Pearl</li>
-									<li class="landingcoords">29N x 13W</li>
+									<li>29 N &times; 13 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2365,10 +2408,10 @@
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-warning">Veloxi Hive World</li>
 									<li class="text-success">40000</li>
 									<li class="text-interest">Dodecahedron</li>
-									<li class="landingcoords">16S x 20W</li>
+									<li>16 S &times; 20 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2385,7 +2428,7 @@
 									<li class="text-warning">Harrison's Base</li>
 									<li class="text-success">50000</li>
 									<li class="text-interest">Ellipsoid</li>
-									<li class="landingcoords">44S x 137W</li>
+									<li>44 S &times; 137 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2405,7 +2448,7 @@
 									<li class="text-warning">Kloann 3</li>
 									<li class="text-success">40000</li>
 									<li class="text-interest">Red Cylinder</li>
-									<li class="landingcoords">59N x 64W</li>
+									<li>59 N &times; 64 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2421,7 +2464,7 @@
 								<ul class="properties">
 									<li class="text-warning">New Scotland</li>
 									<li class="text-interest">Rod Device</li>
-									<li class="landingcoords">59N x 23E</li>
+									<li>59 N &times; 23 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2429,7 +2472,7 @@
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- RING DEVICE -->
-				<div class="system" style="top: 1570px; left: 2345px; width: 350px;">
+				<div class="system" style="top: 1570px; left: 2345px;">
 					<div class="planet maptext">
 						<h5>215, 86</h5>
 						<ul>
@@ -2444,14 +2487,14 @@
 									<li class="text-warning">Earth</li>
 									<li class="text-success">35000</li>
 									<li class="text-interest">Hypercube</li>
-									<li class="landingcoords">11N x 104W</li>
+									<li>11 N &times; 104 W</li>
 								</ul>
 							</li>
 							<li class="planet">4
 								<ul class="properties">
 									<li class="text-warning">Mars</li>
 									<li class="text-interest">Ring Device</li>
-									<li class="landingcoords">90N x 0</li>
+									<li>90 N &times;  0</li>
 								</ul>
 							</li>
 						</ul>
@@ -2471,7 +2514,7 @@
 									<li class="text-danger">Guarded</li>
 									<li class="text-success">55000</li>
 									<li class="text-interest">Shimmering Ball</li>
-									<li class="landingcoords">12N x 35E</li>
+									<li>12 N &times; 35 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2494,7 +2537,7 @@
 							<li class="planet">5
 								<ul class="properties">
 									<li class="text-interest">Tesseract</li>
-									<li class="landingcoords">15N x 44W</li>
+									<li>15 N &times; 44 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2503,8 +2546,8 @@
 				</div>
 			</div>
 			<!-- end artifacts -->
-			<!-- ADDITIONAL SYSTEMS  LOCATIONS -->
-			<div id="additionalsystems" style="display: none;">
+			<!-- ADDITIONAL SYSTEMS LOCATIONS -->
+			<div id="pointsofinterest" class="d-none">
 				<!-- UHLEK HOMEWORLD -->
 				<div class="system" style="top: 1240px; left: 225px;">
 					<div class="planet maptext">
@@ -2596,7 +2639,7 @@
 								<ul class="properties">
 									<li class="text-warning">Eleran</li>
 									<li class="text-success">35000</li>
-									<li class="landingcoords">60S X 45E</li>
+									<li>60 S &times; 45 E</li>
 								</ul>
 							</li>
 							<li class="planet">4
@@ -2630,7 +2673,7 @@
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- ELAN -->
-				<div class="system" style="top: 1795px; left: 1505px;">
+				<div class="system" style="top: 1800px; left: 1495px;">
 					<div class="planet maptext">
 						<h5>148, 63</h5>
 						<ul class="properties">
@@ -2644,7 +2687,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pointer" style="left: 120px; width: 15px;">&nbsp;</div>
+					<div class="pointer" style="left: 135px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- VOTIPUTOX -->
 				<div class="system" style="top: 925px; left: 1690px;">
@@ -2671,7 +2714,7 @@
 						<ul>
 							<li class="planet">4
 								<ul class="properties">
-									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-warning">Veloxi Hive World</li>
 									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
@@ -2689,7 +2732,7 @@
 						<ul>
 							<li class="planet">3
 								<ul class="properties">
-									<li class="text-warning">Veloxi Hive</li>
+									<li class="text-warning">Veloxi Hive World</li>
 									<li class="text-danger">Guarded</li>
 								</ul>
 							</li>
@@ -2701,12 +2744,12 @@
 				<div class="system" style="top: 1565px; left: 1720px;">
 					<div class="planet maptext">
 						<h5>164, 85</h5>
-						<ul style="position: relative; left: -145px;">
+						<ul style="position: relative; left: -100px;">
 							<li class="planet">8
 								<ul class="properties">
 									<li class="text-warning">Gaal</li>
 									<li class="text-success">50000</li>
-									<li class="landingcoords">79S X 68E</li>
+									<li>79 S &times; 68 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2721,7 +2764,7 @@
 							<li class="planet">6
 								<ul class="properties">
 									<li class="text-warning">Akteron 6: The Institute</li>
-									<li class="landingcoords">75S X 68E</li>
+									<li>75 S &times; 68 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2737,7 +2780,7 @@
 								<ul class="properties">
 									<li class="text-warning">Derelict Noah 9 Ship</li>
 									<li class="text-success">35000</li>
-									<li class="landingcoords">22N X 97W</li>
+									<li>22 N &times; 97 W</li>
 								</ul>
 							</li>
 						</ul>
@@ -2745,14 +2788,14 @@
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- OLD EMPIRE RUINS -->
-				<div class="system" style="top: 1215px; left: 1995px;">
+				<div class="system" style="top: 1220px; left: 2000px;">
 					<div class="planet maptext">
 						<h5>180, 120</h5>
 						<ul>
 							<li class="planet">1
 								<ul class="properties">
 									<li class="text-warning">Old Empire Ruins</li>
-									<li class="landingcoords">24N X 28E</li>
+									<li>24 N &times; 28 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2767,7 +2810,7 @@
 							<li class="planet">1
 								<ul class="properties">
 									<li class="text-warning">Crystal Planet</li>
-									<li class="landingcoords">47N X 45E</li>
+									<li>47 N &times; 45 E</li>
 								</ul>
 							</li>
 						</ul>
@@ -2775,14 +2818,14 @@
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- MARDAN -->
-				<div class="system" style="top: 1535px; left: 2390px; width: 350px;">
+				<div class="system" style="top: 1535px; left: 2410px;">
 					<div class="planet maptext">
 						<h5>217, 88</h5>
-						<ul style="position: relative; left: 10px;">
+						<ul>
 							<li class="planet">2
 								<ul class="properties">
 									<li class="text-warning">Mardan 2</li>
-									<li class="landingcoords">56N X 16W</li>
+									<li>56 N &times; 16 W</li>
 								</ul>
 							</li>
 							<li class="planet">4
@@ -2790,19 +2833,19 @@
 									<li class="text-warning">Mardan 4</li>
 									<li class="text-success">50000</li>
 									<li class="text-activity">Mining</li>
-									<li class="landingcoords">0N x 0W</li>
+									<li>0 N &times; 0 W</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
-					<div class="pointer" style="left: -40px; width: 35px;">&nbsp;</div>
+					<div class="pointer" style="left: -60px; width: 55px;">&nbsp;</div>
 				</div>
 			</div>
 			<!-- end additional systems -->
 		</div>
 		<!-- end starmap -->
 		<!-- GRID -->
-		<div id="grid" style="display: block;">
+		<div id="grid" class="fullscreen d-block">
 			<div class="x">
 				<div class="xgrid"></div>
 				<div class="xgrid"></div>

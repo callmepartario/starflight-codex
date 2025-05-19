@@ -1,10 +1,138 @@
+/* font - body */
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src:url('../fonts/IBMPlexSansCondensed-Regular.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 100;
+    src:url('../fonts/IBMPlexSansCondensed-Thin.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 200;
+    src:url('../fonts/IBMPlexSansCondensed-ExtraLight.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 300;
+    src:url('../fonts/IBMPlexSansCondensed-Light.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 400;
+    src:url('../fonts/IBMPlexSansCondensed-Regular.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 500;
+    src:url('../fonts/IBMPlexSansCondensed-Medium.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 600;
+    src:url('../fonts/IBMPlexSansCondensed-SemiBold.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 700;
+    src:url('../fonts/IBMPlexSansCondensed-Bold.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src:url('../fonts/IBMPlexSansCondensed-Regular.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 100;
+    src:url('../fonts/IBMPlexSansCondensed-ThinItalic.ttf') format(truetype);
+	font-style: italic;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 200;
+    src:url('../fonts/IBMPlexSansCondensed-ExtraLightItalic.ttf') format(truetype);
+	font-style: italic;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 300;
+    src:url('../fonts/IBMPlexSansCondensed-LightItalic.ttf') format(truetype);
+	font-style: italic;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 400;
+    src:url('../fonts/IBMPlexSansCondensed-RegularItalic.ttf') format(truetype);
+	font-style: italic;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 500;
+    src:url('../fonts/IBMPlexSansCondensed-MediumItalic.ttf') format(truetype);
+	font-style: italic;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 600;
+    src:url('../fonts/IBMPlexSansCondensed-SemiBoldItalic.ttf') format(truetype);
+	font-style: italic;
+}
+@font-face {
+	font-family: "IBM Plex Sans Condensed";
+	font-weight: 700;
+    src:url('../fonts/IBMPlexSansCondensed-BoldItalic.ttf') format(truetype);
+	font-style: italic;
+}
+
+/* font header */
+@font-face {
+	font-family: "Sarpanch";
+	font-weight: 400;
+    src:url('../fonts/Sarpanch-Regular.ttf') format(truetype);
+}
+@font-face {
+	font-family: "Sarpanch";
+	font-weight: 500;
+    src:url('../fonts/Sarpanch-Medium.ttf') format(truetype);
+}
+@font-face {
+	font-family: "Sarpanch";
+	font-weight: 600;
+    src:url('../fonts/Sarpanch-SemiBold.ttf') format(truetype);
+}
+@font-face {
+	font-family: "Sarpanch";
+	font-weight: 700;
+    src:url('../fonts/Sarpanch-Bold.ttf') format(truetype);
+}
+@font-face {
+	font-family: "Sarpanch";
+	font-weight: 800;
+    src:url('../fonts/Sarpanch-ExtraBold.ttf') format(truetype);
+}
+@font-face {
+	font-family: "Sarpanch";
+	font-weight: 900;
+    src:url('../fonts/Sarpanch-Black.ttf') format(truetype);
+}
+
+/* clean slate */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
 	border: 0;
-	font-size: 100%;
-	font-family: Arial;
+	font-size: 12px;
 	margin: 0;
 	outline: 0;
 	padding: 0;
@@ -13,63 +141,273 @@ fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	background-color: #000;
 	line-height: 1.2;
+	font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
+	color: #c3faf4;
 }
-a {	text-decoration: none; }
-ol, ul { margin-left: 25px; }
 :focus { outline: 0px; }
-#utilities {
-	position: fixed;
-	top: 0px;
-	height: 150px;
-	background: url(../interface/top-black-gradient.webp) repeat-x bottom;
-	width: 100%;
-	z-index: 10;
-}
-.util {
-	padding: 0px;
-	z-index: 11;
-}
-.util h2 {
-	font-size: 20px;
-	text-transform: uppercase;
-	color: #c6fff5;
+
+/* headers */
+h1, h2, h3, h4 {
+	font-family: "Sarpanch", Arial, sans-serif;
 	text-shadow: 0px 0px 2px #c3faf4, 1px 1px 0px #077c83, -1px 1px 0px #077c83, 1px -1px 0px #077c83, -1px -1px 0px #077c83;
-	text-align: right;
+}
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+h1, h2 {
+	text-align: center;
+	font-size: 20px;
 	position: relative;
 	bottom: 28px;
 	margin-bottom: -20px;
 }
-.util h3 {
-	display: block;
-	margin-top: 5px;
-	font-size: 14px;
+h3 {
 	text-align: center;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+}
+h4 {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 20px;
+}
+h5 {
+	font-family: "Sarpanch", Arial, sans-serif;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
 	text-transform: uppercase;
-	color: #c6fff5;
-	text-shadow: 0px 0px 15px #c3faf4, 1px 1px 0px #077c83, -1px 1px 0px #077c83, 1px -1px 0px #077c83, -1px -1px 0px #077c83;
+}
+
+/* inline text */
+a {	text-decoration: none; }
+ol, ul { 
+	margin-left: 0px;
+	margin-top: 5px;
+	list-style-type: none;
+}
+ol li, ul li { margin-top: 5px;}
+p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-transform: none;
+}
+
+/* list-as-table */
+ul.table {
+	display: table;
+	text-transform: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+ul.table li.tr {
+	display: table-row;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+ul.table li.tr span.th {
+	font-weight: bold;
+	display: table-cell;
+	white-space: nowrap;
+	padding-right: 10px;
+}
+ul.table li.tr span.td {
+	display: table-cell;
+	padding-bottom: 10px;
+}
+
+/* table styling */
+table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-transform: none;
+	width: 100%;
+}
+th { 
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+td { 
+	padding-left: 11px;
+	padding-right: 11px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+table.spaced tbody tr td { padding-bottom: 9px; }
+
+/* display and alignment */
+.fullscreen {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.d-block { display: block; }
+.d-none { display: none; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right;}
+.fw-bold { font-weight: bold; }
+.fw-normal { font-weight: normal; }
+.h7 {
+	font-family: "Sarpanch";
+	text-transform: uppercase;
+}
+.col {	
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.col-legend {
+	padding: 0px 0px 0px 0px;
+	width: 150px;
+}
+.col-legend-sm {
+	padding: 0px 0px 0px 0px;
+	width: 130px;
+}
+.col-2 { width: 440px; }
+.col-3 { width: 286px; }
+.col-4 { width: 210px; }
+.border-shape {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 8px;
+}
+.border-shape2 {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 15px;
+}
+
+/* text color and effect */
+.text-success {
+	color: #afa;
+	text-shadow: 1px 1px #080;
+}
+.text-warning {
+	color: #ff8;
+	text-shadow: 1px 1px 0px #831;
+}
+.text-danger {
+	color: #f80;
+	text-shadow: 1px 1px 0px #800;
+}
+.text-activity {
+	color: rgb(249, 96, 208);
+	text-shadow: 1px 1px #606;
+}
+.text-interest {
+	color: #0ff;
 }
 .blink { animation: blink 2s steps(5, start) infinite; }
 @keyframes blink {
 to { visibility: hidden; }
 }
-.util form { 
-	text-align: center;
+
+/* buttons */
+button {
+	color: #c3faf4;
+	display: block;
+	font-family: "Sarpanch";
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 8px;
+	width: 100%;
+	border-radius: 5px;
+	padding: 3px 1px 3px 1px;
 }
-/* CODE WHEEL */
-.util option { 
-	font-weight: normal;
-	font-style: normal;
-	color: #c6fff5;
-	background-color: #112221;
-	overflow: display;
+.btn-primary {
+	text-shadow: 1px 1px #1e433e;
 }
-.util input.codewheel { 
+.btn-primary:hover {
+	border: 1px solid #fff;
+	box-shadow: 0px 0px 3px #c3faf4;
+}
+.btn-primary:active {
+	color: #fff;
+	border: 1px solid fff;
+	background-color: #008581;
+	text-shadow: 1px 1px #1e433e;
+	box-shadow: 0px 0px 3px #c3faf4;
+}
+.btn-primary-on  {
+	background-color: rgba(0, 133, 129, 0.6);
+	border: 1px solid #c3faf4;
+}
+.btn-primary-off {
+	background-color: transparent;
+	border: 1px solid #008581;
+}
+.btn-secondary {
+	color: #ff8;
+	text-shadow: 1px 1px #960000;
+}
+.btn-secondary:hover {
+	border: 1px solid #fff;
+	box-shadow: 0px 0px 3px #ff8;
+}
+.btn-secondary:active {
+	color: #fff;
+	border: 1px solid #ff8;
+	background-color: rgba(251, 110, 83, 0.9);
+	text-shadow: 1px 1px #960000;
+	box-shadow: 0px 0px 3px #ff8;
+}
+.btn-secondary-on {
+	background-color: rgba(251, 110, 83, 0.6);
+	border: 1px solid #ff8;
+}
+.btn-secondary-off {
+	background-color: transparent;
+	border: 1px solid #008581;
+}
+
+/* logo */
+#interstel {
+	position: fixed;
+	top: 20px;
+	left: 5px;
+	width: 150px;
+	height: 125px;
+	background: url(../interface/interstel.webp) top center no-repeat;
+}
+
+/* code wheel */
+#codegen {
+	position: fixed;
+	top: 28px;
+	left: 150px;
+	margin-left: 0px;
+	width: 175px;
+	height: 135px;
+}
+select {
+	color: #c3faf4;
+	display: block;
+	width: 95%;
+	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	display: block;
-	width: 150px;
 	text-align: center;
-	margin-top: 15px;
+	font-size: 12px;
+	text-shadow: 0px 0px 3px #112221;
+	border: 1px solid #c3faf4;
+	background-color: rgba(17, 34, 33, 0.5);
+	box-shadow: 0px 0px 5px 2px #7cc4ba, 0px 0px 3px 2px #7cc4ba inset;
+}
+input { 
+	display: block;
+	width: 90%;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	font-size: 20px;
 	color: #fb6e53;
 	font-weight: bold;
@@ -78,232 +416,140 @@ to { visibility: hidden; }
 	background-color: rgba(150, 0, 0, 0.6);
 	box-shadow: 0px 0px 5px 2px #fb6e53, 0px 0px 5px 3px #cf441e inset;
 }
-/* DROPDOWN BOXES */
-.util select {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 3px;
-	width: 150px;
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	text-indent: 0.01px;
-	text-overflow: '';
-	text-align: center;
-	font-size: 12px;
-	font-weight: bold;
-	color: #a0dcd4;
-	text-shadow: 0px 0px 3px #112221; 
-	border: 1px solid #c3faf4;
-	background-color: rgba(17, 34, 33, 0.5);
-	background: transparent;
-	box-shadow: 0px 0px 5px 2px #7cc4ba, 0px 0px 10px 5px #7cc4ba inset;
-	padding-left: 3px;
-	overflow: display;
-}
-.util select:hover { 
-	color: #c6fff5;
-	box-shadow: 0px 0px 5px 2px #7cc4ba, 0px 0px 5px 3px #7cc4ba inset;
-}
-.util ul { margin-top: 5px; list-style-type: none; }
-.util ul li {display: inline; font-size: 10px; }
-.util ul li a {
-	text-transform: uppercase;
-	padding: 5px;
-	display: inline;
-	margin-right: 2px;
-	width: 150px;
-	text-align: center;
-	font-weight: bold;
-	color: #a0dcd4;
-	text-shadow: 0px 0px 3px #112221; 
-	border-top-left-radius: 15px;
-	border-top-right-radius: 8px;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 15px;
-	border: 1px solid #c3faf4;
-	background-color: #487771;
-	background: transparent;
-	box-shadow: 0px 0px 5px 2px #7cc4ba, 0px 0px 10px 5px #7cc4ba inset;
-	padding-left: 3px;
-	overflow: display;
-}
-.util ul li a:hover { 
-	color: #c6fff5;
-	box-shadow: 0px 0px 5px 2px #7cc4ba, 0px 0px 5px 3px #7cc4ba inset;
-}
-.util p {
-	margin-top: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: 12px;
-	text-transform: none;
-}
-#interstel {
+
+/* codex */
+#utilities {
 	position: fixed;
-	top: 28px;
-	left: 5px;
-	width: 150px;
-	height: 125px;
-	background: url(../interface/interstel.webp) top center no-repeat;
+	top: 0px;
+	height: 150px;
+	background: url(../interface/top-black-gradient.webp) repeat-x bottom;
+	width: 100%;
+	z-index: 10;
 }
-#codegen {
-	position: fixed;
-	top: 28px;
-	left: 150px;
-	margin-left: 5px;
-	width: 175px;
-	height: 125px;
-}
+.util { z-index: 11; }
+.util form { text-align: center; }
 #codex {
 	position: fixed;
 	top: 28px;
 	left: 0px;
-	margin-left: 350px;
-	height: 125px; 		
+	margin-left: 370px;
+	height: 135px; 		
 	width: 700px;
 }
-#codexselect { width: 225px; margin-bottom: 5px; }
 #legend {
-	font-size: 16px;
-	height: 95px;
+	height: 100px;
 	margin-left: auto;
 	margin-right: auto;
 }
-#legend .column {
-	float: left; 
-	width: 200px;
-	margin-right: -35px;	
-}
-#legend h4 {
-	font-size: 16px; 
-	text-align: center; 
-	margin-right: 50px; 
-	margin-left: 50px;
-}
-#legend ul { margin-top: 2px; }
-#legend ul li {
-	font-weight: normal;
-	display: block;
-	font-size: 9px;
-	list-style-type: none;
-}
-input[type="checkbox"] {
-    display:none;
-}
-input[type="checkbox"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-1px 4px 0 0;
-    vertical-align:middle;
-    background:url(../interface/inputboxes.webp) left top no-repeat;
-    cursor:pointer;
-}
-input[type="checkbox"]:checked + label span {
-    background:url(../interface/inputboxes.webp) -19px top no-repeat;
-}
-.codex ul li.notes {
-	font-size: 8px;
-}
-#science {
+ul.menu { margin-left: 5px; }
+#credits { position: relative; top: -5px; }
+#history, #science, #engineering, #combat, #artifacttech {
 	position: fixed;
 	top: 190px;
 	left: 150px;
-	width: 900px;
+	width: 920px;
 	font-weight: normal;
 }
-#science h6 { font-size: 14px; margin-top: 5px; }
-#science .column { padding: 5px; float: left; width: 210px; }
-#science p { margin-left: 5px; margin-top: 2px; }
-#science ul li { text-transform: uppercase; margin-left: 5px; list-style-type: none; display: block; margin-bottom: 2px; font-size: 11px; }
-#science .startypes { margin-left: 10px; margin-right: 25px; background: rgba(2, 49, 51, 0.9); }
-#science .startypes img { position: relative; top: 25px; width: 60px; height: 60px; margin-top: -40px; }
-#science .startypes ul { margin-left: 0px; }
-#science .startypes ul li { font-size: 12px; height: 30px; margin-left: 0px; text-transform: none; margin-bottom: -5px; }
-#science .startypes .planettype { position: relative; top: -2px; margin-left: 10px; float: left; height: 14px; width: 14px; border-radius: 10px; background: url(../interface/planet-highlight.webp) no-repeat top left; }
-#science th { padding-left: 10px; font-size: 12px; text-align: left; }
-#science td { padding-left: 15px; width: 90px; text-indent: -10px; font-size: 12px; }
-#science .linebreak { display: block; margin-left: 10px; }
-#engineering {
-	position: fixed;
-	top: 190px;
-	left: 150px;
-	width: 900px;
-	font-weight: normal;
+
+/* science-specific */
+.startype { 
+	width: 80px;
+	height: 80px;
+	position: relative;
+	top: 5px;
+	margin-top: -25px;
+	margin-bottom: -30px;
 }
-#engineering h6 { font-size: 14px; margin-top: 5px; }
-#engineering .column { padding: 5px; float: left; width: 210px; }
-#engineering p { margin-left: 5px; margin-top: 2px; }
-#engineering ul li { text-transform: uppercase; margin-left: 5px; list-style-type: none; display: block; margin-bottom: 2px; font-size: 11px; }
-#engineering th { padding-left: 10px; font-size: 12px; text-align: left; }
-#engineering td { padding-left: 15px; width: 90px; text-indent: -10px; font-size: 12px; }
-#engineering .linebreak { display: block; margin-left: 10px; }
-#combat {
-	position: fixed;
-	top: 190px;
-	left: 150px;
-	width: 900px;
-	font-weight: normal;
+.planettype { 
+	position: relative;
+	top: 3px;
+	margin-left: 20px;
+	float: left;
+	height: 14px;
+	width: 14px;
+	border-radius: 10px;
+	background: url(../interface/planet-highlight.webp) no-repeat top left;
 }
-#combat h6 { font-size: 14px; margin-top: 5px; }
-#combat .column { padding: 5px; float: left; width: 210px; }
-#combat p { margin-left: 5px; margin-top: 2px; }
-#combat ul li { text-transform: uppercase; margin-left: 5px; list-style-type: none; display: block; margin-bottom: 2px; font-size: 11px; }
-#combat th { padding-left: 10px; font-size: 12px; text-align: left; }
-#combat td { padding-left: 15px; width: 90px; text-indent: -10px; font-size: 12px; }
-#combat .linebreak { display: block; margin-left: 10px; }
-#history {
-	position: fixed;
-	top: 190px;
-	left: 150px;
-	width: 900px;
-	font-weight: normal;
-}
-#history .column { width: 430px; margin-right: 15px; float: left; }
-#history h6 { font-size: 14px; margin-top: 5px; }
-#history ul { margin-left: 10px; }
-#history ul li { display: block; font-size: 12px; text-transform: none; text-indent: -45px; margin-left: 45px; margin-bottom: 8px; }
-#tech {
-	position: fixed;
-	top: 190px;
-	left: 150px;
-	width: 900px;
-	font-weight: normal;
-}
-#tech h6 { font-size: 14px; margin-top: 5px; }
-#tech .artifactname { font-weight: bold; text-transform: uppercase; }
-#tech .column { padding: 5px; float: left; width: 440px; }
-#tech ul li { text-transform: none; margin-left: 5px; list-style-type: none; display: block; margin-bottom: 10px; text-indent: -20px; font-size: 13px; }
+
+/* alien species */
 #profileselect { text-transform: none; }
 .alienprofile {
 	position: fixed;
 	top: 190px;
-	left: 400px; 
-	height: 70px; 
-	width: 590px; 
-	border-top-left-radius: 15px; 
-	border-top-right-radius: 10px; 
-	border-bottom-left-radius: 10px; 
-	border-bottom-right-radius: 15px; 
-	padding: 5px; 
+	left: 370px;
+	height: 100px;
+	width: 690px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 15px;
+	padding: 0px 10px 5px 10px;
 }
-.alienprofile h5 { font-size: 16px; margin-top: -25px; text-align: right; }
-.alienprofile h5 span { font-size: 75%; }
 .alienprofile p { text-transform: none; }
-.alienprofile ul.race { float: left; margin-right: 10px; }
-.alienprofile ul.race li { text-indent: -15px; list-style-type: none;  width: 200px;  font-weight: normal; display: block; }
+.alienprofile ul.race {
+	margin-top: 0px;
+	float: left;
+	white-space: nowrap;
+	margin-right: 15px;
+}
+.alienprofile ul.race li {
+	list-style-type: none;
+	display: block;
+	margin-top: 0px;
+}
 .alienprofile div { float: left; }
-.alienprofile img.race { position: fixed; top: 195px; left: 50px; width: 290px; height: 290px; background-color: rgba(0, 0, 0, 0.5); }
-.alienprofile .fleet { position: absolute; top: 90px; left: -50px; width: 820px; display: block; }
-.alienprofile .ship { text-align: center; float: left; height: 100px; width: 345px; margin-right: 8px; margin-bottom: 10px; overflow: hidden; }
-.alienprofile .ship img { position: relative; float: left; top: -20px; left: 0px; margin-right: 0px; margin-bottom: 10px; width: 140px; height: 140px; }
-.alienprofile .ship h5 { font-size: 14px; margin-top: 3px; margin-bottom: 2px; margin-right: 20px; text-align: right;  }
-.alienprofile .ship ul { display: block; font-weight: normal; line-height: 12px; font-size: 10px; margin-top: 0px; }
-.alienprofile .ship ul li { float: left; width: 100px; display: inline; }
-.alienprofile .ship ul li.notes { width: 275px; clear: right; display: block; float: none; text-indent: -10px; position: relative; left: 10px; line-height: 13px; }
-#map { position: absolute; top: 0; left: 0; }
+.alienprofile img.race {
+	position: fixed;
+	top: 180px;
+	left: 100px;
+	width: 260px;
+	height: 260px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.alienprofile .fleet {
+	position: absolute;
+	top: 105px;
+	left: 0px;
+	width: 820px;
+	display: block;
+}
+.alienprofile .ship {
+	float: left;
+	height: 125px;
+	width: 354px;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+.alienprofile .ship img {
+	position: relative;
+	float: left;
+	top: -5px;
+	left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	width: 120px;
+	height: 120px;
+}
+.alienprofile .ship h5 {
+	font-size: 14px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	margin-right: 20px;
+	text-align: center;
+ }
+.alienprofile .ship ul {
+	font-family: "Sarpanch";
+	text-transform: uppercase;
+	display: block;
+	font-weight: normal;
+	line-height: 12px;
+	font-size: 10px;
+	margin-top: 0px;
+	float: left;
+	width: 110px;
+}
+
+/* map construction */
 #map .starmap {
 	position: relative;
 	display: block;
@@ -312,14 +558,16 @@ input[type="checkbox"]:checked + label span {
 	overflow: hidden;
 	z-index: 3;
 }
-#nebulae { position: absolute; left: 0px; top: 0px; }
+
+/* nebulae */
 .nebulae {
-	margin-top: 60px; 
+	margin-top: 60px;
 	position: absolute;
 	display: block;
 }
 .nebulae img { display: block; }
-#stars { position: absolute; left: 0px; top: 0px; }
+
+/* stars */
 .star { 
 	margin-top: 60px;
 	position: absolute;
@@ -334,8 +582,12 @@ input[type="checkbox"]:checked + label span {
 #gstars .star { background: url(../map/star-green.webp); }
 #tstars .star { background: url(../map/star-teal.webp); }
 #bstars .star { background: url(../map/star-blue.webp); }
+
+/* alien script */
 #alienscript .writing { position: absolute; }
 #alienscript .writing img { display: block; }
+
+/* starfield */
 #starfield {
 	position: fixed;
 	top: -50px;
@@ -377,23 +629,15 @@ input[type="checkbox"]:checked + label span {
 	right: 0px;
 	z-index: 5;
 }
+
+/* territories */
 .territorycircle {
-	border: 1px solid #17aeaa; 
+	border: 1px solid #17aeaa;
 	box-shadow: 0px 0px 5px 1px #228583, 0px 0px 30px -5px #326a66 inset;
 }
 #territoriesdetail .territorylabel { font-size: 24px; }
-.border-shape {
-	border-top-left-radius: 8px;
-	border-top-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 8px;
-}
-.border-shape2 {
-	border-top-left-radius: 15px;
-	border-top-right-radius: 8px;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 15px;
-}
+
+/* alien themeing - primary backgrounds */
 .bg-interstel { 
 	background-color: rgba(30, 67, 62, 0.7);
 	box-shadow: 0px 0px 12px 3px #c3faf4, 0px 0px 30px 15px #112221 inset;
@@ -406,6 +650,7 @@ input[type="checkbox"]:checked + label span {
 .bg-gazurtoid { background: url(../interface/bg-gazurtoid.webp) top left; }
 .bg-uhlek { background: url(../interface/bg-uhlek.webp); }
 
+/* alien themeing - secondary backgrounds */
 .bg-velox2 { background: url(../interface/bg-velox.webp) bottom right; }
 .bg-mechans2 { background: url(../interface/bg-mechans.webp) bottom right; }
 .bg-elowan2 { background: url(../interface/bg-elowan.webp) bottom right; }
@@ -413,87 +658,75 @@ input[type="checkbox"]:checked + label span {
 .bg-thrynn2 { background: url(../interface/bg-thrynn.webp) bottom right; }
 .bg-gazurtoid2 { background: url(../interface/bg-gazurtoid.webp) bottom right; }
 .bg-uhlek2 { background: url(../interface/bg-uhlek.webp) bottom right; }
+
+/* alien themeing - borders */
 .border-interstel {
-	border: 1px solid #c3faf4; 
+	border: 1px solid #c3faf4;
 	box-shadow: 0px 0px 12px 3px #009980, 0px 0px 30px -5px #009980 inset;
 }
 .border-velox {
-	border: 1px solid #dc232d; 
+	border: 1px solid #dc232d;
 	box-shadow: 0px 0px 5px 1px #a20000, 0px 0px 30px -5px #c00a0a inset;
 }
 .border-mechans {
-	border: 1px solid #ffd861; 
+	border: 1px solid #ffd861;
 	box-shadow: 0px 0px 5px 1px #e49a17, 0px 0px 30px -5px #daa134 inset;
 }
 .border-elowan { 
-	border: 1px solid #fffa79; 
+	border: 1px solid #fffa79;
 	box-shadow: 0px 0px 5px 1px #e6c823, 0px 0px 30px -5px #ffea00 inset;
 }
 .border-thrynn {
-	border: 1px solid #80eead; 
+	border: 1px solid #80eead;
 	box-shadow: 0px 0px 5px 1px #2dc66c, 0px 0px 30px -5px #4ef090 inset;
 }
 .border-gazurtoid {
-	border: 1px solid #81bef3; 
+	border: 1px solid #81bef3;
 	box-shadow: 0px 0px 5px 1px #0088ff, 0px 0px 30px -5px #4394db inset;
 }
 .border-spemin {
-	border: 1px solid #bcf657; 
+	border: 1px solid #bcf657;
 	box-shadow: 0px 0px 5px 1px #55b61b, 0px 0px 30px -5px #5c9f38 inset;
 }
 .border-uhlek {
-	border: 1px solid #ff6dc7; 
+	border: 1px solid #ff6dc7;
 	box-shadow: 0px 0px 5px 1px #ff00c6, 0px 0px 30px -5px #c50099 inset;
 }
+
+/* alien themeing - text */
 .text-interstel {
-	color: #c6fff5; 
-	font-size: 18pt;  
-	text-transform: uppercase;
-	font-weight: bold;
 	text-shadow: 1px 1px 0px #1e433e;
 }
 .text-velox {
-	color: #dc232d;  
-	text-transform: uppercase; 
-	font-weight: bold; 
-	text-shadow: 0px 0px 2px #a20000;
+	color: #ea5946;  
+	text-shadow: 0px 0px 2px #900000;
 }
 .text-mechans {
-	color: #ffd861; 
-	text-transform: uppercase; 
-	font-weight: bold; 
+	color: #ffd861;
 	text-shadow: 0px 0px 2px #e49a17;
 }
 .text-elowan {
-	color: #fffa79;  
-	text-transform: uppercase; 
-	font-weight: bold; 
+	color: #fdfcd7;  
 	text-shadow: 0px 0px 2px #ea8c06;
 }
 .text-thrynn {
 	color: #80eead;  
-	text-transform: uppercase; 
-	font-weight: bold; 
 	text-shadow: 0px 0px 2px #2dc66c;
 }
 .text-gazurtoid {
 	color: #44a8ff;  
-	text-transform: uppercase; 
-	font-weight: bold; 
 	text-shadow: 0px 0px 2px #0088ff;
 }
 .text-spemin {
 	color: #bcf657;  
-	text-transform: uppercase; 
-	font-weight: bold; 
 	text-shadow: 0px 0px 2px #55b61b;
 }
 .text-uhlek {
 	color: #ff6dc7;  
-	text-transform: uppercase; 
-	font-weight: bold; 
-	text-shadow: 0px 0px 2px #ff00c6;
+	text-shadow: 0px 0px 2px #6f0358;
 }
+
+/* fluxes */
 #fluxes {
 	position: absolute;
 	top: 350px;
@@ -502,11 +735,17 @@ input[type="checkbox"]:checked + label span {
 	height: 2100px;
 	background: url(../map/fluxes.webp) top left no-repeat;
 }
-.maptext { 	
+
+/* map text */
+.maptext { 
+	font-family: "Sarpanch";
 	text-transform: uppercase;
+	font-weight: bold;
 	color: #c6fff5;
 	text-shadow: 0px 0px 2px #c3faf4, 1px 1px 0px #1e433e, -1px 1px 0px #1e433e, 1px -1px 0px #1e433e, -1px -1px 0px #1e433e;
 }
+
+/* map coordinates */
 ul.xcoords {
 	list-style-type: none;
 	margin-left: 115px;
@@ -518,7 +757,7 @@ ul.xcoords li {
 	list-style-type: none;
 	width: 45px;
 	float: left;
-	margin-right: 57px; 
+	margin-right: 57px;
 	margin-bottom: 0px;
 }
 ul.ycoords {
@@ -532,15 +771,12 @@ ul.ycoords li {
 	list-style-type: none;
 	width: 45px;
 	display: block;
-	margin-left: 0px; 
+	margin-left: 0px;
 	margin-bottom: 79px;
 }
-#grid {
- 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-}
+
+/* map grid */
+#grid { z-index: 2; }
 #grid .x { 
 	display: block;
 	position: absolute;
@@ -554,9 +790,9 @@ ul.ycoords li {
 	width: 101px;
 	height: 2600px;
 	margin-right: 101px;
-	border-left: 1px solid #108885;
-	border-right: 1px solid #108885;
-	box-shadow: 0px 5px 5px #008581, 0px 5px 5px #008581 inset;
+	border-left: 1px solid #10888580;
+	border-right: 1px solid #10888580;
+	box-shadow: 0px 5px 5px #00858180, 0px 5px 5px #00858180 inset;
 }
 #grid .y { 
 	display: block;
@@ -570,20 +806,36 @@ ul.ycoords li {
 	width: 100%;
 	height: 102px;
 	margin-top: 102px;
-	border-top: 1px solid #108885;
-	border-bottom: 1px solid #108885;
-	box-shadow: 5px 0px 5px #008581, 5px 0px 5px #008581 inset;
+	border-top: 1px solid #10888580;
+	border-bottom: 1px solid #10888580;
+	box-shadow: 5px 0px 5px #00858180, 5px 0px 5px #00858180 inset;
 }
-#fleets img { position: absolute; width: 45px; height: 45px; }
+
+/* star systems and labels */
 .system { position: absolute; }
 .system h5 { display: inline; }
-.pointer { position: absolute; top: 10px; height: 2px; background: #c6fff5; box-shadow: 1px 1px 0px #077c83; }
-ul.properties { display: inline; margin-left: 2px; }
-ul.properties li { display: inline; border-radius: 3px; border-right: 1px solid #c6fff5; border-left: 1px solid #c6fff5; padding-left: 3px; padding-right: 3px; font-size: 10px; }
-li.planet { font-size: 12px; list-style-type: none; border-left: 2px solid #c6fff5; border-radius: 4px; width: 300px; padding-left: 2px;  }
-.text-success { color: #afa; text-shadow: 1px 1px #080; }
-.text-warning { color: #ff8; text-shadow: 1px 1px 0px #831; }
-.text-danger { color: #f80; text-shadow: 1px 1px 0px #800; }
-.text-activity { color: #f4c; text-shadow: 1px 1px #606; }
-.text-interest { color: #0ff; }
-.landingcoords { font-size: 10px; }
+.pointer { 
+	position: absolute;
+	top: 10px;
+	height: 2px;
+	background: #c6fff5;
+	box-shadow: 1px 1px 0px #077c83;
+}
+li.planet { list-style-type: none;
+	border-left: 3px solid #c6fff5;
+	border-radius: 4px;
+	width: 300px;
+	padding-left: 5px;
+	white-space: nowrap;
+}
+ul.properties { 
+	display: inline;
+	margin-left: 2px;
+}
+ul.properties li {
+	display: inline;
+	border-radius: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-size: 12px;
+}
