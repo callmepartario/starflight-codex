@@ -21,3 +21,8 @@ The codex includes:
 - Lore:
     - Historical Timeline
     - Alien Fleet Analysis
+
+# Contact the Editor
+
+- Email: partario.flynn@gmail.com
+- Ko-fi: [Buy Me a Coffee](https://ko-fi.com/oldgus)
