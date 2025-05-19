@@ -1,6 +1,6 @@
 # Starflight Codex
 
-An informational codex for PC classic [Starflight](https://en.wikipedia.org/wiki/Starflight) (1986).
+An informational codex for PC classic [Starflight](https://en.wikipedia.org/wiki/Starflight) (1986) by Binary Systems (Greg Johnson, Alec Kercso, Bob Gonsalves, T.C. Lee, and Rod McConnell).
 
 Available online at https://callmepartario.github.io/starflight-codex/
 
