@@ -33,7 +33,7 @@
 			<div class="col col-legend">
 				<ul class="menu">
 					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-starfield">Starfield</button></li>
-					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-grid">Grid Lines</button></li>
+					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-grid">Grid Compass</button></li>
 					<li><button type="button" class="btn btn-primary btn-primary-on" id="toggle-alienscript">Alien Script</button></li>
 					<li><button type="button" class="btn btn-primary btn-primary-off" id="toggle-territory">Territory Detail</button></li>
 					<li><button type="button" class="btn btn-primary btn-primary-off" id="toggle-nebulaedetail">Nebulae Detail</button></li>
@@ -73,7 +73,7 @@
 					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-velox">Velox</button></li>
 					<li><button type="button" class="btn-secondary btn-secondary-off" id="toggle-otheraliens">Other Aliens</button></li>
 				</ul>
-				<p id="credits" class="text-center"><a class="text-warning" href="https://github.com/callmepartario/starflight-codex">Github</a> | <a class="text-warning" href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a></p>
+				<p id="credits" class="text-center">v2.0a | <a href="https://github.com/callmepartario/starflight-codex">Git</a> | <a href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a></p>
 			</div>
 		</div>
 		<!-- end legend -->
@@ -222,7 +222,7 @@
 						</tr>
 					<tbody>
 				</table>
-				<p>Stellar flare phenomena are moving coreward (right) to outward (left) at a rate 7 clicks per month.</p>
+				<p>Stellar flare phenomena are moving coreward to outward at a rate 7 clicks per month.</p>
 				<p class="text-warning">Your mission is to determine the cause of the solar flares.</p>
 				<p class="text-danger">Ships caught in a flaring star system are destroyed. Arth will be destroyed in 10-4620.</p>
 			</div>
@@ -474,7 +474,7 @@
 			<div class="col col-2">
 				<ul class="table">
 					<li class="tr"><span class="th text-right h7"><span class="text-success">Valuables</span>&nbsp;&mdash;</span><span class="td">Not all artifacts have functions useful for hyperspace travel. You can sell artifacts to starport or to interested aliens.</span></li>
-					<li class="tr"><span class="th text-right h7"><span class="text-interest">Black Egg</span>&nbsp;&mdash;</span><span class="td">Planetary destruction devices of <span class="text-activity">Phlegmak</span> origin. <span class="text-danger">A black egg's destructive power increases with volume (CM).</span></span></li>
+					<li class="tr"><span class="th text-right h7"><span class="text-interest">Black Egg</span>&nbsp;&mdash;</span><span class="td">Planetary destruction devices of <span class="text-activity">Phlegmak</span> origin.</span></li>
 					<li class="tr"><span class="th text-right h7"><span class="text-interest">Crystal Cone</span>&nbsp;&mdash;</span><span class="td">Locates Control Nexus of the <span class="text-warning">Crystal Planet</span>.</span></li>
 					<li class="tr"><span class="th text-right h7"><span class="text-interest">Crystal Orb</span>&nbsp;&mdash;</span><span class="td">Bypasses <span class="text-warning">Crystal Planet</span> defenses and allows ship to land on surface. <span class="text-danger">Stealing it triggers a conflict with the <span class="text-activity">Velox</span></span>.</span></li>
 					<li class="tr"><span class="th text-right h7"><span class="text-interest">Crystal Pearl</span>&nbsp;&mdash;</span><span class="td">Warps ship out of combat if ship systems are damaged.</span></li>
@@ -1122,9 +1122,15 @@
 </div>
 <!-- end utils -->
 <!-- SET FULL SCREEN -->
-<div id="fullscreen">
+<div id="directions">
+	<h2 class="direction" id="coreward">Coreward</h2>
+	<h2 class="direction" id="outward">Outward</h2>
+	<h2 class="direction" id="upspin">Upspin</h2>
+	<h2 class="direction" id="downspin">Downspin</h2>
+</div>
+<div class="fullscreen">
 	<!-- MAP CONTAINER -->
-	<div id="map" class="fullscreen">
+	<div id="map">
 		<!-- SCROLLING JS FOR STARFIELD AND COORDS -->
 		<script>
 			$(window).scroll(function(){
@@ -1205,7 +1211,7 @@
 		<!-- BEGIN STARMAP -->
 		<div class="starmap maptext">
 			<!-- BEGIN NEBULAE -->
-			<div id="nebulae" class="fullscreen d-block">
+			<div id="nebulae" class="d-block">
 				<!-- sw, uhlek territory -->			
 				<div class="nebulae" style="top: 1920px; left: 98px;">
 					<img src="map/nebulae-01.webp" alt="nebulae">
@@ -1252,7 +1258,7 @@
 				</div>
 			</div> <!-- end nebulae -->
 			<!-- BEGIN NEBULAE -->
-			<div id="nebulaedetail" class="fullscreen d-none">
+			<div id="nebulaedetail" class="d-none">
 				<!-- sw, uhlek territory -->			
 				<div class="nebulae" style="top: 1920px; left: 98px;">
 					<img src="map/nebulae2-01.webp" alt="nebulae">
@@ -1299,7 +1305,7 @@
 				</div>
 			</div> <!-- end nebulae detail -->
 			<!-- BEGIN STARS -->
-			<div id="stars" class="fullscreen">
+			<div id="stars">
 				<!-- WHITE STARS -->
 				<div id="wstars" >
 					<!-- unknkown star types -->
@@ -2788,7 +2794,7 @@
 					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
 				</div>
 				<!-- OLD EMPIRE RUINS -->
-				<div class="system" style="top: 1220px; left: 2000px;">
+				<div class="system" style="top: 1220px; left: 2050px;">
 					<div class="planet maptext">
 						<h5>180, 120</h5>
 						<ul>
@@ -2800,7 +2806,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pointer" style="left: -20px; width: 15px;">&nbsp;</div>
+					<div class="pointer" style="left: -70px; width: 65px;">&nbsp;</div>
 				</div>
 				<!-- CRYSTAL PLANET -->
 				<div class="system" style="top: 885px; left: 2120px;">

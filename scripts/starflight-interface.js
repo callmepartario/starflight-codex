@@ -92,6 +92,8 @@ $(document).ready(function() {
     if (gridToggle == false) {
       $("#grid").addClass("d-none");
       $("#grid").removeClass("d-block");
+      $("#directions").addClass("d-none");
+      $("#directions").removeClass("d-block");
       $("#toggle-grid").removeClass("btn-primary-on");
       $("#toggle-grid").addClass("btn-primary-off");
       gridToggle = true;
@@ -99,6 +101,8 @@ $(document).ready(function() {
     else {
       $("#grid").addClass("d-block");
       $("#grid").removeClass("d-none");
+      $("#directions").addClass("d-block");
+      $("#directions").removeClass("d-none");
       $("#toggle-grid").removeClass("btn-primary-off");
       $("#toggle-grid").addClass("btn-primary-on");
       gridToggle = false;

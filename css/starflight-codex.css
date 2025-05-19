@@ -182,7 +182,10 @@ h5 {
 }
 
 /* inline text */
-a {	text-decoration: none; }
+a {	
+	color: #ff8;
+	text-decoration: none;
+}
 ol, ul { 
 	margin-left: 0px;
 	margin-top: 5px;
@@ -773,6 +776,42 @@ ul.ycoords li {
 	display: block;
 	margin-left: 0px;
 	margin-bottom: 79px;
+}
+
+/* direction labels */
+.direction {
+	z-index: 4;
+	font-style: italic;
+	font-size: 30px;
+	opacity: 0.4;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+#outward {
+	transform: rotate(-90deg) translateY(-50%);
+	position: fixed;
+	left: -5px;
+	bottom: 50%;
+}
+#coreward {
+	transform: rotate(90deg) translateY(50%);
+	position: fixed;
+	right: -70px;
+	bottom: 50%;
+}
+#upspin {
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	top: 165px;
+	width: 100%;
+}
+#downspin {
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 40px;
+	width: 100%;
 }
 
 /* map grid */
