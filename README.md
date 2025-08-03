@@ -22,8 +22,9 @@ The codex includes:
 
 ## Contact the Editor
 
-- Email: partario.flynn@gmail.com
-- Ko-fi: [Buy Me a Coffee](https://ko-fi.com/oldgus)
+- partario.flynn@gmail.com
+- [@oldgus@dice.camp](https://dice.camp/@oldgus)
+- [Ko-fi](https://ko-fi.com/oldgus)
 
 ## More from Old Gus
 
